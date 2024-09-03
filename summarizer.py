@@ -115,3 +115,28 @@ def summarize_content(rss_content):
 
     return summarized_content
 
+
+def pdfRead():
+    import PyPDF2
+    '''
+    Process the PDF file to create a summary to chat with AI
+    Use the api to create a ppt
+    '''
+    # 打开PDF文件
+    with open('your_paper.pdf', 'rb') as file:
+        reader = PyPDF2.PdfReader(file)
+        text = ''
+        # 循环读取每一页的内容
+        for page in reader.pages:
+            text += page.extract_text()
+    print(text)
+
+    return text
+
+def pdf2ppt():
+    '''
+    Use the api to create a ppt
+    https://www.xfyun.cn/doc/spark/PPTGeneration.html#%E6%8E%A5%E5%8F%A3%E4%B8%8E%E9%89%B4%E6%9D%83
+    可以直接上传pdf和要求，或者可以转为文本后上传，可以测试一下二者的效果的区别
+    时间生成上和生成质量上
+    '''

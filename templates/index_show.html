@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS 订阅</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style>
+        /* 逐字显示效果的样式 */
+        #summary-content {
+            display: none;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>RSS 订阅</h1>
+    <form action="/subscribe" method="post">
+        <div class="form-group">
+            <label for="rss_url">RSS URL:</label>
+            <input type="text" id="rss_url" name="rss_url" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">订阅</button>
+    </form>
+
+    {% if subscribed %}
+    <script>
+        alert('订阅成功！');
+    </script>
+    {% endif %}
+
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <!-- 侧边栏显示订阅源 -->
+            <h4>订阅源</h4>
+            <ul class="list-group">
+                {% for source in sources %}
+                <li class="list-group-item">{{ source }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <!-- 显示每条消息的标题 -->
+            <div class="row">
+                {% for message in messages %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ message.title }}</h5>
+                            <button class="btn btn-info" onclick="showSummary()">显示总结</button>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- 显示总结内容的区域 -->
+    <div id="summary-content"></div>
+
+    <script>
+        function showSummary() {
+            $.post('/summarize', function(data) {
+                let text = data.content;
+                $('#summary-content').show().text('');
+                let i = 0;
+                let interval = setInterval(function() {
+                    $('#summary-content').append(text[i]);
+                    i++;
+                    if (i >= text.length) {
+                        clearInterval(interval);
+                    }
+                }, 50); // 逐字显示，速度为50ms每个字
+            });
+        }
+    </script>
+</div>
+</body>
+</html>
