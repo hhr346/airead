@@ -1,61 +1,52 @@
 # routes.py
 from flask import request, render_template, jsonify
 from summarizer import summarize_content, fetch_rss_content
+import SparkApi
+import feedparser
+
+# 以下密钥信息从控制台获取   https://console.xfyun.cn/services/bm35
+appid = "c29cd28d"     #填写控制台中获取的 APPID 信息
+api_secret = "OWMyNzRjZWU0NTEwZDZiMjMzNmU1YmNi"   #填写控制台中获取的 APISecret 信息
+api_key ="f3eddb259d1f711e3c6bbdcb3dddecf0"    #填写控制台中获取的 APIKey 信息
+
+# https://www.xfyun.cn/doc/spark/Web.html#_1-%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E
+domain = "generalv3.5"    # v3.0版本
+Spark_url = "wss://spark-api.xf-yun.com/v3.5/chat"  # v3.5环服务地址
+domain = "general"
+Spark_url = "wss://spark-api.xf-yun.com/v1.1/chat"  # Lite环服务地址
+domain = '4.0Ultra'        # v4.0版本
+Spark_url = "wss://spark-api.xf-yun.com/v4.0/chat"  # v4.0环服务地址
+
+text = []
+def getText(role,content):
+    jsoncon = {}
+    jsoncon["role"] = role
+    jsoncon["content"] = content
+    text.append(jsoncon)
+    return text
 
 def init_routes(app):
-    """
-    @app.route('/')
-    def index():
-        # 显示欢迎信息，然后通过HTML meta标签在2秒后重定向到订阅页面
-        return '''
-            <html>
-                <head>
-                    <meta http-equiv="refresh" content="2;url=/subscribe" />
-                </head>
-                <body>
-                    <h1>欢迎来到RSS订阅网站！</h1>
-                    <p>2秒后将自动跳转到订阅页面...</p>
-                </body>
-            </html>
-        '''
-    # def index():
-    #     return "欢迎来到RSS订阅网站！"
-
-    @app.route('/subscribe', methods=['GET', 'POST'])
-    def subscribe():
-        if request.method == 'POST':
-            rss_url = request.form['rss_url']
-            rss_content = fetch_rss_content(rss_url)
-            print(rss_content)
-
-            # summary = summarize_content(rss_content)
-            # return f"订阅成功！摘要内容: {summary}"
-
-            # 构造HTML来显示RSS内容
-            response_html = "<h2>订阅成功！</h2><ul>"
-            for title, link, content in rss_content:
-                response_html += f"<li><a href='{link}' target='_blank'>{title}</a><p>{content}</p></li>"
-            response_html += "</ul>"
-            return response_html
-
-        return render_template('subscribe.html')
-    """
-
+    # 现有的路由
     @app.route('/')
     def home():
-        return render_template('index.html', sources=[])
+        messages = [{'id': 1, 'title': 'Article 1', 'summary': 'Summary of Article 1'},
+                    {'id': 2, 'title': 'Article 2', 'summary': 'Summary of Article 2'}]
+        return render_template('index.html', messages=messages)
 
-    @app.route('/subscribe', methods=['POST'])
-    def subscribe():
-        rss_url = request.form['rss_url']
-        # 假设这里成功订阅了 RSS 源，并获取了消息数据
-        # 将获取到的源和消息数据传递给前端
-        messages = [{'title': 'Example Article 1'}, {'title': 'Example Article 2'}]  # 示例数据
-        return render_template('index.html', sources=[rss_url], messages=messages, subscribed=True)
+    # 新的路由来处理AI问答
+    @app.route('/ask_ai', methods=['POST'])
+    def ask_ai():
+        data = request.json
+        question = data.get('question')
+        message_id = data.get('message_id')
+        question = getText("user", question)
 
-    @app.route('/summarize', methods=['POST'])
-    def summarize():
-        # 调用你的 API 来生成总结
-        summarized_content = "这是一个总结内容的示例。"
-        return jsonify({'content': summarized_content})
-
+        # 在这里调用AI的处理逻辑
+        SparkApi.answer = ""
+        print("星火:", end="")
+        SparkApi.main(appid, api_key, api_secret, Spark_url, domain, question)
+        # 获取AI的回答
+        summarized_content = SparkApi.answer
+        
+        # 返回JSON格式的响应
+        return jsonify({'answer': summarized_content})
