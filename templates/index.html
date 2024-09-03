@@ -1,80 +1,127 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>RSS Feed Summarization</title>
-    <!-- 添加一些CSS样式使界面更美观 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Chat with AI</title>
     <style>
-        .message-container {
-            display: flex;
-            flex-wrap: wrap;
+        /* 样式定义 */
+        body {
+            font-family: Arial, sans-serif;
         }
-        .message {
-            border: 1px solid #ccc;
+        .chat-container {
+            width: 60%;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .message-box {
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
             padding: 10px;
-            margin: 10px;
-            width: 300px;
-            text-align: left;
+            margin-bottom: 10px;
+            background-color: white;
         }
-        .summary {
-            margin-top: 10px;
-            font-style: italic;
+        .user-message, .ai-message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 80%;
+            line-height: 1.5;
         }
-        .question-container {
-            margin-top: 20px;
+        .user-message {
+            background-color: #e0f7fa;
+            align-self: flex-end;
+            text-align: right;
+        }
+        .ai-message {
+            background-color: #ffecb3;
+            align-self: flex-start;
+        }
+        .input-area {
+            display: flex;
+            gap: 10px;
+        }
+        .input-area input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .input-area button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <h1>RSS Feed Summarization</h1>
-
-    <div class="message-container">
-        <!-- 迭代每个消息 -->
-        {% for message in messages %}
-        <div class="message">
-            <h3>{{ message.title }}</h3>
-            <p class="summary">{{ message.summary }}</p>
-            <!-- 增加交互按钮 -->
-            <button onclick="showInteraction('{{ message.id }}')">Ask AI</button>
+    <div class="chat-container">
+        <h2>Chat with AI</h2>
+        <!-- 消息显示框 -->
+        <div id="message-box" class="message-box">
+            <!-- 在这里显示对话历史 -->
         </div>
-        {% endfor %}
-    </div>
 
-    <!-- 添加一个对话框和输入框 -->
-    <div id="interaction-modal" style="display:none;">
-        <div>
-            <h2>Ask AI about: <span id="selected-message-id"></span></h2>
-            <textarea id="user-question" rows="4" cols="50"></textarea>
-            <button onclick="sendQuestion()">Submit</button>
-        </div>
-        <div id="ai-response">
-            <!-- AI回答将显示在这里 -->
+        <!-- 输入区域 -->
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Type your message here...">
+            <button onclick="sendMessage()">Send</button>
         </div>
     </div>
 
     <script>
-        function showInteraction(messageId) {
-            document.getElementById("selected-message-id").innerText = messageId;
-            document.getElementById("interaction-modal").style.display = "block";
+        // 用于保存对话历史的数组
+        let chatHistory = [];
+
+        function updateChatHistory() {
+            const messageBox = document.getElementById('message-box');
+            messageBox.innerHTML = '';  // 清空消息框
+
+            chatHistory.forEach(chat => {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = chat.type === 'user' ? 'user-message' : 'ai-message';
+                messageDiv.innerText = chat.message;
+                messageBox.appendChild(messageDiv);
+            });
+
+            // 滚动到最新消息
+            messageBox.scrollTop = messageBox.scrollHeight;
         }
 
-        function sendQuestion() {
-            const question = document.getElementById("user-question").value;
-            const messageId = document.getElementById("selected-message-id").innerText;
+        function sendMessage() {
+            const userInput = document.getElementById('user-input').value;
+            if (userInput.trim() === '') return;
 
+            // 添加用户消息到历史记录
+            chatHistory.push({ type: 'user', message: userInput });
+            updateChatHistory();
+
+            // 发送请求到服务器
             fetch('/ask_ai', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ question: question, message_id: messageId })
+                body: JSON.stringify({ question: userInput })
             })
             .then(response => response.json())
             .then(data => {
-                document.getElementById("ai-response").innerText = "AI Response: " + data.answer;
+                // 添加AI的回答到历史记录
+                chatHistory.push({ type: 'ai', message: data.answer });
+                updateChatHistory();
             })
             .catch(error => console.error('Error:', error));
+
+            // 清空输入框
+            document.getElementById('user-input').value = '';
         }
     </script>
 </body>

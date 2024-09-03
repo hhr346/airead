@@ -46,7 +46,7 @@ def init_routes(app):
         print("星火:", end="")
         SparkApi.main(appid, api_key, api_secret, Spark_url, domain, question)
         # 获取AI的回答
-        summarized_content = SparkApi.answer
+        ai_answer = SparkApi.answer
         
         # 返回JSON格式的响应
-        return jsonify({'answer': summarized_content})
+        return jsonify({'answer': ai_answer})

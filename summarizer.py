@@ -49,7 +49,7 @@ def checklen(text):
     
 def fetch_rss_content(rss_url):
     '''
-    https://www.teach.ustc.edu.cn/category/notice/feed
+    RSS eg: https://www.teach.ustc.edu.cn/category/notice/feed
     将RSS的内容提取出来，返回界面
     '''
     feed = feedparser.parse(rss_url)

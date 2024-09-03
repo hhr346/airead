@@ -8,4 +8,5 @@ app = Flask(__name__)
 # 初始化路由
 init_routes(app)
 if __name__ == '__main__':
+    # app.run(port=5000, debug=True) 
     app.run(port=5000) 

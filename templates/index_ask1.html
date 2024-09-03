@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RSS Feed Summarization</title>
+    <!-- 添加一些CSS样式使界面更美观 -->
+    <style>
+        .message-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .message {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+            text-align: left;
+        }
+        .summary {
+            margin-top: 10px;
+            font-style: italic;
+        }
+        .question-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>RSS Feed Summarization</h1>
+
+    <div class="message-container">
+        <!-- 迭代每个消息 -->
+        {% for message in messages %}
+        <div class="message">
+            <h3>{{ message.title }}</h3>
+            <p class="summary">{{ message.summary }}</p>
+            <!-- 增加交互按钮 -->
+            <button onclick="showInteraction('{{ message.id }}')">Ask AI</button>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- 添加一个对话框和输入框 -->
+    <div id="interaction-modal" style="display:none;">
+        <div>
+            <h2>Ask AI about: <span id="selected-message-id"></span></h2>
+            <textarea id="user-question" rows="4" cols="50"></textarea>
+            <button onclick="sendQuestion()">Submit</button>
+        </div>
+        <div id="ai-response">
+            <!-- AI回答将显示在这里 -->
+        </div>
+    </div>
+
+    <script>
+        function showInteraction(messageId) {
+            document.getElementById("selected-message-id").innerText = messageId;
+            document.getElementById("interaction-modal").style.display = "block";
+        }
+
+        function sendQuestion() {
+            const question = document.getElementById("user-question").value;
+            const messageId = document.getElementById("selected-message-id").innerText;
+
+            fetch('/ask_ai', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ question: question, message_id: messageId })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("ai-response").innerText = "AI Response: " + data.answer;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
