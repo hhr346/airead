@@ -1,3 +1,5 @@
+import glob
+import os
 from flask import Flask, render_template, request, jsonify
 import feedparser
 import hashlib
@@ -26,11 +28,6 @@ def init_routes(app):
     # 对论文工具的页面进行路由
     def paper_tool():
         return render_template('paper_tool.html')
-
-    @app.route('/messages')
-    # 对所有消息的页面进行路由
-    def messages():
-        return render_template('messages.html')
 
     @app.route('/profile')
     # 对个人资料的页面进行路由
@@ -119,3 +116,35 @@ def init_routes(app):
 
         # 渲染模板并传递消息列表
         return render_template('subscription.html', rss_id=rss_id, messages=messages)
+
+    @app.route('/messages')
+    # 对所有消息的页面进行路由
+    def messages():
+        messages = []
+        # 读取对应的RSS订阅源消息
+        files = glob.glob(f'data/*.txt')
+        for file in files:
+            if os.path.basename(file) == 'rss_sources.txt':
+                continue
+            try:
+                with open(file, 'r', encoding='utf-8') as f:
+                    for line in f.readlines():
+                        parts = line.split('--:--')  # 假设你的数据格式固定
+                        if len(parts) == 4:
+                            date, title, description, link = parts
+                            messages.append({
+                                'date': date,
+                                'title': title,
+                                'description': description,
+                                'link': link.strip()  # 去掉末尾换行符
+                            })
+            except FileNotFoundError:
+                messages.append({
+                    'date': '',
+                    'title': '订阅源不存在',
+                    'description': '没有找到相应的RSS订阅源数据',
+                    'link': '#'
+                })
+
+        # 渲染模板并传递消息列表
+        return render_template('messages.html', messages=messages)
