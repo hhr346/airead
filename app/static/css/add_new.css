@@ -1,0 +1,53 @@
+/* 父容器：水平和垂直居中 */
+.add-rss-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* 使用70%的视口高度 */
+    width: 80vw;
+    text-align: center;
+}
+
+/* "添加RSS" 标题 */
+.add-rss-title {
+    font-size: 3em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* 输入框和按钮的容器：水平对齐 */
+.input-group {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 输入框样式 */
+.rss-input {
+    width: 40vw;
+    padding: 15px;
+    font-size: 1.2em;
+    border: 2px solid #ccc;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+}
+
+/* 按钮样式 */
+.rss-button {
+    padding: 0;
+    background-color: #1986fc;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+}
+
+.rss-button img {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+}
+
+.rss-button:hover {
+    background-color: #004494;
+}

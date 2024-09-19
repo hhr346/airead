@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIread 爱阅读</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon_io/favicon.ico') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <!-- Toggle button -->
+        <div class="toggle-button" onclick="toggleSidebar()">
+            <img id="toggle-icon" src="{{ url_for('static', filename='images/switch_left.png') }}" alt="Toggle Sidebar">
+        </div>
+
+        <a href="{{ url_for('profile') }}" class="sidebar-item {% if request.endpoint == 'profile' %}active{% endif %}">个人档案</a>
+        <a href="{{ url_for('paper_tool') }}" class="sidebar-item {% if request.endpoint == 'paper_tool' %}active{% endif %}">论文工具</a>
+        <a href="{{ url_for('add_new') }}" class="sidebar-item {% if request.endpoint == 'add_new' %}active{% endif %}">添加订阅源</a>
+        <a href="{{ url_for('messages') }}" class="sidebar-item {% if request.endpoint == 'messages' %}active{% endif %}">全部消息</a>
+
+        <!-- 预留下动态生成的RSS订阅 -->
+        <div id="rss-feeds">
+            <!-- RSS feed 名称和导入的消息将插入到这里 -->
+        </div>
+    </div>
+
+    <div class="topbar">
+        <div class="topbar-content">
+            <span class="logo-text">AIread 爱阅读</span>
+            <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Profile" class="profile-icon">
+        </div>
+    </div>
+
+
+    {% block content %}
+        <div class="content"></div>
+            <h1>欢迎来到AIread！</h1>
+        </div>
+    {% endblock %}
+
+    <script>
+        var switchLeft = "{{ url_for('static', filename='images/switch_left.png') }}";
+        var switchRight = "{{ url_for('static', filename='images/switch_right.png') }}";
+        window.onload = function() {
+            updateSidebar();  // 确保每次加载页面时都更新侧边栏
+        };
+    </script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

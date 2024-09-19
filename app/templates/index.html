@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container text-container">
+    <h1 class="mt-4">欢迎来到AIread爱阅读！</h1>
+    <p>AIread爱阅读，是一款利用大模型技术对传统RSS阅读器进行改进的网站。</p>
+    <p>其开发的目的在于更好的利用RSS的自动爬取推荐功能，并充分利用大模型的总结能力为用户提供更高效的服务，根据不同日期的消息来生成日报。</p>
+    <p>用户可以指定自己的研究领域关键词，来让模型优先推荐相关的词条。</p>
+    <br>
+    <p>本项目主要利用了讯飞星火的API免费调用额度，对内容进行总结摘要，并更高效的推荐相关文章。</p>
+    <p>与此同时，论文工具网页还利用了讯飞星火的智文API，可以根据用户上传的pdf格式论文来生成总结大纲，并接受用户的提问，还可以直接生成汇报PPT供用户使用。</p>
+    <br>
+    <br>
+    <p>开发者：猴太阳</p>
+</div>
+{% endblock %}

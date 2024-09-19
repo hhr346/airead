@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/add_new.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- 中心化容器 -->
+    <div class="add-rss-wrapper">
+        <h1 class="add-rss-title">添加RSS</h1>
+        <div class="input-group">
+            <input type="text" class="rss-input" placeholder="输入RSS链接" id="rss-url">
+            
+            <!-- 先调用script.js里的importRSS()函数，内部请求post import_rss路由，返回内容后请求update_sidebar()函数，fetch get_sidebar_data路由，返回sidebar内容 -->
+            <button class="rss-button", onclick="importRSS()">
+                <img src="{{ url_for('static', filename='images/search.png') }}" alt="Search">
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 为整个文档添加键盘事件监听器
+    document.addEventListener('keydown', function(event) {
+        // 检查是否按下了回车键
+        if (event.key === 'Enter') {
+            // 触发importRSS函数
+            importRSS();
+        }
+    });
+</script>
+{% endblock %}

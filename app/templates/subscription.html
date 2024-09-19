@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/subscription.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-4">订阅源消息</h1>
+    <div class="rss-messages">
+        {% for message in messages %}
+        <div class="rss-message-card">
+            <h4><a href="{{ message.link }}" target="_blank">{{ message.title }}</a></h4>
+            <p class="message-date">{{ message.date }}</p>
+            <p>{{ message.description }}</p>
+        </div>
+        {% else %}
+        <p>暂无消息</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

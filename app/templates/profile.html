@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/paper_tool.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="profile-container">
+    <h1 class="mt-4">个人档案</h1>
+
+    <!-- 用户名显示 -->
+    <div class="profile-section">
+        <label for="username">用户名：</label>
+        <span id="username">admin</span>
+    </div>
+
+    <!-- 关键词编辑 -->
+    <div class="profile-section">
+        <label for="keyword">关键词：</label>
+        <input type="text" id="keyword" value="默认关键词" disabled />
+        <button id="edit-btn"><img src="{{ url_for('static', filename='images/edit.svg') }}" alt="Edit"></button>
+    </div>
+
+    <!-- 登出按钮 -->
+    <div class="profile-section">
+        <button id="logout-btn">登出账号</button>
+    </div>
+</div>
+{% endblock %}

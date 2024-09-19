@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/paper_tool.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container paper-tool-container">
+    <!-- 上传文件图片 -->
+    <div class="upload-box">
+        <img src="{{ url_for('static', filename='images/add_box.svg') }}" alt="Upload File" class="upload-image">
+    </div>
+
+    <!-- 论文总结标题 -->
+    <h2 class="title">论文总结</h2>
+
+    <!-- 生成总结按钮 -->
+    <button class="generate-button" id="generate-summary">生成总结</button>
+
+    <!-- AI 对话文本框，默认隐藏 -->
+    <div class="ai-conversation" id="conversation-box" style="display: none;">
+        <textarea placeholder="在这里进行AI对话..." rows="5" class="conversation-textarea"></textarea>
+    </div>
+
+    <!-- PPT总结标题 -->
+    <h2 class="title">PPT总结-智文大模型</h2>
+
+    <!-- PPT生成按钮 -->
+    <button class="generate-button" id="generate-ppt">PPT生成</button>
+
+    <!-- PPT 下载链接文本框 -->
+    <div class="ppt-download">
+        <textarea id="ppt-download-link" rows="2" class="download-textarea" placeholder="PPT下载链接将显示在这里..."></textarea>
+    </div>
+</div>
+{% endblock %}
