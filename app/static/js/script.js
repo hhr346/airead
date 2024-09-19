@@ -1,19 +1,22 @@
 // 侧边栏收叠脚本
 function toggleSidebar() {
-    const sidebar = document.getElementById('sidebar');
-    const toggleIcon = document.getElementById('toggle-icon');
+    const sidebar = document.querySelector('.sidebar');
+    const topbar = document.querySelector('.topbar');
     
     // 切换收叠状态
     sidebar.classList.toggle('collapsed');
-    
-    // 切换图标
+
+    // 折叠后更改收叠图标和顶部栏的宽度和左侧距离
     if (sidebar.classList.contains('collapsed')) {
         toggleIcon.src = switchRight; // 收叠时显示右图标
+        // topbar.style.left = '70px';
+        // topbar.style.width = 'calc(100% - 70px - 200px)';
     } else {
         toggleIcon.src = switchLeft; // 展开时显示左图标
+        // topbar.style.left = '250px';
+        // topbar.style.width = 'calc(100% - 250px - 30px)';
     }
 }
-
 
 
 // 论文工具相关的脚本
@@ -118,3 +121,4 @@ function updateSidebar() {
         });
     });
 }
+

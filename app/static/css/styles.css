@@ -7,7 +7,10 @@ body {
 
 /* 侧边栏样式 */
 .sidebar {
-    background-color: #2c3e50; /* 蓝色背景 */
+    position: fixed;
+    top: 0;
+    left: 0; /* 确保侧边栏固定在左侧 */
+    background-color: #2c3e50;
     color: white;
     width: 250px;
     height: 100vh;
@@ -15,8 +18,10 @@ body {
     flex-direction: column;
     padding: 20px;
     box-sizing: border-box;
-    transition: width 0.3s;
+    transition: width 0.3s ease;
+    z-index: 100; /* 保证侧边栏的层级 */
 }
+
 .sidebar.collapsed {
     width: 70px; /* 收叠时的宽度 */
 }
@@ -99,17 +104,22 @@ body {
 
 /* 顶部栏的基本样式 */
 .topbar {
-    position: fixed; /* 顶部固定 */
+    position: fixed;
     top: 0;
-    left: 250px;
-    width: calc(100% - 250px - 30px); /* 计算宽度，减去侧边栏的宽度 */
-    height: 40px; /* 顶部栏的高度 */
-    background-color: #384654; /* 和侧边栏保持一致 */
+    left: 250px; /* 根据侧边栏展开宽度调整 */
+    width: calc(100% - 250px - 30px); /* 去除固定宽度，动态调整 */
+    height: 40px;
+    background-color: #384654;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* 两端对齐 */
-    padding: 0 20px; /* 左右的内边距 */
-    z-index: 100; /* 确保顶层显示 */
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 100;
+    transition: left 0.3s ease, width 0.3s ease; /* 添加平滑的动态变化 */
+}
+.sidebar.collapsed ~ .topbar {
+    left: 70px; /* 侧边栏收叠时顶部栏从70px开始 */
+    width: calc(100% - 70px - 30px); /* 顶部栏宽度相应变化 */
 }
 /* 顶部栏内容的样式 */
 .topbar-content {
@@ -121,7 +131,7 @@ body {
 /* 顶部栏左侧 logo 文本 */
 .logo-text {
     color: white;
-    font-size: 1.5rem;
+    font-size: 25px;
     font-weight: bold;
 }
 /* 顶部栏右侧 profile 图标 */
