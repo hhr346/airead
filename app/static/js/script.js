@@ -1,4 +1,6 @@
+/**********************/
 // 侧边栏收叠脚本
+/**********************/
 function toggleSidebar() {
     const sidebar = document.querySelector('.sidebar');
     const topbar = document.querySelector('.topbar');
@@ -18,22 +20,37 @@ function toggleSidebar() {
     }
 }
 
+// 更新侧边栏
+function updateSidebar() {
+    fetch('/get_sidebar_data')
+    .then(response => response.json())
+    .then(data => {
+        const rssFeeds = document.getElementById('rss-feeds');
+        const currentUrl = window.location.pathname;  // 获取当前页面的URL
+        // rssFeeds.innerHTML = "";  // 清空现有的RSS feed区域，或许不应该清空？只在更新时清空？为什么这个清空似乎去掉了之后也不会累加呢？
 
-// 论文工具相关的脚本
-// 获取按钮和文本框的DOM元素
-document.getElementById('generate-summary').addEventListener('click', function() {
-    // 显示AI对话的文本框
-    document.getElementById('conversation-box').style.display = 'block';
-});
+        // 遍历从后端获取的数据
+        data.forEach(item => {
+            const rssLink = document.createElement('a');  // 创建一个<a>标签
+            rssLink.href = `/subscription/${item.id}`;    // 为每个RSS feed生成唯一链接
+            rssLink.innerText = item.title;               // 显示RSS订阅源标题
+            rssLink.classList.add('sidebar-item');        // 添加与固定选项一致的样式
+            rssFeeds.appendChild(rssLink);                // 将新元素添加到rss-feeds区域
 
-document.getElementById('generate-ppt').addEventListener('click', function() {
-    // 这里可以触发后端逻辑生成PPT，并把下载链接放到文本框里
-    document.getElementById('ppt-download-link').value = 'PPT下载链接生成成功！';
-});
+            // 如果当前URL匹配这个RSS订阅源的URL，则添加 'active' 类
+            if (currentUrl === `/subscription/${item.id}`) {
+                rssLink.classList.add('active');
+            }
+            
+        });
+    });
+}
 
 
 
-// 以下是用户设置页面的脚本
+/**********************/
+// 用户设置页面的脚本
+/**********************/
 document.addEventListener("DOMContentLoaded", function () {
     const editBtn = document.getElementById("edit-btn");
     const keywordInput = document.getElementById("keyword");
@@ -63,9 +80,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
+/**********************/
 // 添加新的RSS feed
+/**********************/
 function importRSS() {
     var rssUrl = document.getElementById('rss-url').value;
 
@@ -97,28 +114,66 @@ function importRSS() {
     });
 }
 
-function updateSidebar() {
-    fetch('/get_sidebar_data')
-    .then(response => response.json())
-    .then(data => {
-        const rssFeeds = document.getElementById('rss-feeds');
-        const currentUrl = window.location.pathname;  // 获取当前页面的URL
-        // rssFeeds.innerHTML = "";  // 清空现有的RSS feed区域，或许不应该清空？只在更新时清空？为什么这个清空似乎去掉了之后也不会累加呢？
 
-        // 遍历从后端获取的数据
-        data.forEach(item => {
-            const rssLink = document.createElement('a');  // 创建一个<a>标签
-            rssLink.href = `/subscription/${item.id}`;    // 为每个RSS feed生成唯一链接
-            rssLink.innerText = item.title;               // 显示RSS订阅源标题
-            rssLink.classList.add('sidebar-item');        // 添加与固定选项一致的样式
-            rssFeeds.appendChild(rssLink);                // 将新元素添加到rss-feeds区域
 
-            // 如果当前URL匹配这个RSS订阅源的URL，则添加 'active' 类
-            if (currentUrl === `/subscription/${item.id}`) {
-                rssLink.classList.add('active');
-            }
-            
-        });
-    });
+
+/**********************/
+/* 论文工具中的拖拽上传 */
+/**********************/
+document.getElementById('uploadImage').addEventListener('click', function () {
+    document.getElementById('fileInput').click(); // 打开文件选择框
+});
+
+// 监听文件选择变化
+document.getElementById('fileInput').addEventListener('change', function (event) {
+    uploadFiles(event.target.files);
+});
+
+// 监听拖拽
+const uploadBox = document.getElementById('uploadBox');
+uploadBox.addEventListener('dragover', (event) => {
+    event.preventDefault();
+    uploadBox.classList.add('drag-over');
+});
+
+uploadBox.addEventListener('dragleave', () => {
+    uploadBox.classList.remove('drag-over');
+});
+
+uploadBox.addEventListener('drop', (event) => {
+    event.preventDefault();
+    uploadBox.classList.remove('drag-over');
+    const files = event.dataTransfer.files;
+    uploadFiles(files); // 上传拖拽的文件
+});
+
+// 文件上传处理函数
+function uploadFiles(files) {
+    const formData = new FormData();
+    for (let i = 0; i < files.length; i++) {
+        formData.append('file', files[i]); // 添加文件到FormData
+    }
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/upload_file', true);
+
+    // 上传进度条更新
+    xhr.upload.onprogress = function (event) {
+        if (event.lengthComputable) {
+            const percentComplete = (event.loaded / event.total) * 100;
+            document.getElementById('progressBar').style.width = percentComplete + '%';
+        }
+    };
+
+    // 上传完成的处理
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            document.getElementById('uploadStatus').innerText = '上传成功!';
+            document.getElementById('fileName').innerText = files[0].name;
+        } else {
+            document.getElementById('uploadStatus').innerText = '上传失败!';
+        }
+    };
+
+    xhr.send(formData);
 }
-

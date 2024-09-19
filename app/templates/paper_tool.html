@@ -7,9 +7,16 @@
 {% block content %}
 <div class="container paper-tool-container">
     <!-- 上传文件图片 -->
-    <div class="upload-box">
-        <img src="{{ url_for('static', filename='images/add_box.svg') }}" alt="Upload File" class="upload-image">
+    <div class="upload-box" id="uploadBox">
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" id="fileInput" style="display: none;" multiple>
+            <img src="{{ url_for('static', filename='images/add_box.svg') }}" alt="Upload File" class="upload-image" id="uploadImage">
+        </form>
+        <p>点击加号上传文件或拖拽进行上传</p>
+        <p id="fileName"></p> <!-- 显示文件名 -->
+        <div id="progressBar" style="width: 0%; height: 20px; background-color: #4caf50;"></div> <!-- 上传进度条 -->
     </div>
+    <p id="uploadStatus"></p> <!-- 显示上传状态 -->
 
     <!-- 论文总结标题 -->
     <h2 class="title">论文总结</h2>
@@ -33,4 +40,24 @@
         <textarea id="ppt-download-link" rows="2" class="download-textarea" placeholder="PPT下载链接将显示在这里..."></textarea>
     </div>
 </div>
+
+<script>
+    document.getElementById('generate-ppt').addEventListener('click', function() {
+        document.getElementById('ppt-download-link').value = 'PPT生成中...';
+        
+        fetch('/generate_ppt', { method: 'POST' })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                document.getElementById('ppt-download-link').value = 'PPT已生成，点击下载: \n' + data.ppt_url;
+            } else {
+                document.getElementById('ppt-download-link').value = 'PPT生成失败，请稍后重试';
+            }
+        })
+        .catch(error => {
+            document.getElementById('ppt-download-link').value = '出现错误: ' + error;
+        });
+    });
+</script>
+
 {% endblock %}

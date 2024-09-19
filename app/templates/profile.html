@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/paper_tool.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
 {% endblock %}
 
 {% block content %}
@@ -17,7 +17,7 @@
     <!-- 关键词编辑 -->
     <div class="profile-section">
         <label for="keyword">关键词：</label>
-        <input type="text" id="keyword" value="默认关键词" disabled />
+        <input type="text" id="keyword" value="科学研究" disabled />
         <button id="edit-btn"><img src="{{ url_for('static', filename='images/edit.svg') }}" alt="Edit"></button>
     </div>
 

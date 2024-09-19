@@ -1,7 +1,7 @@
 
 .paper-tool-container {
-    margin-left: 80px; /* 控制与侧边栏的距离 */
-    padding-top: 20px;
+    margin-left: 20%; /* 控制与侧边栏的距离 */
+    padding-top: 70px;
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -45,7 +45,8 @@
 
 .conversation-textarea,
 .download-textarea {
-    width: 100%;
+    width: 250%;
+    height: 150%;
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;
@@ -54,4 +55,25 @@
 
 #conversation-box {
     display: none; /* 初始隐藏 */
+}
+
+
+
+.upload-box {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.upload-box.drag-over {
+    border-color: #4caf50;
+}
+
+#progressBar {
+    margin-top: 10px;
+    background-color: #ccc;
+    transition: width 0.3s;
 }

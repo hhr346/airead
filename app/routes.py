@@ -1,19 +1,22 @@
 import glob
 import os
 from flask import Flask, render_template, request, jsonify
+from .createByDoc import createByDoc
 import feedparser
 import hashlib
 
 app = Flask(__name__)
 
-# 模拟的用户订阅源数据
-subscription_sources = [
-    {"id": 1, "name": "订阅源1"},
-    {"id": 2, "name": "订阅源2"},
-    # 可以通过后端代码动态添加或更新这个列表
-]
-
 def init_routes(app):
+    UPLOAD_FOLDER = 'data'  # 文件存储位置
+    RSS_FOLDER = 'data/rss'
+    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+    app.config['RSS_FOLDER'] = RSS_FOLDER
+
+    # 确保上传文件夹存在
+    if not os.path.exists(UPLOAD_FOLDER):
+        os.makedirs(UPLOAD_FOLDER)
+
     @app.route('/')
     # 对主页的页面进行路由
     def index():
@@ -62,10 +65,10 @@ def init_routes(app):
         
         # 存储RSS的订阅源的标题
         with open('data/rss_sources.txt', 'a', encoding='utf-8') as f:
-            f.write(f"{rss_hash}--:--{rss_title}\n")
+            f.write(f"{rss_hash}--:--{rss_title}--:--{rss_url}\n")
 
         # 将消息存储到文本文件中
-        with open(f'data/{rss_hash}.txt', 'a', encoding='utf-8') as f:
+        with open(f'data/rss/{rss_hash}.txt', 'a', encoding='utf-8') as f:
             for message in messages:
                 f.write(f"{message['published']}--:--{message['title']}--:--{message['summary']}--:--{message['link']}\n")
 
@@ -81,10 +84,11 @@ def init_routes(app):
         with open('data/rss_sources.txt', 'r', encoding='utf-8') as f:
             for line in f.readlines():
                 parts = line.split('--:--')
-                rss_hash, rss_title = parts
+                rss_hash, rss_title, rss_url = parts
                 sidebar_data.append({
                     "title": rss_title,
-                    "id": rss_hash
+                    "id": rss_hash,
+                    "url": rss_url
                 })
         return jsonify(sidebar_data)
 
@@ -95,7 +99,7 @@ def init_routes(app):
 
         # 读取对应的RSS订阅源消息
         try:
-            with open(f'data/{rss_id}.txt', 'r', encoding='utf-8') as f:
+            with open(f'data/rss/{rss_id}.txt', 'r', encoding='utf-8') as f:
                 for line in f.readlines():
                     parts = line.split('--:--')  # 假设你的数据格式固定
                     if len(parts) == 4:
@@ -122,10 +126,8 @@ def init_routes(app):
     def messages():
         messages = []
         # 读取对应的RSS订阅源消息
-        files = glob.glob(f'data/*.txt')
+        files = glob.glob(f'data/rss/*.txt')
         for file in files:
-            if os.path.basename(file) == 'rss_sources.txt':
-                continue
             try:
                 with open(file, 'r', encoding='utf-8') as f:
                     for line in f.readlines():
@@ -148,3 +150,37 @@ def init_routes(app):
 
         # 渲染模板并传递消息列表
         return render_template('messages.html', messages=messages)
+
+    @app.route('/upload_file', methods=['POST'])
+    def upload_file():
+        if 'file' not in request.files:
+            return 'No file part', 400
+
+        file = request.files['file']
+        if file.filename == '':
+            return 'No selected file', 400
+
+        # 保存文件到指定文件夹
+        # file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
+        file.save(os.path.join(app.config['UPLOAD_FOLDER'], 'process_file.' + file.filename.split('.')[1]))
+        return 'File successfully uploaded', 200
+
+    @app.route('/generate_ppt', methods=['POST'])
+    def generate_ppt():
+        try:
+            # Set your APPId and APISecret (you can use environment variables)
+            APPId = os.getenv('XUNFEI_APPID')
+            APISecret = os.getenv('XUNFEI_APISECRET')
+
+            # Initialize the PPT generation process
+            filepath = os.path.join(app.config['UPLOAD_FOLDER'], 'process_file.pdf')
+            ppt_generator = createByDoc(APPId, APISecret, filepath)
+            
+            # Generate the PPT and get the download link
+            ppt_url = ppt_generator.get_result()
+
+            # Return the PPT download link to the frontend
+            return jsonify({'success': True, 'ppt_url': ppt_url})
+        except Exception as e:
+            print(e)
+            return jsonify({'success': False, 'error': str(e)}), 500

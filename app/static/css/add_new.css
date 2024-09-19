@@ -4,8 +4,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh; /* 使用70%的视口高度 */
-    width: 80vw;
+    height: 90vh; /* 使用70%的视口高度 */
+    width: 100vw;
     text-align: center;
 }
 
