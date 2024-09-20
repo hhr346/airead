@@ -2,6 +2,7 @@ import glob
 import os
 from flask import Flask, render_template, request, jsonify
 from .createByDoc import createByDoc
+from .summarizer import SparkTools
 import feedparser
 import hashlib
 
@@ -58,6 +59,7 @@ def init_routes(app):
             message = {
                 "title": entry.title,
                 "summary": entry.summary if 'summary' in entry else "No summary available",
+                "details": entry['content'][0].get('value', 'No details'),
                 "link": entry.link,
                 "published": entry.published if 'published' in entry else "No date available"
             }
@@ -70,7 +72,8 @@ def init_routes(app):
         # 将消息存储到文本文件中
         with open(f'data/rss/{rss_hash}.txt', 'a', encoding='utf-8') as f:
             for message in messages:
-                f.write(f"{message['published']}--:--{message['title']}--:--{message['summary']}--:--{message['link']}\n")
+                # f.write(f"{message['published']}--:--{message['title']}--:--{message['summary']}--:--{message['link']}\n")
+                f.write(f"{message['published']}--:--{message['title']}--:--{message['details']}--:--{message['link']}\n")
 
         return jsonify({"status": "success", "message": "RSS导入成功"})
 
@@ -184,3 +187,31 @@ def init_routes(app):
         except Exception as e:
             print(e)
             return jsonify({'success': False, 'error': str(e)}), 500
+
+    @app.route('/generate-summary', methods=['POST'])
+    # 论文工具中的总结生成
+    def generate_summary_route():
+        try:
+            # Assume 'uploaded_file_path' is the path where the uploaded PDF is saved
+            paper_tools = SparkTools()
+            uploaded_file_path = os.path.join('data', 'process_file.pdf')
+            summary = paper_tools.generate_summary(uploaded_file_path)  # Call the summarizer function
+            return jsonify({'summary': summary})
+        except Exception as e:
+            print(e)
+            return jsonify({'error': str(e)}), 500
+
+    @app.route('/ask-question', methods=['POST'])
+    # 生成总结后用户可提问
+    def ask_question_route():
+        data = request.get_json()
+        question = data['question']
+        
+        try:
+            paper_tools = SparkTools()
+            # Call the ask_question function from summarizer.py
+            answer = paper_tools.ask_question(question)
+            return jsonify({'answer': answer})
+        except Exception as e:
+            print(e)
+            return jsonify({'error': str(e)}), 500

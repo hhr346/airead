@@ -10,7 +10,7 @@
     <div class="upload-box" id="uploadBox">
         <form id="uploadForm" enctype="multipart/form-data">
             <input type="file" id="fileInput" style="display: none;" multiple>
-            <img src="{{ url_for('static', filename='images/add_box.svg') }}" alt="Upload File" class="upload-image" id="uploadImage">
+            <img src="{{ url_for('static', filename='images/add_box.png') }}" alt="Upload File" class="upload-image" id="uploadImage">
         </form>
         <p>点击加号上传文件或拖拽进行上传</p>
         <p id="fileName"></p> <!-- 显示文件名 -->
@@ -18,16 +18,25 @@
     </div>
     <p id="uploadStatus"></p> <!-- 显示上传状态 -->
 
+
+
     <!-- 论文总结标题 -->
     <h2 class="title">论文总结</h2>
-
     <!-- 生成总结按钮 -->
     <button class="generate-button" id="generate-summary">生成总结</button>
-
-    <!-- AI 对话文本框，默认隐藏 -->
-    <div class="ai-conversation" id="conversation-box" style="display: none;">
-        <textarea placeholder="在这里进行AI对话..." rows="5" class="conversation-textarea"></textarea>
+    <!-- 对话框 -->
+    <div class="chat-box" id="chat-box">
+        <div class="ai-message" id="ai-message">
+            <!-- AI的总结会显示在这里 -->
+        </div>
     </div>
+
+    <!-- 用户输入区 -->
+    <div class="user-input">
+        <textarea id="user-input-text" placeholder="在这里输入问题..." rows="3"></textarea>
+        <button class="send-button" id="send-message">发送</button>
+    </div>
+
 
     <!-- PPT总结标题 -->
     <h2 class="title">PPT总结-智文大模型</h2>
@@ -42,6 +51,7 @@
 </div>
 
 <script>
+    // 生成PPT的脚本和链接生成
     document.getElementById('generate-ppt').addEventListener('click', function() {
         document.getElementById('ppt-download-link').value = 'PPT生成中...';
         
@@ -57,6 +67,44 @@
         .catch(error => {
             document.getElementById('ppt-download-link').value = '出现错误: ' + error;
         });
+    });
+
+    // 生成总结
+    document.getElementById('generate-summary').addEventListener('click', function() {
+        fetch('/generate-summary', {
+            method: 'POST'
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Display the AI-generated summary in the chat box
+            document.getElementById('ai-message').innerHTML = '<p>' + data.summary + '</p>';
+        })
+        .catch(error => console.error('Error:', error));
+    });
+
+    // 对话与发送消息
+    document.getElementById('send-message').addEventListener('click', function() {
+        const userInput = document.getElementById('user-input-text').value;
+        
+        if (userInput) {
+            fetch('/ask-question', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ question: userInput })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Append AI answer and user input to the chat
+                const chatBox = document.getElementById('chat-box');
+                const userMessage = '<div class="user-message"><p>' + userInput + '</p></div>';
+                const aiMessage = '<div class="ai-message"><p>' + data.answer + '</p></div>';
+                chatBox.innerHTML += userMessage + aiMessage;
+                document.getElementById('user-input-text').value = ''; // Clear input field
+            })
+            .catch(error => console.error('Error:', error));
+        }
     });
 </script>
 

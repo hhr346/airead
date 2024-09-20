@@ -1,14 +1,11 @@
 
 .paper-tool-container {
     margin-left: 20%; /* 控制与侧边栏的距离 */
+    margin-bottom: 5%;
     padding-top: 70px;
     display: flex;
     flex-direction: column;
     align-items: left;
-}
-
-.upload-box {
-    margin-bottom: 20px;
 }
 
 .upload-image {
@@ -61,7 +58,8 @@
 
 .upload-box {
     border: 2px dashed #ccc;
-    padding: 20px;
+    padding: 50px;
+    margin-top: 30px;
     width: 300px;
     text-align: center;
     cursor: pointer;
@@ -76,4 +74,62 @@
     margin-top: 10px;
     background-color: #ccc;
     transition: width 0.3s;
+}
+
+
+/* 支持Markdown
+这个宽度自动变得太长太蠢了
+气泡的宽度需要更改左右
+绑定回车按钮
+问题的提交可以先执行 */
+
+.chat-box {
+    border: 1px solid #ccc;
+    padding: 100px;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    width: 125%;
+}
+
+.ai-message, .user-message {
+    margin: 10px 0;
+}
+
+.ai-message p {
+    background-color: #e0f7fa;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.user-message p {
+    background-color: #fff59d;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: right;
+}
+
+.user-input {
+    margin-top: 10px;
+    display: flex;
+    width: 180%;
+}
+
+.user-input textarea {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.send-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #0056b3;
 }
