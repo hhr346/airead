@@ -19,7 +19,6 @@
     <p id="uploadStatus"></p> <!-- 显示上传状态 -->
 
 
-
     <!-- 论文总结标题 -->
     <h2 class="title">论文总结</h2>
     <!-- 生成总结按钮 -->
@@ -34,13 +33,12 @@
     <!-- 用户输入区 -->
     <div class="user-input">
         <textarea id="user-input-text" placeholder="在这里输入问题..." rows="3"></textarea>
-        <button class="send-button" id="send-message">发送</button>
+        <button class="send-button" id="send-message", onclick="sendMessage()">发送</button>
     </div>
 
 
     <!-- PPT总结标题 -->
     <h2 class="title">PPT总结-智文大模型</h2>
-
     <!-- PPT生成按钮 -->
     <button class="generate-button" id="generate-ppt">PPT生成</button>
 
@@ -49,6 +47,7 @@
         <textarea id="ppt-download-link" rows="2" class="download-textarea" placeholder="PPT下载链接将显示在这里..."></textarea>
     </div>
 </div>
+
 
 <script>
     // 生成PPT的脚本和链接生成
@@ -82,30 +81,16 @@
         .catch(error => console.error('Error:', error));
     });
 
-    // 对话与发送消息
-    document.getElementById('send-message').addEventListener('click', function() {
-        const userInput = document.getElementById('user-input-text').value;
-        
-        if (userInput) {
-            fetch('/ask-question', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ question: userInput })
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Append AI answer and user input to the chat
-                const chatBox = document.getElementById('chat-box');
-                const userMessage = '<div class="user-message"><p>' + userInput + '</p></div>';
-                const aiMessage = '<div class="ai-message"><p>' + data.answer + '</p></div>';
-                chatBox.innerHTML += userMessage + aiMessage;
-                document.getElementById('user-input-text').value = ''; // Clear input field
-            })
-            .catch(error => console.error('Error:', error));
+
+    // 对话与发送消息，绑定回车键
+    document.addEventListener('keydown', function(event) {
+        // 检查是否按下了回车键
+        if (event.key === 'Enter') {
+            // 触发函数
+            sendMessage();
         }
     });
+
 </script>
 
 {% endblock %}

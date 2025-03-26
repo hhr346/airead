@@ -1,388 +1,1343 @@
-第７卷 第１期 导航定位学报 Ｖｏｌ．７，Ｎｏ．１
-２０１９年３月 Ｊｏｕｒｎａｌ ｏｆ Ｎａｖｉｇａｔｉｏｎ ａｎｄ Ｐｏｓｉｔｉｏｎｉｎｇ Ｍａｒ．，２０１９
-引文格式：高伟，侯聪毅，许万旸，等 ．室内导航定位技术研究进展与展望［Ｊ］．导航定位学报，２０１９，７（１）：１０－１７．（ＧＡＯ Ｗｅｉ，ＨＯＵ Ｃｏｎｇｙｉ，ＸＵ
-Ｗａｎｙａｎｇ，ｅｔ ａｌ．Ｒｅｓｅａｒｃｈ ｐｒｏｇｒｅｓｓ ａｎｄ ｐｒｏｓｐｅｃｔ ｏｆ ｉｎｄｏｏｒ ｎａｖｉｇａｔｉｏｎ ａｎｄ ｐｏｓｉｔｉｏｎｉｎｇ ｔｅｃｈｎｏｌｏｇｙ［Ｊ］．Ｊｏｕｒｎａｌ ｏｆ Ｎａｖｉｇａｔｉｏｎ ａｎｄ Ｐｏｓｉｔｉｏｎｉｎｇ，２０１９，
-７（１）：１０－１７．）ＤＯＩ：１０．１６５４７／ｊ．ｃｎｋｉ．１０－１０９６．２０１９０１０２．
-室内导航定位技术研究进展与展望
-高 伟，侯聪毅，许万旸，陈 玄
-（天津城建大学 地质与测绘学院，天津 ３００３８４）
-摘要：为了进一步研究室内导航定位的方法和技术，在分析室内定位方法和分类的基础上，总结室内导航定位技术的
-研究进展与应用现状，并对室内定位技术的发展前景和难点进行探讨，最后给出室内定位技术与方法的研究趋势。
-关键词：室内导航；室内定位技术；应用进展
-中图分类号：Ｐ２２８ 文献标志码：Ａ 文章编号：２０９５－４９９９（２０１９）０２－００１０－０８
-Ｒｅｓｅａｒｃｈ ｐｒｏｇｒｅｓｓ ａｎｄ ｐｒｏｓｐｅｃｔ ｏｆ ｉｎｄｏｏｒ ｎａｖｉｇａｔｉｏｎ ａｎｄ ｐｏｓｉｔｉｏｎｉｎｇ ｔｅｃｈｎｏｌｏｇｙ
-ＧＡＯ Ｗｅｉ，ＨＯＵ Ｃｏｎｇｙｉ，ＸＵ Ｗａｎｙａｎｇ，ＣＨＥＮ Ｘｕａｎ
-（Ｓｃｈｏｏｌ ｏｆ Ｇｅｏｌｏｇｙ ａｎｄ Ｇｅｏｍａｔｉｃｓ，Ｔｉａｎｊｉｎ Ｃｈｅｎｇｊｉａｎ Ｕｎｉｖｅｒｓｉｔｙ，Ｔｉａｎｊｉｎ ３００３８４，Ｃｈｉｎａ）
-Ａｂｓｔｒａｃｔ：Ｉｎ ｏｒｄｅｒ ｔｏ ｆｕｒｔｈｅｒ ｓｔｕｄｙ ｏｎ ｔｈｅ ｍｅｔｈｏｄｓ ａｎｄ ｔｅｃｈｎｏｌｏｇｙ ｏｆ ｉｎｄｏｏｒ ｎａｖｉｇａｔｉｏｎ ａｎｄ ｐｏｓｉｔｉｏｎｉｎｇ，ｔｈｅ ｐａｐｅｒ ｓｕｍｍａ－
-ｒｉｚｅｄ ｔｈｅ ｒｅｓｅａｒｃｈ ｐｒｏｇｒｅｓｓ ａｎｄ ａｐｐｌｉｃａｔｉｏｎ ｓｔａｔｕｓ ｏｆ ｉｎｄｏｏｒ ｎａｖｉｇａｔｉｏｎ ａｎｄ ｐｏｓｉｔｉｏｎｉｎｇ ｔｅｃｈｎｏｌｏｇｙ ｂａｓｅｄ ｏｎ ｔｈｅ ａｎａｌｙｓｉｓ ｏｆ ｉｎｄｏｏｒ
-ｐｏｓｉｔｉｏｎｉｎｇ ｍｅｔｈｏｄｓ ａｎｄ ｃｌａｓｓｉｆｉｃａｔｉｏｎ，ａｎｄ ｄｉｓｃｕｓｓｅｄ ｔｈｅ ｄｅｖｅｌｏｐｍｅｎｔ ｐｒｏｓｐｅｃｔ ａｎｄ ｄｉｆｆｉｃｕｌｔｉｅｓ ｏｆ ｔｈｅ ｔｅｃｈｎｏｌｏｇｙ．Ｆｉｎａｌｌｙ，ｔｈｅ
-ｒｅｓｅａｒｃｈ ｔｒｅｎｄ ｏｆ ｉｎｄｏｏｒ ｐｏｓｉｔｉｏｎｉｎｇ ｔｅｃｈｎｏｌｏｇｙ ａｎｄ ｍｅｔｈｏｄｓ ｗａｓ ｇｉｖｅｎ．
-Ｋｅｙｗｏｒｄｓ：ｉｎｄｏｏｒ ｎａｖｉｇａｔｉｏｎ；ｉｎｄｏｏｒ ｐｏｓｉｔｉｏｎｉｎｇ ｔｅｃｈｎｏｌｏｇｙ；ａｐｐｌｉｃａｔｉｏｎ ｐｒｏｇｒｅｓｓ
-者为了提高精度采取组合定位的方法。但是由
-０ 引言
-于多路径效应影响，室内环境易变、复杂，尚
-室内导航与定位系统是指在各种室内空间 未有一种普适的解决方案；所以如何提升精度、
-中采用不同技术来实现人员室内导航以及对人 实时性、安全性，提高可扩展能力，降低成本
-员、物体的定位与跟踪。随着物联网技术的发 仍然是研究的热点，使得人们无论在生活还是
-展，人员、物体在经济行为、个人活动、军事 工作环境中可以随时随地获取位置信息，享受
-等应用领域的定位需求越来越多。在室外有全 基于位置服务带来的便捷。
-球卫星导航系统（ｇｌｏｂａｌ ｎａｖｉｇａｔｉｏｎ ｓａｔｅｌｌｉｔｅ ｓｙｓ－ 本文在综述国内外室内导航定位技术的研究
-ｔｅｍ，ＧＮＳＳ），是一种普适且成熟的方案可以让 进展与应用现状的基础上，对室内定位技术的发
-人们在室外实现导航与定位；但是在室内空间 展趋势和难点进行分析与探讨，结合自己的思考，
-越来越庞大的今天，各个工厂车间、大型购物 给出室内定位方法与技术的研究趋势。
-商城、办公楼、地铁站的不断建设，基于室内
-１ 方法与分类
-的导航与定位对人员、物体的安全与监测是必
-不可少的，人们在室内环境中的位置服务需求 １．１ 方法
-已经日趋显著，国内外学者进行了大量探索与 多数室内定位技术的原理是根据接收设备对
-研究。目前室内导航定位系统大都基于临近探 信号的接收，从而判断接收机与已知信号点的相
-测、三角、多边定位、指纹定位法来实现，或 对距离。另外，利用特征比对和定位对象对信号
-收稿日期：２０１８－０７－０６
-第一作者简介：高伟（１９６８—），男，山东宁阳人，博士，教授，研究方向为卫星导航和室内定位。第１期 高 伟，等．室内导航定位技术研究进展与展望 １１
-的遮蔽也是常用的技术方法［１］。主要室内定位方法 的对比与分析如表１所示。
-表１ 主要室内定位方法对比
-定位方法 应用案例 优点 缺点
-邻近探测法 基站定位 布设成本低，易于搭建 只能提供大概的定位信息，精度依赖于参考点的分布密度
-质心法 基站定位 计算量小 精度取决于信标的布设密度
-极点法 激光扫描 使用方便 应用不广泛
-三角定位法 蓝牙定位 原理简单 设备复杂度比较高，定位效果不太理想
-多边定位法 超声波定位 精度较高，应用广泛 可扩展性不高
-航位推算法 惯性导航 数据稳定 时间累积误差，定位精度逐渐变差
-指纹法 地磁定位 不太需要参考点，精度比较高 工作量极其大，可扩展性不高
-遮蔽法 基站定位 高精度定位 成本太高
-表１中列举了基于室内环境的各种定位方法与 移动站和基站２个部分组成。先有 Ｏｌｉｖｅｔｔｉ研究
-特点，其中基于航位推算法和指纹法的改进算法研 实验室，然后由剑桥ＡＴ＆ＬＴ实验室开发的Ａｃ－
-究颇多：文献 ［２］提出了一种用室内地图来消除行 ｔｉｖｅ Ｂａｄｇｅ系统是比较经典的应用红外线技术的
-人航位推算过程中漂移误差的定位方法；文献 ［３］ 系统［１２］，适用于中小型房间，定位精度平均可
-的ＤＲＥＤＲ（ｄｅａｄ－ｒｅｃｋｏｎｉｎｇ ｅｎｈａｎｃｅｄ ｗｉｔｈ ａｃｔｉｖｉｔｙ 达６ｍ。红外线发射器携带轻便，但是红外线穿
-ｒｅｃｏｇｎｉｔｉｏｎ）室内定位方法是针对行人航位推算法中 透力差，不能穿透固体墙壁，它们只能提供房
-漂移误差的累积提出的，利用零速度更新技术对每 间级的位置传感功能［１３］；且传播只有几米的有
-一步操作结果进行校正［４］；文献 ［５］提出了在指纹 效范围，容易受到光照或者荧光灯的影响而产
-法的基础上将确定型算法和概率分布算法结合的新 生盲区，定位效果不理想［１４］。因此红外线定位
-方法，该方法可以减小算法空间复杂度；文献 ［６］
-技术主要是跟其他技术组合来实现室内定位；
-提出了改进的位置指纹定位算法，可以较好地滤除
-利用手机红外线ＬＥＤ来实现室内定位是当前研
-噪声干扰、优化定位阶段的估算坐标，从而提高准
-究的热点。
-确性，有更高的精度、稳定性。
-２）超声波定位
-１．２ 分类 超声波技术采用的测距方法大都是反射式测
-文献 ［７］于２００１年提出了室内定位分类体 距法，通过计算时间差从而得到待测距离。当然，
-系，其中根据定位的位置类型、定位的覆盖范围、 也可以采用单向测距法直接测定超声波发生到被
-精度、所用信号，以及绝对／相对定位、主动／被 测物体的距离。这２种方法一般都是采用多边定位
-动定位进行分类，为了让位置服务开发者更全方 等方法来确定被测物体位置。
-位地去了解它们的性能。文献 ［８］提出了３种分 １９９７年开发的 Ａｃｔｉｖｅ Ｂａｔ系统［１５］就是基于超
-类方法：基于位置感知技术、基于信号测量技术、 声波技术，比以红外线定位为基础的Ａｃｔｉｖｅ Ｂａｄｇｅ
-基于传感器类型的分类。文献 ［９］又依据定位算 系统定位精度要高，定位精度达到３ｃｍ。２０００年
-法分成基于几何、指纹定位法、成本最小化、贝 麻省理工学院在 Ａｃｔｉｖｅ Ｂａｔ系统基础上改造成的
-叶斯技术法。文献 ［１０］按照定位方式分成卫星、 Ｃｒｉｃｋｅｔ室内定位系统［１６］，不需要布置固定传感
-基站、感知定位３类。文献 ［１１］提出可以按照定 器，而是利用超声波的传输时间和射频控制信号，
-位原理和传输信号的不同进行分类，同时武汉大 最终实现三维定位。在硬件布设方面超声波定位
-学陈锐志教授还根据定位源的不同进行分类。这 技术要求比较高，所以成本比较高，不过其结构
-些分类研究促进了室内定位技术的发展。 简单、定位精度高，平均能达到厘米级［１３］。
-２ 研究进展
-３）惯性导航定位
-惯性导航定位是利用惯性传感器如加速度计、
-２．１ 基于传感器的室内定位技术 陀螺仪或磁力计采集物体的一些参数信息［１７］，从
-１）红外线定位 而确定位置信息。一般采用航位推算法，已广泛
-红外线定位系统一般由装有红外发射器的 应用于一些军事安全领域，传感器质量和传感器１２ 导航定位学报 第７卷
-的安放位置影响着其定位精度［１８］。 位因其低成本而成为受众广泛的技术，百度、高
-文献 ［１９］基于惯性器件构建了一套适用于 德、ＷｉＦｉＳＬＡＭ、Ｓｅｎｓｅｗｈｅｒｅ、图聚智能等一些
-军警的定位系统，并且建设性地提出了用户之间 公司都投身其中。其定位的优势在于无需额外的
-联合定位的想法；但是惯性导航定位技术带来的 设备，部署成本低、功耗低，用户随时随地就能
-累积误差的影响无法忽略，所以一般和其他定位 使用手机开启 ＷｉＦｉ、蜂窝网络，定位成本低、适
-系统结合来实现高精度定位。比如前期使用无线 用性强，所以最早实现了规模化。
-局域网络（ｗｉｒｅｌｅｓｓ ｌｏｃａｌ ａｒｅａ ｎｅｔｗｏｒｋｓ，ＷＬＡＮ） ＷｉＦｉ室内定位技术一般分２种：一种是基于
-定位系统来为其提供初始化和矫正的方法，或者 接收信号强度指示（ｒｅｃｅｉｖｅｄ ｓｉｇｎａｌ ｓｔｒｅｎｇｔｈ ｉｎｄｉｃａ－
-在无缝定位研究与应用中，惯性导航定位系统常 ｔｉｏｎ，ＲＳＳＩ）距离交会的定位方法，由于在不同的
-常与ＧＮＳＳ系统结合定位［２０］。还有目前微机电系 环境的条件下信号衰减和距离的关系都有改变，
-统（ｍｉｃｒｏ ｅｌｅｃｔｒｏ ｍｅｃｈａｎｉｃａｌ ｓｙｓｔｅｍ，ＭＥＭＳ）日趋 结果达不到理想的精度；另一种是基于ＲＳＳＩ位置
-成熟，基于智能手机平台的加速度计、陀螺仪、 指纹法，信号的匹配是其研究的主要部分，定位
-倾斜仪、气压计和磁力计等这些低成本运动传感 精度在于校准点密度，不需要部署过多硬件设施，
-器都可用于行人航迹推算（ｐｅｄｅｓｔｒｉａｎ ｄｅａｄ ｒｅｃｋｏｎ， 是目前用得较多的 ＷｉＦｉ定位方法。由 Ｍｉｃｒｏｓｏｆｔ
-ＰＤＲ）。目前，ＰＤＲ 跟地磁匹配或与无线保真 公司开发的 ＲＡＤＡＲ室内定位系统，在空旷的室
-（ｗｉｒｅｌｅｓｓ ｆｉｄｅｌｉｔｙ，ＷｉＦｉ）的融合越来越受到重视。 内环境中精度可达到２～５ｍ［２７］。ＨＯＲＵＳ系统提
-４）视觉定位 高精度的方法是以无线信号数据的概率模型作为
-日本在视觉领域的研究是世界领先的，相对 定位特征参数，但前期需要大量的指纹采集作为基
-来说中国起步比较晚，计算机视觉常用于机器人 础来确定准确的指纹概率分布［２８］。Ｍｏｌｅ、ＥＰＥ系统
-定位，机器人安装摄像机拍摄附近环境，根据所 虽然精度可以达到要求，但是算法极其复杂，所以
-拍摄图像处理与分析相关数据并进行机器人定 满足不了定位的快速性。另外，美国的 ＷｉＦｉＳＬＡＭ
-位［２１］。视觉定位的方式有很多种：基于手机设备 和我国的 “翼周边”等系统对数据库的运行和维护
-的单目摄像头多数用的定位方法是图像匹配；而 要求高，一般用在重要地点的布设［２９］。随着定位方
-基于相机交会的定位方法主要依据密度匹配和运 案的不断改进，２０１０年微软研究院在 ＷｉＦｉ技术支
-动恢复结构（ｓｔｒｕｃｔｕｒｅ ｆｒｏｍ ｍｏｔｉｏｎ，ＳＦＭ）的原 持下又提出了一种基于ＥＺ算法的室内定位系统，
-理，第一步基于众包图像的图像特征库的建立， 该系统不需要前期大量的调研，只需在比较强大的
-发现和求解显著图像的特征目标，第二步基于单 中心处理器上进行大量复杂的计算［３０］。
-张照片的相机交会定位系统，这种方法相对复
-２）蓝牙（Ｂｌｕｅｔｏｏｔｈ）和紫蜂（ＺｉｇＢｅｅ）定位
-杂［２２］。计算机视觉定位技术的优势在于信号探测
-蓝牙定位和ＺｉｇＢｅｅ定位技术二者均基于短距
-范围宽、获取信息完整等，但是相对而言对处理
-离低功耗通讯协议，实现的方法可以是质心定位
-器的要求更高［２３］。
-法、指纹定位和邻近探测法；且二者都具有功耗
-ＥａｓｙＬｉｖｉｎｇ系统是基于计算机视觉的定位系统，
-低，近距离、运用广泛等优点，但同时稳定性差、
-采用高性能的照相机，准确性比较高；但当室内环
-受环境干扰大。
-境复杂时，很难一直保持高精度［１３］。通过移动机器
-蓝牙定位技术是根据测量信号强度进行定位，
-人同步定位和制图（ｓｉｍｕｌｔａｎｅｏｕｓ ｌｏｃａｔｉｏｎ ａｎｄ ｍａｐ－
-苹果公司开发了一个基于低功耗的精确的微定位
-ｐｉｎｇ，ＳＬＡＭ）的原理，可以引入视觉传感器［２４］。文
-技术ｉＢｅａｃｏｎ，我国的 “寻鹿”定位系统也使用该
-献 ［２５］通过基于参考图像使用低分辨率相机实现 模式进行定位。２０１６年发布的蓝牙５．０协议将为
-ＳＬＡＭ算法，从而精度可以到亚米级。２０１２年提出
-实现高精度室内定位提供技术支持［３１－３２］。目前蓝
-的ＥＶ－Ｌｏｃ室内定位系统是一个以视觉信号作为辅
-牙技术较多使用的指纹定位法，其改进的方法也
-助定位来提高精度的定位系统［２６］。基于视觉定位原
-大都基于这个方法。ＺｉｇＢｅｅ室内定位的实现是通
-理的谷歌视觉定位服务（ｖｉｓｕａｌ ｐｏｓｉｔｉｏｎｉｎｇ ｓｅｒｖｉｃｅ， 过每个盲节点之间相互协调通信［１］，基于的方法是
-ＶＰＳ）技术，其理论精度可达厘米级别。
-邻近探测法。目前ＺｉｇＢｅｅ定位技术通过模糊聚类
-２．２ 基于射频信号的室内定位技术 等方法改进，定位精度可达到米级［１４］。
-１）ＷｉＦｉ定位 ３）蜂窝网络定位
-人们的生活已经被无线局域网包围，ＷｉＦｉ定 蜂窝网络定位主要用于智能手机的定位，依第１期 高 伟，等．室内导航定位技术研究进展与展望 １３
-靠检测传播信号的特征参数来实现定位，常用的 公司的ＵＷＢ实时定位系统产品工作频段为５．８～
-定位方法有邻近探测法、以及基于观测到达时间 ７．２ＧＨｚ，采用的方法为多边定位法和三角定位
-差（ｏｂｓｅｒｖｅｄ ｔｉｍｅ ｄｉｆｆｅｒｅｎｃｅ ｏｆ ａｒｒｉｖａｌ，ＯＴＤＯＡ） 法，定位精度可达１５ｃｍ。ＤｅｃａＷａｖｅ研发的Ｓｃｅｎ－
-来实现定位。该定位技术的优势在于可以形成普 Ｓｏｒ系列无线室内定位芯片，其中产品中最小的定
-适化的室内定位方案，但缺点是由于受系统设计、 位误差在１０ｃｍ以内，但是由于其成本比较高，所
-时间同步精度差等影响，精度一般较低，约为 以还未得到广泛的应用［３８］。为了更好地优化室内
-５０～３００ｍ［３３］。爱立信公司采用ＯＴＤＯＡ的方法达 定位服务，超宽带技术与ＲＦＩＤ技术的结合可用于
-到５０ｍ 的精度［３４］。有的采用多天线 ＭＩＭＯ＋ 室内精确定位。
-ＴＤＯＡ技术，定位精度可达５～１０ｍ［３１］。未来的 ２．３ 融合定位技术
-发展如基于５Ｇ通信网络的技术有望达到更高的 不同传感器进行位置信息融合，称为融合定
-精度。 位。融合多种定位技术进行室内定位是目前研究
-４）射频识别定位 的热点。武汉大学的陈锐志教授把融合定位方法
-射频识别技术（ｒａｄｉｏ ｆｒｅｑｕｅｎｃｙ ｉｄｅｎｔｉｆｉｃａｔｉｏｎ， 分为紧耦合和松耦合［２２］，北京邮电大学的邓中亮
-ＲＦＩＤ）是一种利用射频信号实现对物体的自动识别 教授提出室内融合 ＷｉＦｉ、蓝牙、惯性、视觉等多
-并获得相关信息的技术。ＲＦＩＤ技术是二战时被英 种手段创建多元紧耦合定位模型，同时结合室外
-国用来识别飞机作为雷达改进的一部分，结合智 的ＧＮＳＳ实现大型建筑物内外人的 “米”级无缝
-能传感器技术，ＲＦＩＤ技术已成为物联网核心技 定位［３３］。把多种技术的优势结合以达到更高的精
-术［３５］。其具有辐射距离远、可以绕过障碍物传输、 度从而提高定位的鲁棒性，是融合定位的一大
-设备低成本、高可携性、易维护性、定位精度高 优势。
-等特点，但是作用距离短、接收信号强度可能不 现有的室内定位融合研究方案有多种。文献
-稳定。 ［３９］提出结合 ＷｉＦｉ、磁场强度和蜂窝信号来构建
-具有代表性的ＲＦＩＤ系统定位系统有微软公司 混合定位系统。文献 ［４０］中 ＷｉＦｉ测量结合ＰＤＲ
-的ＲＡＤＡＲ系统［３６］，是基于ＲＳＳＩ测量的室内定位 来实现更高的准确性。文献 ［４１］使用蓝牙ＲＳＳＩ
-解决方案，不过易扩展性不高因其对环境有很大 测量和智能手机上的加速度计和气压计进行融合
-的依赖性。华盛顿大学的ＳｐｏｔＯＮ系统［３７］是运用 室内三维定位。文献 ［４２］实现了地磁场定位和
-聚合算法进行反复的迭代计算，但是其计算量极 惯性传感器结合的方案，提供不需要基础设施的
-其大。密歇根州立大学提出的基于主动射频识别 可靠的定位方法。文献 ［４３］提出只根据自身携
-校验的动态识别系统（ｌｏｃａｔｉｏｎ ｉｄｅｎｔｉｆｉｃａｔｉｏｎ ｂａｓｅｄ 带的惯性测量单元（ｉｎｅｒｔｉａｌ ｍｅａｓｕｒｅｍｅｎｔ ｕｎｉｔ，
-ｏｎ ｄｙｎａｍｉｃ ａｃｔｉｖｅ ＲＦＩＤ ｃａｌｉｂｒａｔｉｏｎ，ＬＡＮＤ－ ＩＭＵ）、气压计、超声波、摄像头，采用开发粒子
-ＭＡＲＣ），其算法的核心是通过邻近法来实现定 滤波的方法而不需要基础设施进行融合，实验结
-位；之后的研究者们在此算法基础上进行了很多 果精度可达到３ｍ。这些都可以说明不论是稳定性
-改进。目前，科研人员对算法的研究一直持续， 还是精度方面，融合后的定位系统均优于单一的
-从而使得射频识别技术日趋成熟。 定位系统。
-５）超宽带定位 ２．４ 其他定位技术
-超宽带（ｕｌｔｒａ ｗｉｄｅｂａｎｄ，ＵＷＢ）定位在美国空
-地磁定位技术确定室内位置是利用室内环境
-军中最早得到应用，到２００２年，美国ＦＣＣ才通过 中不同点位地磁场强度不同的特点，与 ＷｉＦｉ指纹
-了超宽带定位可以运用于民用的提案。其具有结 方法相似。芬兰奥卢大学的ＩｎｄｏｏｒＡｔｌａｓ是应用地磁
-构简单、实现成本低、发射信号功耗低、信号的 定位技术的代表系统，精度可达到０．１～２ｍ［１７］。
-穿透力强、安全性高、信号速率高，具大通信通 ＮＦＣ技术是通过距离接近的方法来实现定位的，
-道容量等优点，且定位精度可以达到厘米级别。 通过布设感应标签，得知感应标签的位置从而确
-ＵＷＢ相对于其他的无线通信技术，很容易做到定 定移动设备的位置，优势在于简单快速，劣势在
-位与通信互为一体，所以比较适合繁杂的室内 于无法感知行人在各个标签之间的状态，要实现
-空间。 广域覆盖必须跟运动传感器融合［２２］。ＬＥＤ可见光
-在应用研发方面，芯片Ｄｒｉｖｅｒ２和Ａｅｔｈｅｒ５具 通信采用的主要技术有相机技术、图像捕获技术、
-有体积小、穿透力强、功耗低等优点。Ｕｂｉｓｅｎｓｅ 移动终端等。基于终端的ＬＥＤ光定位技术是该领１４ 导航定位学报 第７卷
-域的研究热点，主要有光网技术以及多模式融合 提供有效的定位监护。在幼儿园中设立电子围栏，
-技术。Ｂｙｔｅｌｉｇｈｔ定位系统就是基于对光源调制特 实时把数据以消费推送的方式发送给家长，这样
-定光信号来实现定位的，可达米级的定位精度［４４］， 家长可以通过智能手机移动终端 ＡＰＰ了解孩子的
-Ｕｂｅａｃｏｎ系统也是采用ＬＥＤ定位研发的。多用户 行程轨迹从而知晓孩子的安全状态。在医院中，
-协同定位指用户之间通过接受信号强度进行互相 室内定位服务通过配置连入网络的 ＷｉＦｉ有源标签
-测量，从而获取相互距离，可以把信息利用得更 可以动态监测医院贵重设备，查询设备类型、数
-充分，稳定性更好［４２］。 量、状态；同时让一些特殊病人携带指标监视器，
-２．５ 室内定位技术精度对比分析 如果病人发生突发状况，医生能够第一时间知道
-其位置，有效开展救援。在监狱中需要知道犯人
-室内定位技术精度对比分析如表２所示。
-是否在其应该在的活动区域，室内定位服务可为
-表２ 室内定位技术对比
-监狱管理人员提供犯人的行为轨迹。
-技术 精度 功耗 覆盖范围
-３）在应急安全救援中的应用
-ＷｉＦｉ接收信号强度的距离 １０～２０ｍ 高 覆盖广
-当发生一些无法控制的紧急事件时，消防人
-交会法
-ＷｉＦｉ接收信号强度的位置 １～５ｍ 高 小范围覆盖 员在烟雾弥漫且复杂的室内很难准确开展救援，
-指纹法 此时室内导航定位的作用就会凸显出来：由于基
-射频识别 ０．０５～５ｍ 低 １５０ｍ
-于射频信号的技术瘫痪，大多数情况可应用惯性
-超宽带技术 ６～１０ｃｍ 低 １５０ｍ
-导航技术来确定人员位置；一般消防员身上携带
-低功耗蓝牙技术 ＜１０ｍ 低 １２０ｍ
-有传感器，以便观察消防人员的位置、身体状况，
-ＺｉｇＢｅｅ技术 １～２ｍ 低 １５０ｍ
-及时对消防员实施路线指令，可以更好地开展救
-红外线技术 ５～１０ｍ 高 １５ｍ
-援，保障人员安全。文献 ［４６］分析了在应急逃
-超声波技术 １～１０ｃｍ 低 ２１０ｍ
-生导航路径规划方面的常用算法，然后提出了基
-视觉定位 ０．０１～１ｍ 高 １１０ｍ
-于优化模型的路径规划算法，并验证了其优越性。
-惯性导航 ２～１０ｍ 中等 广泛适用
-４）在大型室内旅游景点的应用
-在博物馆、画展、图书馆这些人群密集的场
-３ 应用进展
-所，可以在人们常驻足的地方布置ＲＦＩＤ有源标签
-等设备［４７］，当游客携带导游设备走进该点时，通
-室内导航与定位技术已经逐渐应用于经济社
-会、国防和人类的日常生活中，随着对其进一步 过识别ＲＦＩＤ标签可对不同游客的游览路线进行分
-的深入研究和应用拓展，其应用将渗透到人类社 析得到不同的解说信息，并且根据停留时间感知
-会与生活的方方面面。 游客感兴趣的画作，并向其推荐更详细的内容，
-１）在企业管理中的应用 同时也可以进行导航服务，让游客获得更好的游
-各种类型的厂矿企业，其内部均包含庞大的 览体验。也可以采用无源定位导航技术方案，如
-设施以及复杂的室内空间，需要对人员安全、设 文献 ［４８］提出的 ＱＲ－Ｃｏｄｅ方案，用户直接可以
-施安全、移动物体的运动轨迹、产品制造安全等 通过手机扫码功能扫描附近的 ＱＲ－Ｃｏｄｅ来获得游
-方面进行严格的管理与监控。首先采用基于邻近 览路线，从而全面提高导览服务水平。
-探测法自动识别系统对员工的上下班时间进行记 ５）在智慧养老服务中的应用
-录，然后通过ＺｉｇＢｅｅ传感器技术，在室内环境中 通过智慧养老云中心将服务需求方与提供方
-布置参考节点，接受参考节点的信号强度来获取 连接起来，通过安装在老人身上的指标监视器，
-员工自身位置从而记录员工所在位置的变化，同 可以及时了解身体的各项指标，实时将生理指标
-时ＲＥＩＤ人员定位系统结合门禁系统，可以有效管 参数传到养老服务中心的电脑上，通过给老人配
-理不同权限人员进出相应的区域［４５］，这对于员工 置智能手机、智能腕表、定位传感器等，来实现
-内部的管理是相当重要的。同时可对所有设备安 定位以及紧急救助。当老人离家外出时，发送实
-装ＲＦＩＤ电子标签，通过识别器对物品进行动态监 时的位置信息给照顾者，减少老年人走丢的概率，
-控，以实现自动化的安全管理。 方便家人和社区服务人员对老人的照顾。
-２）对特殊人群的监护服务 ６）在物品管理和运输中的应用
-室内导航定位技术可对幼儿、病人和犯人等 生活中对物品也可以进行定位服务，在大型第１期 高 伟，等．室内导航定位技术研究进展与展望 １５
-仓库中，对物品的分类及寻找极其重要，可以在 单一的缺点，通过集成技术提供更可靠和更准确
-不同种类的物品上安置传感器，并且实时更新这 的位置［３５］。目前已有一些定位源的融合，平均精
-些数据，这样分拣员根据手持终端可以快捷方便 度达到２～５ｍ。但是要想实现高精度、低成本、
-地找到物品，提高工作效率。文献 ［４９］用ＰＤＣ 实时性强和广域覆盖的室内定位技术，仍然需要
-算法，加入物品自动分拣功能，完成ＲＦＩＤ仓库物 寻求新的完整解决方案［２２］。为确保它的可靠性和
-流管理系统实现。所以从物品的整理到运输以及 稳定性，还需要权威性的标准来促进室内定位技
-后续的防盗问题，室内导航与定位服务都可发挥 术的发展。
-非常重要的作用。 ２）低功耗优化
-通过对技术的低功耗优化，可以避免产生额
-４ 面临的挑战与发展趋势
-外功耗，节省时间、提高效率。苹果公司采用的
-４．１ 室内导航定位面临的挑战 ｉＢｅａｃｏｎ，因其低功耗蓝牙技术而受到广大关注，
-室内导航定位技术的研究与应用虽然迅猛， 可避免用户开启定位功能而产生额外的高功耗，
-但仍面临很多挑战。 从而用户随时随地都能享受定位服务。通过分出
-１）动态性太强 特定的处理器来处理分析室内定位运动数据，降
-室内环境容易发生变化，比如因为重新装修 低使用其应用处理器，达到降低功耗的目的［３２］；
-导致商场里整个格局会发生变化，或者是简单的 预计未来低功耗蓝牙室内技术将获得更加广泛的
-一些桌子的移动都会影响室内定位的精度。如何 应用。
-能让其对环境的自适应能力增强、实现数据信息 ３）寻找新的定位源和定位方法
-库的自动更新，是室内定位的挑战和难点。 依靠传统定位源的定位只能达到２～５ｍ的精
-２）成本和复杂性较高 度，所以未来寻求新的定位源来实现高精度定位，
-一些技术必须要有配套的基础设备来提供技 探索新的基于视觉、音频信号和射频信号的技术
-术支撑，还要匹配定位终端设备才能发挥作用， 来进行研究是实现更高精度定位的方向［２２］。在算
-同时前期需要采集数据库作为支撑，需要大量的 法上可以把其他领域的一些成熟算法引入进来，
-人力和物资以及后期的维护，这限制了室内定位 如神经网络、遗传算法等，可以增强室内定位的
-技术的推广和普及。 精度和稳定性［４７］。
-３）可扩展性不高 ４）重点突破５Ｇ网通信网络的室内定位
-有很多的室内定位处理方案是针对特定的环 全球５Ｇ时代即将来临，我国在推进５Ｇ方面
-境提出的针对性方案，所以可扩展性比较低，不 也属于领跑地位，５Ｇ的发展为室内定位技术的研
-能很好地应用于其他的环境中［３２］。 究提供更好的技术支撑。未来的５Ｇ网络会大大提
-４）用户终端供电能力有限 高移动终端的通信带宽，具备多天线、密集组网
-对于使用电池的移动设备来讲，室内定位所 等优点，可为实现１ｍ以内精度提供技术支撑［３１］，
-产生的功耗对用户来说影响很大，智能手机虽说 为实现室内外无缝定位提供支持。
-性能越来越高，不过还要满足其他的一些主流功 ５）注重室内定位数据安全与隐私问题
-能，所以定位功能只占据小部分，如果开启定位
-关于 ＷｉＦｉ中的个人隐私问题引起了很多人的
-功能而使设备电池消耗过快，那么用户可能就不
-重视，如何能保证在不侵犯用户隐私的情况下对
-会开启，这样就限制了用户的使用。
-终端周围的 ＷｉＦｉ热点进行采集是目前急需解决的
-４．２ 室内导航定位发展趋势 问题，同时在人工智能和大数据下，人们通过智
-室内导航定位技术的发展日新月异，但仍存 能设备得到的位置信息是否会被泄露，定位服务
-在很多难题急需解决，未来仍有很多理论与技术 的安全性是否可以得到保障，是未来的重要研究
-方法需要深入研究和探讨。 方向。
-１）寻找新的多技术融合方案以及信息融合算
-５ 结束语
-法的优化
-开发低成本、可靠的室内定位系统的一个新 室内导航定位技术的研究日益得到关注和重
-兴解决方案是使用混合系统，多个传感器和多个 视，其应用逐渐得到普及，未来智能城市的建设
-技术集成可以优势并存，从而弥补单个技术比较 等都将离不开室内导航定位技术，未来发展精度１６ 导航定位学报 第７卷
-性高、成本低、普适性的室内导航定位技术以及 内导航定位技术的发展趋势和难点进行了分析与
-实现室内外无缝导航定位始终是国内外研究的热 探讨，结合自己的研究与思考，给出了室内导航
-点与难点。本文从室内导航定位方法出发，对室 定位技术与方法的研究趋势。
-参考文献
-［１］ 刘梦君，曾帅．室内定位导航技术［Ｊ］．科技展望，２０１７，２７（６）：１４０－１４１．
-［２］ ＤＡＮＧ Ｃ，ＳＥＺＡＫＩ Ｋ，ＩＷＡＩ Ｍ．ＤＥＣＬ：ａ ｃｉｒｃｕｌａｒ ｉｎｆｅｒｅｎｃｅ ｍｅｔｈｏｄ ｆｏｒ ｉｎｄｏｏｒ ｐｅｄｅｓｔｒｉａｎ ｌｏｃａｌｉｚａｔｉｏｎ ｕｓｉｎｇ ｐｈｏｎｅ ｉｎｅｒｔｉａｌ
-ｓｅｎｓｏｒｓ［Ｃ］／／Ｔｈｅ Ｉｎｓｔｉｔｕｔｅ ｏｆ Ｅｌｅｃｔｒｉｃａｌ ａｎｄ Ｅｌｅｃｔｒｏｎｉｃ Ｅｎｇｉｎｅｅｒｓ（ＩＥＥＥ）．Ｐｒｏｃｅｓｓｉｎｇ ｏｆ ２０１４ ７ｔｈ Ｉｎｔｅｒｎａｔｉｏｎａｌ Ｃｏｎｆｅｒｅｎｃｅ
-ｏｎ Ｍｏｂｉｌｅ Ｃｏｍｐｕｔｉｎｇ ａｎｄ Ｕｂｉｑｕｉｔｏｕｓ Ｎｅｔｗｏｒｋｉｎｇ（ＩＣＭＵ）．Ｓｉｎｇａｐｏｒｅ：ＩＥＥＥ，２０１４：１１７－１２２．
-［３］ ＴＲＫ Ａ，ＮＡＧＹ Ａ，ＫＯＶＡＴＳ Ｌ，ｅｔ ａｌ．ＤＲＥＡＲ－ｔｏｗａｒｄｓ ｉｎｆｒａｓｔｒｕｃｔｕｒｅ－ｆｒｅｅ ｉｎｄｏｏｒ ｌｏｃａｌｉｚａｔｉｏｎ ｖｉａ ｄｅａｄ－ｒｅｃｋｏｎｉｎｇ ｅｎ－
-ｈａｎｃｅｄ ｗｉｔｈ ａｃｔｉｖｉｔｙ ｒｅｃｏｇｎｉｔｉｏｎ［ＥＢ／ＯＬ］．［２０１８－０３－２７］．ｈｔｔｐｓ：／／ｗｗｗ．ｒｅｓｅａｒｃｈｇａｔｅ．ｎｅｔ／ｐｕｂｌｉｃａｔｉｏｎ／２７０７９３４１８＿
-ＤＲＥＡＲ－＿Ｔｏｗａｒｄｓ＿Ｉｎｆｒａｓｔｒｕｃｔｕｒｅ－＿ｆｒｅｅ＿Ｉｎｄｏｏｒ＿Ｌｏｃａｌｉｚａｔｉｏｎ＿ｖｉａ＿Ｄｅａｄ－＿Ｒｅｃｋｏｎｉｎｇ＿Ｅｎｈａｎｃｅｄ＿ｗｉｔｈ＿Ａｃｔｉｖｉｔｙ＿Ｒｅｃｏｇｎｉ－
-ｔｉｏｎ．
-［４］ 席瑞，李玉军，侯孟书．室内定位方法综述［Ｊ］．计算机科学，２０１６，４３（４）：１－６，３２．
-［５］ 王忠民，陈振，潘春华．一种改进的位置指纹智能手机室内定位算法［Ｊ］．西安邮电大学学报，２０１４，１９（１）：１７－２０．
-［６］ 吴雨，杨力，孔港港．一种改进的位置指纹定位算法［Ｊ］．导航定位学报，２０１７，５（４）：１６－２０．
-［７］ ＨＩＧＨＴＯＷＥＲ Ｊ，ＢＯＲＲＩＥＬＬＯ Ｇ．Ｌｏｃａｔｉｏｎ ｓｙｓｔｅｍｓ ｆｏｒ ｕｂｉｑｕｉｔｏｕｓ ｃｏｍｐｕｔｉｎｇ［Ｊ］．ＩＥＥＥ Ｃｏｍｐｕｔｅｒ，２００１，３４（８）：５７－６６．
-［８］ 梁元诚．基于无线局域网的室内定位技术研究与实现［Ｄ］．成都：电子科技大学，２００９．
-［９］ ＳＥＣＯ Ｆ，ＪＩＭＥＮＥＺ Ａ Ｒ，ＰＲＩＥＴＯ Ｃ，ｅｔ ａｌ．Ａ ｓｕｒｖｅｙ ｏｆ ｍａｔｈｅｍａｔｉｃａｌ ｍｅｔｈｏｄｓ ｆｏｒ ｉｎｄｏｏｒ ｌｏｃａｌｉｚａｔｉｏｎ［ＥＢ／ＯＬ］．［２０１８－０３－２７］．
-ｈｔｔｐｓ：／／ｐｅｏｐｌｅ．ｅｅｃｓ．ｂｅｒｋｅｌｅｙ．ｅｄｕ／～ｊｏｈｎｗ／ｃｓ２９４－９７／ｐａｐｅｒｓ／Ａ％２０Ｓｕｒｖｅｙ％２０ｏｆ％２０Ｍａｔｈｅｍａｔｉｃａｌ％２０Ｍｅｔｈｏｄｓ％２０ｆｏｒ％
-２０Ｉｎｄｏｏｒ％２０Ｌｏｃａｌｉｚａｔｉｏｎ．ｐｄｆ．
-［１０］娄路．面向移动ＬＢＳ的智能手机室内定位技术探讨［Ｊ］．电信科学，２０１２，２８（６）：９８－１０３．
-［１１］邓中亮，余彦培，袁协，等．室内定位现状与发展趋势研究（英文）［Ｊ］．中国通信（英文版），２０１３，１０（３）：５０－６３．
-［１２］ＷＡＮＴ Ｒ，ＨＯＰＰＥＲ Ａ，ＦＡＬＣＡＯ Ｖ，ｅｔ ａｌ．Ｔｈｅ ａｃｔｉｖｅ ｂａｄｇｅ ｌｏｃａｔｉｏｎ ｓｙｓｔｅｍ［Ｊ］．ＡＣＭ Ｔｒａｎｓａｃｔｉｏｎｓ ｏｎ Ｉｎｆｏｒｍａｔｉｏｎ
-Ｓｙｓｔｅｍｓ，１９９２，１０（１）：９１－１０２．
-［１３］邹金平．超宽带室内定位研究［Ｄ］．昆明：昆明理工大学，２００８．
-［１４］高业，何敏．室内定位技术研究综述［Ｃ］／／江苏省测绘地理信息学会、江苏省测绘工程院．２０１７年度江苏省测绘地理信息
-学会ＧＰＳ、大地专业委员会学术年会暨ＪＳＣＯＲＳ技术交流大会论文集．南京：江苏省测绘地理信息学会、江苏省测绘工
-程，２０１７：５－１０．
-［１５］ＷＡＲＤ Ａ Ｍ，ＪＯＮＥＳ Ａ，ＨＯＰＰＥＲ Ａ，ｅｔ ａｌ．Ａ ｎｅｗ ｌｏｃａｔｉｏｎ ｔｅｃｈｎｉｑｕｅ ｆｏｒ ｔｈｅ ａｃｔｉｖｅ ｏｆｆｉｃｅ［Ｊ］．ＩＥＥＥ Ｐｅｒｓｏｎａｌ Ｃｏｍｍｕｎｉ－
-ｃａｔｉｏｎｓ，１９９７，４（５）：４２－４７．
-［１６］ＰＲＩＹＡＮＴＨＡ Ｎ Ｂ，ＣＨＡＫＲＡＢＯＲＴＹ Ａ，ＢＡＬＡＫＲＩＳＨＮＡＮ Ｈ，ｅｔ ａｌ．Ｔｈｅ Ｃｒｉｃｋｅｔ ｌｏｃａｔｉｏｎ－ｓｕｐｐｏｒｔ ｓｙｓｔｅｍ［ＥＢ／ＯＬ］．
-［２０１８－０３－２７］．ｈｔｔｐ：／／ｎｍｓ．ｌｃｓ．ｍｉｔ．ｅｄｕ／ｐａｐｅｒｓ／ｃｒｉｃｋｅｔ．ｐｄｆ．
-［１７］阮陵，张翎，许越，等．室内定位：分类、方法与应用综述［Ｊ］．地理信息世界，２０１５，２２（２）：８－１４，３０．
-［１８］ＱＩＡＮ Ｊｉｕｃｈａｏ，ＰＥＩ Ｌｉｎｇ，ＭＡ Ｊｉａｂｉｎ，ｅｔ ａｌ．Ｖｅｃｔｏｒ ｇｒａｐｈ ａｓｓｉｓｔｅｄｐｅｄｅｓｔｒｉａｎ ｄｅａｄ ｒｅｃｋｏｎｉｎｇ ｕｓｉｎｇ ａｎ ｕｎｃｏｎｓｔｒａｉｎｅｄ ｓｍａｒｔ－
-ｐｈｏｎｅ［Ｊ］．Ｓｅｎｓｏｒｓ，２０１５，１５（３）：５０３２－５０５７．
-［１９］ＲＡＮＴＡＫＯＫＫＯ Ｊ，ＲＹＤＥＬＬ Ｊ，ＳＴＲＯＭＢＡＣＫ Ｐ．Ａｃｃｕｒａｔｅ ａｎｄ ｒｅｌｉａｂｌｅ ｓｏｌｄｉｅｒ ａｎｄ ｆｉｒｓｔ ｒｅｓｐｏｎｄｅｒ ｉｎｄｏｏｒ ｐｏｓｉｔｉｏｎｉｎｇ：
-ｍｕｌｔｉｓｅｎｓｏｒ ｓｙｓｔｅｍ ａｎｄ ｃｏｏｐｅｒａｔｉｖｅ ｌｏｃａｌｉｚａｔｉｏｎ［Ｊ］．ＩＥＥＥ Ｗｉｒｅｌｅｓｓ ｃｏｍｍｕｎｉｃａｔｉｏｎ，２０１１，１８（２）：１０－１８．
-［２０］邹德岳．异构无线系统室内外无缝定位技术研究［Ｄ］．哈尔滨：哈尔滨工业大学，２０１６．
-［２１］张恒．基于ＡＲＭ的视觉定位技术研究［Ｄ］．广州：广东工业大学，２００７．
-［２２］陈锐志，陈亮．基于智能手机的室内定位技术的发展现状和挑战［Ｊ］．测绘学报，２０１７，４６（１０）：１３１６－１３２６．
-［２３］朱敏．室内定位技术分析［Ｊ］．现代计算机（专业版），２００８（２）：７９－８１．
-［２４］ＦＡＲＬＥＹ Ｇ，ＣＯＬＬＩＮＳ Ｒ，ＣＨＡＰＭＡＮ Ｍ．Ａｎ ａｌｔｅｒｎａｔｅ ａｐｐｒｏａｃｈ ｔｏ ＧＰＳ ｄｅｎｉｅｄ ｎａｖｉｇａｔｉｏｎ ｂａｓｅｄ ｏｎ ｍｏｎｏｃｕｌａｒ ＳＬＡＭ
-ｔｅｃｈｎｉｑｕｅｓ［Ｃ］／／Ｔｈｅ Ｉｎｓｔｉｔｕｔｅ ｏｆ Ｎａｖｉｇａｔｉｏｎ（ＩＯＮ）．Ｐｒｏｃｅｅｄｉｎｇｓ ｏｆ ｔｈｅ ２００８Ｎａｔｉｏｎａｌ Ｔｅｃｈｎｉｃａｌ Ｍｅｅｔｉｎｇ ｏｆ ｔｈｅ Ｉｎｓｔｉｔｕｔｅ ｏｆ
-Ｎａｖｉｇａｔｉｏｎ．Ｓａｎ Ｄｉｅｇｏ，ＣＡ：ＩＯＮ，２００８：８１０－８１８．
-［２５］ＫＲＡＧＩＣ Ｄ．Ｏｂｊｅｃｔ ｓｅａｒｃｈ ａｎｄ ｌｏｃａｌｉｚａｔｉｏｎ ｆｏｒ ａｎ ｉｎｄｏｏｒ ｍｏｂｉｌｅ ｒｏｂｏｔ［Ｊ］．Ｊｏｕｒｎａｌ ｏｆ Ｃｏｍｐｕｔｉｎｇ ＆Ｉｎｆｏｒｍａｔｉｏｎ Ｔｅｃｈｎｏｌｏ－
-ｇｙ，２００９，１７（１）：６７－８０．
-［２６］ＺＨＡＮＧ Ｂｏｙｉｎｇ，ＴＥＮＧ Ｊｉｎ，ＺＨＵ Ｊｕｎｄａ，ｅｔ ａｌ．ＥＶ－Ｌｏｃ：ｉｎｔｅｇｒａｔｉｎｇ ｅｌｅｃｔｒｏｎｉｃ ａｎｄ ｖｉｓｕａｌ ｓｉｇｎａｌｓ ｆｏｒ ａｃｃｕｒａｔｅ ｌｏｃａｌｉｚａｔｉｏｎ
-［ＥＢ／ＯＬ］．［２０１８－０３－２７］．ｈｔｔｐ：／／ｗｅｂ．ｃｓｅ．ｏｈｉｏ－ｓｔａｔｅ．ｅｄｕ／～ｘｕａｎ．３／ｐａｐｅｒｓ／１２＿ｍｏｂｉｈｏｃ＿ｚｔｚｌｘｚ．ｐｄｆ．第１期 高 伟，等．室内导航定位技术研究进展与展望 １７
-［２７］ＢＡＨＬ Ｐ．Ａｎ ｉｎ－ｂｕｉｌｄｉｎｇ ＲＦ－ｂａｓｅｄ ｕｓｅｒ ｌｏｃａｔｉｏｎ ａｎｄ ｔｒａｃｋｉｎｇ ｓｙｓｔｅｍ［Ｊ］．Ｐｒｏｃ ＩＥＥＥ Ｉｎｆｏｃｏｍ，２０００，２：７７５－７８４．
-［２８］ＹＯＵＳＳＥＦ Ｍ．Ｔｈｅ ｈｏｒｕｓ ＷＬＡＮ ｌｏｃａｔｉｏｎ ｄｅｔｅｒｍｉｎａｔｉｏｎ ｓｙｓｔｅｍ［ＥＢ／ＯＬ］．［２０１８－０３－２７］．ｈｔｔｐ：／／ｗｗｗ．ｃｓ．ｕｍｄ．ｅｄｕ／～
-ｍｏｕｓｔａｆａ／ｐａｐｅｒｓ／ｈｏｒｕｓ＿ｕｓｅｎｉｘ．ｐｄｆ．
-［２９］徐素素，谢宏．基于Ａｎｄｒｏｉｄ平台和位置指纹算法的 ＷｉＦｉ定位系统设计［Ｊ］．微型机与应用，２０１７，３６（１８）：８０－８３．
-［３０］ＣＨＩＮＴＡＬＡＰＵＤＩ Ｋ，ＰＡＤＭＡＮＡＢＨＡ Ｉ Ａ，ＰＡＤＭＡＮＡＢＨＡＮ Ｖ Ｎ．Ｉｎｄｏｏｒ ｌｏｃａｌｉｚａｔｉｏｎ ｗｉｔｈｏｕｔ ｔｈｅ ｐａｉｎ［ＥＢ／ＯＬ］．
-［２０１８－０３－２７］．ｈｔｔｐｓ：／／ｗｗｗ．ｍｉｃｒｏｓｏｆｔ．ｃｏｍ／ｅｎ－ｕｓ／ｒｅｓｅａｒｃｈ／ｗｐ－ｃｏｎｔｅｎｔ／ｕｐｌｏａｄｓ／２０１６／０２／ｅｚ－ｍｏｂｉｃｏｍ．ｐｄｆ．
-［３１］裴凌，刘东辉，钱久超．室内定位技术与应用综述［Ｊ］．导航定位与授时，２０１７，４（３）：１－１０．
-［３２］马静宜．室内定位技术现状和发展趋势［Ｊ］．电子产品世界，２０１４，２１（１１）：１５－１７，２５．
-［３３］邓中亮，林文亮．“星地一体”室内外高精度定位技术引领导航科学创新［Ｊ］．海峡科技与产业，２０１６（１２）：１７－２１．
-［３４］Ｅｒｉｃｓｓｏｎ Ｒｅｓｅａｒｃｈ Ｂｌｏｇ．Ｉｎｄｏｏｒ ｐｏｓｉｔｉｏｎｉｎｇ ｉｎ ＬＴＥ［ＥＢ／ＯＬ］．（２０１５－０７－０９）［２０１８－０３－２７］．ｈｔｔｐ：／／ｗｗｗ．ｅｒｉｃｓｓｏｎ．ｃｏｍ／ｒｅ－
-ｓｅａｒｃｈ－ｂｌｏｇ／ｌｔｅ／ｉｎｄｏｏｒ－ｐｏｓｉｔｉｏｎｉｎｇ－ｉｎ－ｌｔｅ／．
-［３５］ＢＡＩ Ｙ Ｂ，ＷＵ Ｓ，ＷＵ Ｈ，ｅｔ ａｌ．Ｏｖｅｒｖｉｅｗ ｏｆ ＲＦＩＤ－ｂａｓｅｄ ｉｎｄｏｏｒ ｐｏｓｉｔｉｏｎｉｎｇ ｔｅｃｈｎｏｌｏｇｙ［ＥＢ／ＯＬ］．［２０１８－０３－２７］．ｈｔｔｐ：／／
-ｃｅｕｒ－ｗｓ．ｏｒｇ／Ｖｏｌ－１３２８／ＧＳＲ２＿Ｂａｉ．ｐｄｆ．
-［３６］ＢＡＨＬ Ｐ，ＰＡＤＭＡＮＡＢＨＡＮ Ｖ Ｎ．ＲＡＤＡＲ：ａｎ ｉｎ－ｂｕｉｌｄｉｎｇ ＲＦ－ｂａｓｅｄ ｕｓｅｒ ｌｏｃａｔｉｏｎ ａｎｄ ｔｒａｃｋｉｎｇ ｓｙｓｔｅｍ［ＥＢ／ＯＬ］．［２０１８－
-０３－２７］．ｈｔｔｐｓ：／／ｗｗｗ．ｍｉｃｒｏｓｏｆｔ．ｃｏｍ／ｅｎ－ｕｓ／ｒｅｓｅａｒｃｈ／ｗｐ－ｃｏｎｔｅｎｔ／ｕｐｌｏａｄｓ／２０１６／０２／ｉｎｆｏｃｏｍ２０００．ｐｄｆ．
-［３７］ＨＩＧＨＴＯＷＥＲ Ｊ．ＳｐｏｔＯＮ：ａｎ ｉｎｄｏｏｒ ３Ｄｌｏｃａｔｉｏｎ ｓｅｎｓｉｎｇ ｔｅｃｈｎｏｌｏｇｙ ｂａｓｅｄ ｏｎ ＲＦ ｓｉｇｎａｌ ｓｔｒｅｎｇｔｈ［ＥＢ／ＯＬ］．［２０１８－０３－
-２７］．ｈｔｔｐｓ：／／ｗｗｗ．ｒｅｓｅａｒｃｈｇａｔｅ．ｎｅｔ／ｐｕｂｌｉｃａｔｉｏｎ／２２８５４１５５７＿ＳｐｏｔＯＮ＿Ａｎ＿Ｉｎｄｏｏｒ＿３Ｄ＿Ｌｏｃａｔｉｏｎ＿Ｓｅｎｓｉｎｇ＿Ｔｅｃｈｎｏｌｏｇｙ＿
-Ｂａｓｅｄ＿ｏｎ＿ＲＦ＿Ｓｉｇｎａｌ＿Ｓｔｒｅｎｇｔｈ．
-［３８］李富民．基于超宽带的室内服务机器人定位技术研究与应用［Ｄ］．济南：山东大学，２０１７．
-［３９］ＫＩＭ Ｂ，ＫＭＡＫ Ｍ，ＬＥＥ Ｊ，ｅｔ ａｌ．Ａ ｍｕｌｔｉ－ｐｒｏｎｇｅｄ ａｐｐｒｏａｃｈ ｆｏｒ ｉｎｄｏｏｒ ｐｏｓｉｔｉｏｎｉｎｇ ｗｉｔｈ ＷｉＦｉ，ｍａｇｎｅｔｉｃ ａｎｄ ｃｅｌｌｕｌａｒ ｓｉｇｎａｌｓ
-［Ｃ］／／Ｔｈｅ Ｉｎｓｔｉｔｕｔｅ ｏｆ Ｅｌｅｃｔｒｉｃａｌ ａｎｄ Ｅｌｅｃｔｒｏｎｉｃ Ｅｎｇｉｎｅｅｒｓ（ＩＥＥＥ）．Ｐｒｏｃｅｅｄｉｎｇｓ ｏｆ ｔｈｅ ２０１４Ｉｎｔｅｒｎａｔｉｏｎａｌ Ｃｏｎｆｅｒｅｎｃｅ ｏｎ Ｉｎ－
-ｄｏｏｒ Ｐｏｓｉｔｉｏｎｉｎｇ ａｎｄ Ｉｎｄｏｏｒ Ｎａｖｉｇａｔｉｏｎ（ＩＰＩＮ）．Ｂｕｓａｎ，Ｓｏｕｔｈ Ｋｏｒｅａ：ＩＥＥＥ，２０１４：７２３－７２６．
-［４０］ＫＡＲＬＳＳＯＮ Ｆ，ＫＡＲＬＳＳＯＮ Ｍ，ＢＥＲＮＨＡＲＤＳＳＯＮ Ｂ，ｅｔ ａｌ．Ｓｅｎｓｏｒ ｆｕｓｅｄ ｉｎｄｏｏｒ ｐｏｓｉｔｉｏｎｉｎｇ ｕｓｉｎｇ ｄｕａｌ ｂａｎｄ ＷｉＦｉ ｓｉｇｎａｌ
-ｍｅａｓｕｒｅｍｅｎｔｓ［Ｃ］／／Ｔｈｅ Ｉｎｓｔｉｔｕｔｅ ｏｆ Ｅｌｅｃｔｒｉｃａｌ ａｎｄ Ｅｌｅｃｔｒｏｎｉｃ Ｅｎｇｉｎｅｅｒｓ（ＩＥＥＥ）．Ｐｒｏｃｅｅｄｉｎｇｓ ｏｆ ｔｈｅ ２０１５Ｅｕｒｏｐｅａｎ Ｃｏｎ－
-ｔｒｏｌ Ｃｏｎｆｅｒｅｎｃｅ．Ｌｉｎｚ，Ａｕｓｔｒｉａ：ＩＥＥＥ，２０１５：１６６９－１６７２．
-［４１］ＪＥＯＮ Ｊ Ｓ，ＫＯＮＧ Ｙ，ＮＡＭ Ｙ，ｅｔ ａｌ．Ａｎ ｉｎｄｏｏｒ ｐｏｓｉｔｉｏｎｉｎｇ ｓｙｓｔｅｍ ｕｓｉｎｇ ｂｌｕｅｔｏｏｔｈ ＲＳＳＩ ｗｉｔｈ ａｎ ａｃｃｅｌｅｒｏｍｅｔｅｒ ａｎｄ ａ ｂａ－
-ｒｏｍｅｔｅｒ ｏｎ ａ ｓｍａｒｔｐｈｏｎｅ［Ｃ］／／Ｔｈｅ Ｉｎｓｔｉｔｕｔｅ ｏｆ Ｅｌｅｃｔｒｉｃａｌ ａｎｄ Ｅｌｅｃｔｒｏｎｉｃ Ｅｎｇｉｎｅｅｒｓ（ＩＥＥＥ）．Ｐｒｏｃｅｅｄｉｎｇｓ ｏｆ ｔｈｅ １０ｔｈ Ｉｎｔｅｒ－
-ｎａｔｉｏｎａｌ Ｃｏｍｍｕｎｉｃａｔｉｏｎ ａｎｄ Ａｐｐｌｉｃａｔｉｏｎｓ（ＢＷＣＣＡ）．Ｋｒａｋｏｗ，Ｐｏｌａｎｄ：ＩＥＥＥ，２０１５：５２８－５３１．
-［４２］郭伟龙．融合多源信息的室内定位算法研究［Ｄ］．杭州：浙江大学，２０１６．
-［４３］ＲＵＯＴＳＡＬＡＩＮＥＮ Ｌ，ＫＩＲＫＫＯＪＡＡＫＫＯＬＡ Ｍ，ＲＡＮＴＡＮＥＮ Ｊ，ｅｔ ａｌ．Ｅｒｒｏｒ ｍｏｄｅｌｌｉｎｇ ｆｏｒ ｍｕｌｔｉ－ｓｅｎｓｏｒ ｍｅａｓｕｒｅｍｅｎｔｓ ｉｎ
-ｉｎｆｒａｓｔｒｕｃｔｕｒｅ－ｆｒｅｅ ｉｎｄｏｏｒ ｎａｖｉｇａｔｉｏｎ［Ｊ］．Ｓｅｎｓｏｒｓ，２０１８，１８（２）：５９０－５９５．
-［４４］刘振宇．全球ＬＥＤ可见光通信室内定位技术专利分析［Ｊ］．高科技与产业化，２０１７（１１）：７８－８４．
-［４５］石火财．室内定位导航技术在医院的应用与部署［Ｊ］．电脑编程技巧与维护，２０１４（２４）：１２６－１２７．
-［４６］陈奕宇．基于ＢＩＭ的室内应急逃生导航技术的研究［Ｄ］．成都：西南石油大学，２０１７．
-［４７］余扬，赵凯飞，沈嘉．室内定位技术应用、研究现状及展望［Ｊ］．电信网技术，２０１４（５）：４６－４９．
-［４８］袁海涛，刘岩．源室内定位导航技术服务平台设计与应用［Ｊ］．北京测绘，２０１７（增刊１）：６１－６４．
-［４９］段宇峰．基于ＲＦＩＤ的物流定位技术研究［Ｄ］．成都：电子科技大学，２０１６．
+Stable Flow: Vital Layers for Training-Free Image Editing
+OmriAvrahami1,2 OrPatashnik1,3 OhadFried4 EgorNemchinov1
+KfirAberman1 DaniLischinski2 DanielCohen-Or1,3
+1SnapResearch 2TheHebrewUniversityofJerusalem 3TelAvivUniversity 4ReichmanUniversity
+Non-rigid editing Adding an object
+“Jumping” “Sitting” “Sniffing the “Wearing “Wearing a “Next to an
+road” green glasses” straw hat” avocado”
+Object replacement Scene editing
+“An otter” “A pig” “A plastic “On a wet “During the “Snowy day”
+bag” road” evening”
+Figure1. StableFlow. Ourtraining-freeeditingmethodisabletoperformvarioustypesofimageeditingoperations,includingnon-rigid
+editing,objectaddition,objectremoval,andglobalsceneediting.Thesedifferenteditsaredoneusingthesamemechanism.
+Abstract 1.Introduction
+Overtherecentyears,wehavewitnessedanunprecedented
+Diffusion models have revolutionized the field of content
+explosionincreativeapplicationsofgenerativemodels,fu-
+synthesisandediting. Recentmodelshavereplacedthetra-
+eled by diffusion-based models [36, 78–80]. Recent mod-
+ditional UNet architecture with the Diffusion Transformer
+els, such as FLUX [46] and SD3 [25], have replaced the
+(DiT), and employed flow-matching for improved training
+traditionalUNetarchitecture[73]withtheDiffusionTrans-
+andsampling. However,theyexhibitlimitedgenerationdi-
+former(DiT)[63],andadoptedflowmatching[5,49,50]as
+versity. In this work, we leverage this limitation to per-
+asuperioralternativefortrainingandsampling.
+formconsistentimageeditsviaselectiveinjectionofatten-
+These flow-based models are based on optimal trans-
+tionfeatures. Themainchallengeisthat, unliketheUNet-
+port conditional probability paths, resulting in faster train-
+based models, DiT lacks a coarse-to-fine synthesis struc-
+ing and sampling, compared to diffusion models. This is
+ture, making it unclear in which layers to perform the in-
+attributed [49] to the fact that they follow straight line tra-
+jection. Therefore, we propose an automatic method to
+jectories,ratherthancurvedpaths. Oneoftheknowncon-
+identify“vitallayers”withinDiT,crucialforimageforma-
+sequencesofthisdifference, however, isthatthesemodels
+tion,anddemonstratehowtheselayersfacilitatearangeof
+exhibitlowerdiversitythanpreviousdiffusionmodels[26],
+controlled stableedits,fromnon-rigidmodificationstoob-
+asshowninFigure2(1-2).Whilereduceddiversityisgener-
+ject addition, using the same mechanism. Next, to enable
+allyconsideredanundesirablecharacteristic, inthispaper,
+real-imageediting,weintroduceanimprovedimageinver-
+wesuggestleveragingitforthetaskoftraining-freeimage
+sion method for flow models. Finally, we evaluate our ap-
+editing,asshowninFigure2(3)andFigure1.
+proach through qualitative and quantitative comparisons,
+Specifically, we explore image editing via parallel gen-
+along with a user study, and demonstrate its effectiveness
+eration [4, 18, 91], where features from the generative tra-
+acrossmultipleapplications.
+jectoryofthesource(reference)imageareinjectedintothe
+trajectoryoftheeditedimage. Suchanapproachhasbeen
+showneffectiveinthecontextofconvolutionalUNet-based
+Project page is available at: https://omriavrahami.com/stable-flow ThisresearchwasperformedwhileOmriwasatSnap.
+1]66[LXDS)1(
+]64[XULF)2(
+wolFelbatS)3(
+Inordertosupporteditingrealimages,itistypicallynec-
+essary to invert them first [53, 79]. We employ an Inverse
+Euler Ordinary Differential Equation (ODE) solver to in-
+vert real images in the FLUX model [46]. However, this
+methodfailstoreconstructtheinputimageinasatisfactory
+manner. Toimprovereconstructionaccuracy,weintroduce
+an out-of-distribution (OOD) nudging technique, in which
+weapplyasmallscalarperturbationtothecleanlatentbe-
+foreinvertingit.WedemonstratethatthismakesFLUXless
+pronetoundesiredchangesintheimageduringtheforward
+pass.
+Finally, we compare our method against its baselines
+qualitativelyandquantitatively,andreaffirmtheresultswith
+a user study. We also demonstrate several applications of
+ourmethod.
+“Aphotoofa +“dogwearing +“catwearing +“casting
+dogandacat...” abluehat” yellowglasses” shadows” In summary, our contributions are: (1) we propose an
+automatic method to detect the set of vital layers in DiT
+Figure2. LeveragingReducedDiversity. Usingthesameinitial
+modelsanddemonstratehowtousethemforimageediting;
+seedwithdifferenteditingprompts,diffusionmodelssuchas(1)
+(2)wearethefirstmethodtoharnessthelimiteddiversityof
+SDXLgeneratediverseresults(differentidentitiesofthedogand
+flow-basedmodelstoperformdifferentimageeditingtasks
+thecat),while(2)FLUXgeneratesamorestable(lessdiverse)set
+usingthesamemechanism;and(3)wepresentanextension
+ofresultsout-of-the-box.However,therearestillsomeunintended
+differences(thedogisstandingintheleftmostcolumnandsitting thatallowseditingrealimagesusingtheFLUXmodel.
+intheothers,thecolorofthecatischanging,andtheroadisdif-
+2.RelatedWork
+ferentontheright).Usingourapproach,(3)StableFlow,theedits
+arestable,maintainingconsistencyoftheunrelatedcontent.
+Text-DrivenImageEditing. Aftertheemergenceoftext-
+to-image models, many works have suggested using them
+diffusion models [18], where the roles of the different at- for various applications [7, 12, 20, 37, 75], including text-
+tention layers are well understood. However, such under- drivenimageeditingtasks[39,65]. SDEdit[52]addressed
+standing has not yet emerged for DiT [63]. Specifically, the image-to-image translation task adding noise and de-
+DiTdoesnotexhibitthesamefine-coarse-finestructureof noising with a new prompt. Blended Diffusion [8, 9] sug-
+theUNet[63],henceitisnotclearwhichlayersshouldbe gested performing localized image editing [15, 38, 47, 55,
+tamperedwithtoachievethedesirededitingbehavior. 62] incorporating an input mask into the diffusion process
+To address this gap, we analyze the importance of the in a training-free manner, while GLIDE [54], ImagenEdi-
+different components in the DiT architecture, in order to tor[89],andSmartBrush[93]offeredfine-tuningthemodel
+determine the subset that should be injected while editing. on a given input mask. Other works suggested inferring
+More specifically, we introduce an automatic method for themaskfromtheinputimage[21,88]orviaanadditional
+detectingasetofvitallayers—layersthatareessentialfor click input [69]. Other works [18, 34, 60, 84] offered to
+theimageformation—bymeasuringthedeviationinimage injectinformationfromtheinputimageusingparallelgen-
+contentresultingfrombypassingeachlayer. Weshowthat eration. While some methods [13, 45, 85] suggested fine-
+thereisnosimplerelationshipbetweenthevitalityofalayer tuningthemodelper-image,arecentlineofworksuggested
+and its position in the architecture, i.e., the vital layers are trainingadesignatedmodelonalargesyntheticdatasetfor
+spreadacrossthetransformer. instruction-based edits [17, 76, 97]. However, none of the
+Acloseexaminationofthevitallayerssuggeststhatthe abovemethodsisatraining-freemethodthatsupportsnon-
+injectionoffeaturesintotheselayersstrikesagoodbalance rigid editing, object adding/replacement and scene editing
+in the multimodal attention between the reference image altogether. Concurrency,Add-it[81]offersasolutiontothe
+contentandtheeditingprompt. Consequently,limitingthe task of object addition using FLUX. Our method, on the
+injectionoffeaturestoonlythevitallayerstendstoyielda otherhand,supportsothertypesofimageediting(e.g.,non-
+stableedit, i.e., aneditthatchangesonlythepart(s)speci- rigidediting,objectreplacement).
+fiedbythetextprompt,whileleavingtherestoftheimage
+intact,asdemonstratedinFigure2(3). Wedemonstratethat Image Inversion. In the realm of generative models, in-
+performingthesamefeatureinjection,enablesperforminga version [92] is the task of finding a code within the latent
+varietyofimageedits,includingnon-rigidediting,addition spaceofagenerator[31,43,44]thatfaithfullyreconstructs
+ofobjects,andscenechanges,asdemonstratedinFigure1. a given image. Initial methods were developed for GAN
+2Generate Generate
+)
+ri
+) s r
+e
++ Layer N + Layer N e y a l
+g
+y n
+a
+l lla
+( n o it a r e
+n
+++ LL aa yy ee rr i i -1 DINOv2 DINOv2 + LL aa yy ee rr i -i 1
+is
+s a
+p y b ( n o it
+a
+e r
+G
+llu Perceptual Similarity
+e n
+e
+g
+F
++ Layer 1 + Layer 1
+la
+it
+r
+a
+P
+Text embeddings Visual embeddings Text embeddings Visual embeddings
+Figure3. LayerRemoval. (Left)Text-to-imageDiTmodelsconsistofconsecutivelayersconnectedthroughresidualconnections[33].
+Eachlayerimplementsamultimodaldiffusiontransformerblock[25]thatprocessesacombinedsequenceoftextandimageembeddings.
+(Right)ForeachDiTlayer,weperformeanablationbybypassingthelayerusingitsresidualconnection.Then,wecomparethegenerated
+resultontheablatedmodelwiththecompletemodelusingaperceptualsimilaritymetric.
+models [1–3, 14, 24, 59, 64, 70, 71, 83, 95, 99, 100], and ing[18,30,84]throughtargetedmanipulationofUNetde-
+more recently for diffusion-based models [16, 23, 29, 32, coderlayers[73].
+40,51,53,58,79,87]. Inthiswork,wesuggestinvertinga Incontrast,state-of-the-arttext-to-imageDiT[63]mod-
+realimageinflowmodelsusinglatentnudging,aswefound els(FLUX[46]andSD3[25])employafundamentallydif-
+thatthestandardinverseODEsolverisinsufficient. ferentarchitecture,asshowninFigure3(left). Thesemod-
+elsconsistofconsecutivelayersconnectedthroughresidual
+3.Method connections [33], without convolutions. Each layer imple-
+mentsamultimodaldiffusiontransformerblock[25](MM-
+Our goal is to edit images based on text prompts while
+DiT-Block)thatprocessesacombinedsequenceoftextand
+faithfullypreservingtheuneditedregionsofthesourceim-
+imageembeddings. UnlikeinUNets,therolesofthediffer-
+age. Given an input image x and an editing prompt p, we
+entlayersarenotyetintuitivelyclear,makingitchallenging
+aim to generate a modified image xˆ that exhibits the de-
+todeterminewhichlayersarebestsuitedforimageediting.
+siredchangesspecifiedbypwhilemaintainingtheoriginal
+To quantify layer importance in the FLUX model, we
+contentelsewhere. Weleveragethelimiteddiversityofthe
+devised a systematic evaluation approach. Using Chat-
+FLUXmodelandfurtherconstrainittoenablesuchstable
+GPT[56],weautomaticallygeneratedasetP ofk =64di-
+imageeditsthroughselectiveinjectionofattentionfeatures
+versetextprompts,anddrawasetSofrandomseeds. Each
+ofthe sourceimageintothe processthatgenerates xˆ. Our
+of these prompts was used to generate a reference image,
+approachisdescribedinmoredetailbelow. InSection3.1,
+yielding in a set G . For each DiT layer ℓ ∈ L, we per-
+weevaluatelayerimportanceintheDiTmodelbyanalyzing ref
+formedanablationbybypassingthelayerusingitsresidual
+theperceptualimpactoflayerremoval(Figure3). Next,in
+connection, as illustrated in Figure 3(right). This process
+Section3.2,weemploythemostinfluentiallayers(termed
+generated a set of images G from the same prompts and
+vital layers) for image editing through attention injection. ℓ
+seeds. Seethesupplementarymaterialformoredetails.
+Finally,inSection3.3,weextendourmethodtorealimage
+To assess the impact of each layer, we measured the
+editing by inverting images into the latent space using the
+perceptual similarity between G and G and using DI-
+EulerinverseODEsolver,enhancedbylatentnudging. ref ℓ
+NOv2[57](seeFigure3). Theresults,plottedinFigure4,
+3.1.MeasuringtheImportanceofDiTLayers show that removing certain layers significantly affects the
+generated images, while others have minimal impact. Im-
+Recent text-to-image diffusion models [36, 66, 68, 72, 74]
+portantly,influentiallayersaredistributedacrossthetrans-
+predominantlyuseCNN-basedUNets, whichexhibitwell-
+formerratherthanconcentratedinspecificregions. Wefor-
+understoodlayerroles. Indiscriminativetasks,earlylayers
+mallydefinethevitalityoflayerℓas:
+detect simple features like edges, while deeper layers cap-
+ture higher-level semantic concepts [77, 96]. Similarly, in 1 X
+vitality(ℓ)=1− d(M (s,p),M (s,p)), (1)
+generativemodels,early-middlelayersdetermineshapeand k full -ℓ
+s∈S,p∈P
+color, while deeper layers control finer details [43]. This
+structurehasbeensuccessfullyexploitedintext-drivenedit- whereM representsthecompletemodel,M denotesthe
+full -ℓ
+30.95
+0.9
+0.85
+0.8
+0 5 10 15 20 25 30 35 40 45 50 55 60
+LayerIndex
+ytiralimiSlautpecreP
+Figure 4. Layer Removal Quantitative Comparison. As ex-
+plainedinSection3.1,wemeasuredtheeffectofremovingeach
+layerofthemodelbycalculatingtheperceptualsimilaritybetween
+thegeneratedimageswithandwithoutthislayer. Lowerpercep-
+tual similarity indicates significant changes in the generated im-
+ages(Figure5). Ascanbeseen, removingcertainlayerssignif-
+icantly affects the generated images, while others have minimal
+impact. Importantly, influential layers are distributed across the
+transformerratherthanconcentratedinspecificregions.Notethat
+the first vital layers were omitted for clarity (as their perceptual
+similarityapproachedzero).
+modelwithlayerℓomitted,andd(·,·)istheperceptualsim-
+ilaritymetric. ThesetofvitallayersV isthendefinedas:
+V ={ℓ∈L|vitality(ℓ)≥τ }, (2)
+vit
+whereτ isthevitalitythreshold.
+vit
+Figure 5 illustrates the qualitative differences between
+vitalandnon-vitallayers. Whilebypassingnon-vitallayers
+results in minor alterations, removing vital layers leads to
+significantchanges:completenoisegeneration(G ),global
+0
+structureandidentitychanges(G ),andalterationsintex-
+18
+tureandfinedetails(G ). 56
+3.2.ImageEditingusingVitalLayers
+Givenasourceimagexgeneratedwithaknownseedsand
+prompt p, we aim to modify p and generate an edited im-
+age xˆ that exhibits the desired changes, while otherwise
+preserving the source content. We adapt the self-attention
+injectionmechanism,previouslyshowneffectiveforimage
+and video editing [18, 91] in UNet-based diffusion mod-
+els, to the DiT-based FLUX architecture. Since each DiT
+layer processes a sequence of image and text embeddings,
+weproposegeneratingbothxandxˆinparallelwhileselec-
+tivelyreplacingtheimageembeddingsofxˆwiththoseofx,
+butonlywithinthevitallayerssetV.
+Remarkably,asshowninFigure1,thistraining-freeap-
+proachsuccessfullyperformsdiverseeditingtasks, includ-
+ingnon-rigiddeformations,objectaddition,objectreplace-
+ment, and global modifications, all using the same set of
+vitallayersV.
+ferG
+0G
+5G
+81G
+25G
+65G
+Figure 5. Layer Removal Qualitative Comparison. As ex-
+plainedinSection3.1,weillustratethequalitativedifferencesbe-
+tweenvitalandnon-vitallayers. Whilebypassingnon-vitallay-
+ers(G andG )resultsinminoralterations,bypassingvitallay-
+5 52
+ersleadstosignificantchanges: completenoisegeneration(G ),
+0
+globalstructureandidentitychanges(G ),andalterationsintex-
+18
+tureandfinedetails(G ). 56
+To understand this effectiveness, we analyze the multi-
+modalattentionpatternsinFLUX.Eachvisualtokensimul-
+taneouslyattendstoallvisualandtexttokens,withattention
+weights normalized across both modalities. Figure 6 con-
+trasts the attention patterns in vital versus non-vital layers
+attwokeypoints: ayellowpointinaregionthatshouldre-
+mainunchanged(requiringcopyingfromthereferenceim-
+age),andaredpointinanareatargetedforediting(requir-
+ing generation based on the text prompt). In vital layers
+(left), points meant to remain unchanged show dominant
+attention to visual features, while points targeted for edit-
+ing exhibit stronger attention to relevant text tokens (e.g.,
+“avocado”). Conversely,non-vitallayers(right)showpre-
+dominantly image-based attention even in regions marked
+for editing. This suggests that injecting features into vital
+layersstrikesagoodmultimodalattentionbalancebetween
+preservingsourcecontentandincorporatingtextedits.
+4Vital Non-Vital
+Layers Layers
+Input Output Input Output
+a photo of a man holding an avocado a photo of a man holding an avocado a photo of a man holding an avocado a photo of a man holding an avocado
+Figure6. Multi-ModalAttentionDistribution. Givenaninputimageofaman,weeditittoholdanavocadobyinjectingthereference
+imageinthevitallayersonly(left)orinthenon-vitallayers(right),andvisualizethemultimodalattentionoftwopoints:ayellowpointina
+regionthatshouldremainunchanged(requiringcopyingfromthereferenceimage),andaredpointinanareatargetedforediting(requiring
+generationbasedonthetextprompt). Ascanbeseen,invitallayers(left),pointsmeanttoremainunchangedshowdominantattentionto
+visualfeatures,whilepointstargetedforeditingexhibitstrongerattentiontorelevanttexttokens(e.g.,“avocado”). Conversely,non-vital
+layers(right)showpredominantlyimage-basedattentioneveninregionsmarkedforediting.Thissuggeststhatinjectingfeaturesintovital
+layersstrikesagoodmultimodalattentionbalancebetweenpreservingsourcecontentandincorporatingtext-guidedmodifications.
+gnigduno/w)a(
+gnigdunw)b(
+To edit real images, we must first invert them into the
+latent space, transforming samples from p to p . We ini-
+1 0
+tiallyimplementedaninverseEulerODEsolverforFLUX
+byreversingthevectorfieldprediction. Giventheforward
+Eulerstep:
+z =z +(σ −σ )∗u (z ) (3)
+t−1 t t+1 t t t
+wherez representsthelatentattimestept,σ istheoptimal t t
+transportstandarddeviationattimet,andu isthelearned
+t
+vectorfield,weproposedtheinversestep:
+z =z +(σ −σ )∗u (z ) (4)
+t t−1 t t+1 t t−1
+assumingu (z )≈u (z )forsmallsteps.
+Inputimage Reconstruction “Raisingitshand” t t t t−1
+However, as Figure 7(a) demonstrates, this approach
+Figure 7. Latent Nudging. As described in Section 3.3, when
+provesinsufficientforFLUX,resultingincorruptedimage
+inverting a real image, (a) a simple inverse Euler ODE solver
+reconstructions and unintended modifications during edit-
+leadstocorruptedimagereconstructionsandunintendedmodifi-
+ing. Wehypothesizethattheassumptionu(z ) ≈ u(z )
+cations during editing. On the other hand, (b) using our latent t t−1
+nudgingtechniquesignificantlyreducesreconstructionerrorsand doesnothold,whichcausesthemodeltosignificantlyalter
+betterconstrainseditstotheintendedregions. the image during the forward process. To address this, we
+introducelatentnudging:multiplyingtheinitiallatentz by
+0
+3.3.LatentNudgingforRealImageEditing asmallscalarλ=1.15toslightlyoffsetitfromthetraining
+distribution. Whilethismodificationisvisuallyimpercepti-
+Flow models generate samples by matching a prior distri-
+ble(Figure7(b)),itsignificantlyreducesreconstructioner-
+butionp (Gaussiannoise)toadatadistributionp (theim-
+0 1
+agemanifold). InthespaceRd,wedefinetwokeycompo- rors and constrains edits to the intended regions. See the
+nents: a probability density path p : [0,1]×Rd → R , supplementarymaterialformoredetails
+t >0
+which specifies time-dependent probability density func-
+4.Experiments
+R
+tions ( p (x)dx = 1), and a vector field u : [0,1] ×
+t t
+Rd → Rd. This vector field generates a flow ϕ : [0,1]× InSection4.1wecompareourmethodagainstitsbaselines,
+Rd →Rdthroughtheordinarydifferentialequation(ODE): both qualitatively and quantitatively. Next, in Section 4.2
+dϕ (x) = u (ϕ (x));ϕ (x) = x. Transformingasample weconductauserstudyandreportresults. Furthermore,in
+dt t t t 0
+from p to a sample in p is achieved using ODE solvers Section4.3wepresenttheablationstudyresults. Finally,in
+0 1
+suchasEuler. Section4.4wedemonstrateseveralapplications.
+5Table 1. Quantitative Comparison. We compare our method lines qualitatively on real images. As can be seen,
+against the baselines in terms of text similarity (CLIP txt), im- SDEdit[52]hasdifficultymaintainingobjectidentitiesand
+age similarity (CLIP ) and image-text direction similarity
+img backgrounds. P2P+NTI [34, 53] struggles with preserv-
+(CLIP ). Ascanbeseen,P2P+NTI[34,53],Instruct-P2P[17],
+dir ingobjectidentitiesandwithaddingnewobjects. Instruct-
+andMasaCTRL[18]sufferfromlowsimilaritytothetextprompt.
+P2P [17] and MagicBrush [97] face challenges with non-
+SDEdit[94]andMagicBrush[97]adheremoretothetextprompt,
+rigid editing. MasaCTRL [18] struggles with preserving
+but they struggle with image similarity and image-text direction
+object identities and adding new objects. Our method, on
+similarity. Ourmethod,ontheotherhand,achievesbetterimage
+andimage-textdirectionsimilarity. theotherhand,isadheringtotheeditingpromptwhilepre-
+servingtheidentities.
+Method CLIP (↑) CLIP (↑) CLIP (↑) To quantify the performance of our method and the
+txt img dir
+baselines, we prepared an evaluation dataset based on
+SDEdit[94] 0.24 0.71 0.07
+COCO [48], that in contrast to previous benchmarks [76,
+P2P+NTI[34,53] 0.21 0.76 0.08
+Instruct-P2P[17] 0.22 0.87 0.07 97],alsocontainsnon-rigideditingtasks. Westartbyfilter-
+MagicBrush[97] 0.24 0.88 0.11 ingthedatasetautomaticallytocontainatleastonepromi-
+MasaCTRL[18] 0.20 0.76 0.03 nentnon-rigidbody. Next, foreachimage, weusevarious
+StableFlow(ours) 0.23 0.92 0.14 imageeditingtasks(non-rigidediting, objectaddition, ob-
+ject replacement and scene editing) that take into account
+the prominent object, resulting in a total dataset of 3,200
+Table2. AblationStudy. Weconductanablationstudyandfind
+samples. Seethesupplementarymaterialformoredetails.
+thatperformingattentioninjectioninallthelayersorperforming
+Weevaluatedtheeditingresultsusingthreemetrics: (1)
+an attention extension in all the layers significantly reduces the
+textsimilarity. Furthermore,performinganattentioninjectionin CLIP img thatmeasuresthesimilaritybetweentheinputim-
+the non-vital layers or removing the latent nudging reduces the age and the edited image, (2) CLIP txt that measure the
+imagesimilarity. similarity between the edited image and the target editing
+prompt, and (3) CLIP [28, 61] that measures the simi-
+dir
+Method CLIPtxt(↑) CLIPimg(↑) CLIPdir(↑) larity between the direction of the prompt change and the
+StableFlow(ours) 0.23 0.92 0.14 directionoftheimagechange.
+As can be seen in Table 1, P2P+NTI [34, 53], Instruct-
+Injectionalllayers 0.17 0.98 0.00
+Injectionnon-vitallayers 0.25 0.72 0.09 P2P[17],andMasaCTRL[18]sufferfromlowsimilarityto
+Extensionalllayers 0.18 0.98 0.01 thetextprompt. SDEdit[94]andMagicBrush[97]adhere
+w/olatentnudging 0.22 0.62 0.05
+moretothetextprompt,buttheystrugglewithimagesim-
+ilarityandimage-textdirectionsimilarity. Ourmethod, on
+Table 3. User Study. We compare our method against the the other hand, is able to achieve better image and image-
+baselinesusingthestandardtwo-alternativeforced-choiceformat. textdirectionsimilarity.
+Userswereaskedtoratewhicheditingresultisbetter(Oursvs.the
+baseline)intermsof:(1)targetpromptadherence,(2)inputimage 4.2.UserStudy
+preservation,(3)realismand(4)overalleditquality.Wereportthe
+WeconductanextensiveuserstudyusingtheAmazonMe-
+winrateofourmethodcomparedtoeachbaseline.Asshown,our
+methodoutperformsthebaselinesacrossallcategories,achieving chanical Turk (AMT) [6] platform, with the automatically
+awinratehigherthantherandomchanceof50%. generated test examples from Section 4.1. We compare
+all the baselines against our method using standard two-
+Oursvs PromptAdher.(↑) ImagePres.(↑) Realism(↑) Overall(↑) alternative forced-choice format. Users were given the in-
+SDEdit[52] 69.00% 68.00% 63.66% 70.66% putimage,theedittextprompt,andtwoeditingresults(one
+P2P+NTI[34,53] 76.00% 71.00% 72.66% 65.33%
+fromourmethodandonefromthebaseline).Foreachcom-
+Instruct-P2P[17] 76.33% 75.66% 68.00% 60.33%
+MagicBrush[97] 61.33% 67.33% 76.66% 74.00% parison,theuserswereaskedtoratewhicheditingresultis
+MasaCTRL[18] 82.33% 80.00% 80.33% 72.00%
+better in terms of: (1) target prompt adherence, (2) input
+imagepreservation, (3)realismand(4)overalleditquality
+4.1.QualitativeandQuantitativeComparison
+(i.e.,whentakingallfactorsintoaccount).Ascanbeseenin
+We compare our method against the most relevant Table3,ourmethodispreferredoverthebaselinesinover-
+text-driven image editing methods. We re-implement alltermsaswellastheotherterms. Seethesupplementary
+SDEdit [52] using the FLUX.1-dev [46] model, and use materialformoredetailsandstatisticalanalysis.
+the official public implementations of P2P+NTI [34, 53],
+4.3.AblationStudy
+Instruct-P2P [17], MagicBrush [97] and MasaCTRL [18].
+Seethesupplementarymaterialformoredetails. We conduct an ablation study for the following cases: (1)
+In Figure 8 we compare our method against the base- Attentioninjectioninalllayers—weperformtheattention
+6Input SDEdit[52] P2P+NTI[34,53] Instruct-P2P[17] MagicBrush[97] MasaCTRL[18] StableFlow(ours)
+“Thecatisyellingandraisingitspaw”
+“Arabbittoysittingandwearingpinksocksduringthelateafternoon”
+“Arubberducknexttoapurpleballduringasunnyday”
+“Adogwithasmallcollarliftingitspawwhilewearingredglasses”
+“Abottlenexttoanapple.Thereisaheartpaintingonthewall.”
+“Adollwithagreenbodywearingahat”
+“Amanwithalonghair”
+Figure8. QualitativeComparison. Wecompareourmethodonrealimagesagainstthebaselines. SDEdit[52]faceschallengeswith
+preserving object identities and backgrounds (e.g., rabbit and cat examples). P2P+NTI [34, 53] struggles with both preserving object
+identities(e.g.,rabbitandliondollsexamples)andaddingnewobjects(e.g.,missingballintheduckexampleandmissingheartinthe
+bottleexample).Instruct-P2P[17]andMagicBrush[97]strugglewithperformingnon-rigidediting(e.g.,raisingofthepawsindogandcat
+examples,andthesittingoftherabbitinitsexample). MasaCTRL[18]hasdifficultywithpreservingobjectidentities(e.g.,cat,dogand
+liondollexamples)andaddingnewobjects(e.g.,missingballintheduckexampleandmissingsocksintherabbitexample).Ourmethod,
+ontheotherhand,isabletoadheretotheeditingpromptwhilepreservingtheidentities.
+7gnitidE.cnI)1(
+Input “Holdinghands” “Wearingglasses” “Nexttoanalbino
+porcupine”
+elytS.tsnoC)2(
+Input “StatueofLiberty” “TajMahal” “EiffelTower”
+gnitidEtxeT)3(
+Input “Manholdinga “Manholdinga “Manholdinga
+signwiththe signwiththe signwiththe
+text‘diffusion’ uppercasetext text‘Flow’”
+inabluecolor” ‘DIFFUSION’”
+Figure9. Applications. Ourmethodcanbeusedforvariousap-
+plications:(1)IncrementalEditing—startingfromasceneoftwo
+kids, theusercanrefinetheimageiterativelybymakingthekid
+holdhands,thenwearglassesandfinallyaddaporcupinenextto
+them. (2)ConsistentStyle—startingfromascenewithagiven
+style,suchasananimationoftheGreatPyramidofGiza,theuser
+can generate images of different places with the same style. (3)
+TextEditing—givenascenethatcontainstext,ourmethodisable
+toperformtext-relatededitingsuchascolorchange,casechange
+andtextreplacement.
+injectionthatisdescribedinSection3.2inallthelayers(in-
+steadonthevitallayersonly). (2)Attentioninjectionnon-
+vitallayers—weperformedtheattentioninjectioninsome
+non-vitallayers(sameamountoflayersasvitallayers). (3)
+Attention extension — instead of performing attention in-
+jection as described in Section 3.2, we extended [35, 82]
+theattentions.t. thegeneratedimagescanattendtotheref-
+erenceimage,aswellasthemselves. (4)w/olatentnudging
+—weomittedthelatentnudgingcomponent(Section3.3).
+As can be seen in Table 2, we found that (1) perform-
+ing attention injection in all the layers or performing (3)
+an attention extensionin allthe layers, significantly harms
+thetextsimilarity. Inaddition, (2)performinganattention
+extensioninthenon-vitallayersor(4)removingthelatent
+nudgingreducestheimagesimilarity.
+4.4.Applications
+As demonstrated in Figure 9, our method can be used for
+various applications: (1) Incremental Editing — starting
+fromagivenscene,theusercanrefinetheimageiteratively
+in a step-by-step manner. (2) Consistent Style — starting
+fromascenewithagivenstyle,theusercangenerateother
+images in the same style [27, 35, 41]. (3) Text Editing —
+gnitidEelytS)1(
+Input “Animation” “Pencilsketch” “Oilpainting”
+.garDtcejbO)2(
+Input “Ontherightside “Ontheleftside “Onthebottom
+oftheframe” oftheframe” oftheframe”
+ecalpeR.gB)3(
+Input “Intheforest” “Inthedesert” “Onthemoon”
+Figure10. Limitations. Ourmethodsuffersfromthefollowing
+limitations: (1)StyleEditing—givenaphotorealisticimageofa
+boy,ourmethodstruggleswithchangingitsstyletoananimation
+(the identity of the boy also changes), to pencil sketch (changes
+onlytoblack&white)ortoanoilpainting(mainlymakestheim-
+agesmoother). (2)ObjectDragging—givenanimageofacat,
+ourmethodisunabletodragitintodifferentlocationsintheimage,
+butchangesthegazeofthecatinstead. (3)BackgroundReplace-
+ment—givenanimageofaratontheroad,ourmethodunableto
+replaceitsbackgroundentirely(theroadleaks).
+givenascenethatcontainstext, ourmethodisabletoper-
+formtext-relatededitingsuchascolorchange,casechange
+andtextreplacement.
+5.LimitationsandConclusions
+AsdemonstratedinFigure10,ourmethodsuffersfromthe
+following limitations: (1) Style Editing — given an input
+image in one style (e.g., photorealistic), our method strug-
+gleswithchangingittoadifferentstyle(e.g.,oilpainting),
+as it relies on attention injection (Section 3.2). (2) Object
+Dragging — given an image with an object, our method
+is unable to drag it [11] into different locations in the im-
+age, as text-to-image models often struggle [10] with spa-
+tial prompt adherence. (3) Background Replacement —
+givenaninputimage, ourmethodstruggleswithreplacing
+itsbackgroundentirelywithnoleakage[22].
+In conclusion, we present Stable Flow, a training-free
+method for image editing that enables various image edit-
+ingtasksusingtheattentioninjectionofthesamevitallay-
+ersgroup. Webelievethatourfully-automatedapproachof
+detecting vital layers may be also beneficial for other use-
+cases, such as generative models pruning and distillation.
+We hope that our layer analysis will inspire more work in
+thefieldofgenerativemodelsandexpandingthepossibili-
+tiesforcreativeexpression.
+8References mantic photo manipulation with a generative image prior.
+ACMTransactionsonGraphics(TOG),38:1–11,2019. 3
+[1] Rameen Abdal, Yipeng Qin, and Peter Wonka. Im-
+[15] DavidBau,AlexAndonian,AudreyCui,YeonHwanPark,
+age2stylegan: Howtoembedimagesintothestyleganla-
+AliJahanian,AudeOliva,andAntonioTorralba. Paintby
+tentspace? InProceedingsoftheIEEE/CVFInternational
+word. ArXiv,abs/2103.10951,2021. 2
+ConferenceonComputerVision, pages4432–4441, 2019.
+[16] Manuel Brack, Felix Friedrich, Katharina Kornmeier,
+3
+LinoyTsaban,PatrickSchramowski,KristianKersting,and
+[2] Rameen Abdal, Yipeng Qin, and Peter Wonka. Im-
+Apolin’arioPassos. Ledits++: Limitlessimageeditingus-
+age2stylegan++: How to edit the embedded images? In
+ingtext-to-imagemodels. 2024IEEE/CVFConferenceon
+ProceedingsoftheIEEE/CVFconferenceoncomputervi-
+Computer Vision and Pattern Recognition (CVPR), pages
+sionandpatternrecognition,pages8296–8305,2020.
+8861–8870,2023. 3
+[3] Yuval Alaluf, Omer Tov, Ron Mokady, Rinon Gal, and
+[17] Tim Brooks, Aleksander Holynski, and Alexei A. Efros.
+AmitHaimBermano. Hyperstyle: Styleganinversionwith
+Instructpix2pix: Learningtofollowimageeditinginstruc-
+hypernetworks for real image editing. 2022 IEEE/CVF
+tions. InCVPR,2023. 2,6,7,13,14,15,16
+Conference on Computer Vision and Pattern Recognition
+[18] Mingdeng Cao, Xintao Wang, Zhongang Qi, Ying Shan,
+(CVPR),pages18490–18500,2021. 3
+Xiaohu Qie, and Yinqiang Zheng. MasaCtrl: tuning-free
+[4] Yuval Alaluf, Daniel Garibi, Or Patashnik, Hadar
+mutual self-attention control for consistent image synthe-
+Averbuch-Elor, andDanielCohen-Or. Cross-imageatten-
+sis and editing. In Proceedings of the IEEE/CVF Inter-
+tion for zero-shot appearance transfer. In International
+national Conference on Computer Vision (ICCV), pages
+Conference on Computer Graphics and Interactive Tech-
+22560–22570,2023. 1,2,3,4,6,7,13,14,15,16
+niques,2023. 1
+[19] Mathilde Caron, Hugo Touvron, Ishan Misra, Herve´ Je-
+[5] Michael S Albergo and Eric Vanden-Eijnden. Building
+gou,JulienMairal,PiotrBojanowski,andArmandJoulin.
+normalizing flows with stochastic interpolants. ArXiv,
+Emergingpropertiesinself-supervisedvisiontransformers.
+abs/2209.15571,2022. 1
+In2021IEEE/CVFInternationalConferenceonComputer
+[6] Amazon. Amazon mechanical turk. https://www. Vision(ICCV),pages9630–9640,2021. 13,15,21,23
+mturk.com/,2024. 6,14 [20] HilaChefer, ShiranZada, RoniPaiss, ArielEphrat, Omer
+[7] MoabArar,AndreyVoynov,AmirHertz,OmriAvrahami, Tov, Michael Rubinstein, Lior Wolf, Tali Dekel, Tomer
+ShlomiFruchter, YaelPritch, DanielCohen-Or, andAriel Michaeli, and Inbar Mosseri. Still-moving: Customized
+Shamir. Palp: Prompt aligned personalization of text-to- video generation without customized video data. ArXiv,
+imagemodels. 2024. 2 abs/2407.08674,2024. 2
+[8] OmriAvrahami,DaniLischinski,andOhadFried.Blended [21] GuillaumeCouairon,JakobVerbeek,HolgerSchwenk,and
+diffusionfortext-driveneditingofnaturalimages. InPro- MatthieuCord. Diffedit: Diffusion-basedsemanticimage
+ceedings of the IEEE/CVF Conference on Computer Vi- editingwithmaskguidance. InTheEleventhInternational
+sionandPatternRecognition(CVPR),pages18208–18218, ConferenceonLearningRepresentations,2022. 2
+2022. 2 [22] Omer Dahary, Or Patashnik, Kfir Aberman, and Daniel
+[9] OmriAvrahami,OhadFried,andDaniLischinski.Blended Cohen-Or. Be yourself: Bounded attention for multi-
+latentdiffusion. ACMTrans.Graph.,42(4),2023. 2 subject text-to-image generation. ArXiv, abs/2403.16990,
+[10] OmriAvrahami,ThomasHayes,OranGafni,SonalGupta, 2024. 8
+YanivTaigman,DeviParikh,DaniLischinski,OhadFried, [23] GiladDeutch,RinonGal,DanielGaribi,OrPatashnik,and
+and Xi Yin. Spatext: Spatio-textual representation for Daniel Cohen-Or. Turboedit: Text-based image editing
+controllable image generation. In Proceedings of the using few-step diffusion models. ArXiv, abs/2408.00735,
+IEEE/CVF Conference on Computer Vision and Pattern 2024. 3
+Recognition(CVPR),pages18370–18380,2023. 8 [24] TanM.Dinh, A.Tran, RangHoManNguyen, andBinh-
+[11] OmriAvrahami,RinonGal,GalChechik,OhadFried,Dani SonHua. Hyperinverter: Improvingstyleganinversionvia
+Lischinski, Arash Vahdat, and Weili Nie. Diffuhaul: A hypernetwork. 2022IEEE/CVFConferenceonComputer
+training-freemethodforobjectdragginginimages. arXiv Vision and Pattern Recognition (CVPR), pages 11379–
+preprintarXiv:2406.01594,2024. 8,21,26 11388,2021. 3
+[12] Omri Avrahami, Amir Hertz, Yael Vinker, Moab Arar, [25] PatrickEsser,SumithKulal,A.Blattmann,RahimEntezari,
+ShlomiFruchter, OhadFried, DanielCohen-Or, andDani Jonas Muller, Harry Saini, Yam Levi, Dominik Lorenz,
+Lischinski. Thechosenone: Consistentcharactersintext- AxelSauer,FredericBoesel,DustinPodell,TimDockhorn,
+to-imagediffusionmodels.InACMSIGGRAPH2024Con- ZionEnglish, KyleLacey, AlexGoodwin, YannikMarek,
+ferencePapers,NewYork,NY,USA,2024.Associationfor andRobinRombach.Scalingrectifiedflowtransformersfor
+ComputingMachinery. 2 high-resolution image synthesis. ArXiv, abs/2403.03206,
+[13] Omer Bar-Tal, Dolev Ofri-Amar, Rafail Fridman, Yoni 2024. 1,3,13,21,36
+Kasten,andTaliDekel. Text2live: Text-drivenlayeredim- [26] Johannes S. Fischer, Ming Gui, Pingchuan Ma, Nick
+ageandvideoediting. ArXiv,abs/2204.02491,2022. 2 Stracke, Stefan Andreas Baumann, Vincent Tao Hu, and
+[14] David Bau, Hendrik Strobelt, William S. Peebles, Jonas BjornOmmer. Boostinglatentdiffusionwithflowmatch-
+Wulff,BoleiZhou,Jun-YanZhu,andAntonioTorralba.Se- ing. ArXiv,abs/2312.07360,2023. 1
+9[27] Yarden Frenkel, Yael Vinker, Ariel Shamir, and Daniel [42] JustinJohnson, AlexandreAlahi, andLiFei-Fei. Percep-
+Cohen-Or. Implicit style-content separation using b-lora. tuallossesforreal-timestyletransferandsuper-resolution.
+ArXiv,abs/2403.14572,2024. 8 ArXiv,abs/1603.08155,2016. 15
+[28] RinonGal,OrPatashnik,HaggaiMaron,AmitH.Bermano, [43] TeroKarras,SamuliLaine,andTimoAila. Astyle-based
+GalChechik,andDanielCohen-Or. Stylegan-nada. ACM generatorarchitectureforgenerativeadversarialnetworks.
+TransactionsonGraphics(TOG),41:1–13,2021. 6,14 InProceedingsoftheIEEEconferenceoncomputervision
+[29] Daniel Garibi, Or Patashnik, Andrey Voynov, Hadar andpatternrecognition,pages4401–4410,2019. 2,3
+Averbuch-Elor,andDanielCohen-Or.Renoise:Realimage [44] TeroKarras, SamuliLaine, MiikaAittala, JanneHellsten,
+inversionthroughiterativenoising.ArXiv,abs/2403.14602, Jaakko Lehtinen, and Timo Aila. Analyzing and improv-
+2024. 3 ing the image quality of stylegan. In Proceedings of the
+[30] MichalGeyer,OmerBar-Tal,ShaiBagon,andTaliDekel. IEEE/CVF Conference on Computer Vision and Pattern
+Tokenflow: Consistent diffusion features for consistent Recognition,pages8110–8119,2020. 2
+videoediting. arXivpreprintarXiv:2307.10373,2023. 3 [45] Bahjat Kawar, Shiran Zada, Oran Lang, Omer Tov, Hui-
+[31] Ian Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing wen Chang, Tali Dekel, Inbar Mosseri, and Michal Irani.
+Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Imagic: Text-basedrealimageeditingwithdiffusionmod-
+andYoshuaBengio. Generativeadversarialnets. Advances els. InProceedingsoftheIEEE/CVFConferenceonCom-
+inneuralinformationprocessingsystems,27,2014. 2 puter Vision and Pattern Recognition, pages 6007–6017,
+[32] Ligong Han, Song Wen, Qi Chen, Zhixing Zhang, Kun- 2023. 2
+peng Song, Mengwei Ren, Ruijiang Gao, Yuxiao Chen, [46] Black Forest Labs. Flux. https://github.com/
+DingLiu,QilongZhangli,AnastasisStathopoulos,Xiaox- black-forest-labs/flux,2024. 1,2,3,6,13,21
+iao He, Jindong Jiang, Zhaoyang Xia, Akash Srivastava, [47] Shanglin Li, Bo-Wen Zeng, Yutang Feng, Sicheng Gao,
+and Dimitris N. Metaxas. Proxedit: Improving tuning- Xuhui Liu, Jiaming Liu, Li Lin, Xu Tang, Yao Hu,
+free real image editing with proximal guidance. 2024 Jianzhuang Liu, and Baochang Zhang. Zone: Zero-shot
+IEEE/CVFWinterConferenceonApplicationsofComputer instruction-guidedlocalediting. 2024IEEE/CVFConfer-
+Vision(WACV),pages4279–4289,2023. 3 enceonComputerVisionandPatternRecognition(CVPR),
+[33] KaimingHe,X.Zhang,ShaoqingRen,andJianSun. Deep pages6254–6263,2023. 2
+residuallearningforimagerecognition.2016IEEEConfer- [48] Tsung-Yi Lin, Michael Maire, Serge J. Belongie, James
+enceonComputerVisionandPatternRecognition(CVPR), Hays, Pietro Perona, Deva Ramanan, Piotr Dolla´r, and
+pages770–778,2015. 3 C. Lawrence Zitnick. Microsoft coco: Common objects
+[34] AmirHertz,RonMokady,JayTenenbaum,KfirAberman, incontext. InEuropeanConferenceonComputerVision,
+YaelPritch,andDanielCohen-or.Prompt-to-promptimage 2014. 6,13,15,16,17
+editingwithcross-attentioncontrol. InTheEleventhInter- [49] YaronLipman,RickyT.Q.Chen,HeliBen-Hamu,Maxi-
+nationalConferenceonLearningRepresentations,2022.2, milianNickel,andMattLe. Flowmatchingforgenerative
+6,7,13,14,15,16 modeling. ArXiv,abs/2210.02747,2022. 1
+[35] AmirHertz,AndreyVoynov,ShlomiFruchter,andDaniel [50] Xingchao Liu, Chengyue Gong, and Qiang Liu. Flow
+Cohen-Or.Stylealignedimagegenerationviasharedatten- straight and fast: Learning to generate and transfer data
+tion. 2024IEEE/CVFConferenceonComputerVisionand withrectifiedflow. ArXiv,abs/2209.03003,2022. 1
+PatternRecognition(CVPR),pages4775–4785,2023. 8 [51] Barak Meiri, Dvir Samuel, Nir Darshan, Gal Chechik,
+[36] JonathanHo,AjayJain,andPieterAbbeel. Denoisingdif- Shai Avidan, and Rami Ben-Ari. Fixed-point inver-
+fusion probabilistic models. In Proc. NeurIPS, 2020. 1, sion for text-to-image diffusion models. arXiv preprint
+3 arXiv:2312.12540,2023. 3
+[37] EliahuHorwitz,JonathanKahana,andYedidHoshen. Re- [52] ChenlinMeng,YutongHe,YangSong,JiamingSong,Jia-
+coveringthepre-fine-tuningweightsofgenerativemodels. junWu,Jun-YanZhu,andStefanoErmon. Sdedit: Guided
+ArXiv,abs/2402.10208,2024. 2 image synthesis and editing with stochastic differential
+[38] Nisha Huang, Fan Tang, Weiming Dong, Tong-Yee Lee, equations. In International Conferenceon Learning Rep-
+andChangshengXu. Region-awarediffusionforzero-shot resentations,2021. 2,6,7,13,14,15,16
+text-drivenimageediting. ArXiv,abs/2302.11797,2023. 2 [53] RonMokady,AmirHertz,KfirAberman,YaelPritch,and
+[39] YiHuang,JianchengHuang,YifanLiu,MingfuYan,Jiaxi Daniel Cohen-Or. Null-text inversion for editing real im-
+Lv,JianzhuangLiu,WeiXiong,HeZhang,ShifengChen, ages using guided diffusion models. In Proceedings of
+andLiangliangCao. Diffusionmodel-basedimageediting: theIEEE/CVFConferenceonComputerVisionandPattern
+Asurvey. ArXiv,abs/2402.17525,2024. 2 Recognition,pages6038–6047,2023. 2,3,6,7,13,14,15,
+[40] InbarHuberman-Spiegelglas,VladimirKulikov,andTomer 16
+Michaeli.Aneditfriendlyddpmnoisespace:Inversionand [54] Alex Nichol, Prafulla Dhariwal, Aditya Ramesh, Pranav
+manipulations. arXive-prints,pagesarXiv–2304,2023. 3 Shyam,PamelaMishkin,BobMcGrew,IlyaSutskever,and
+[41] JaeseokJeong,JunhoKim,YunjeyChoi,GayoungLee,and MarkChen. Glide: Towardsphotorealisticimagegenera-
+YoungjungUh. Visualstylepromptingwithswappingself- tionandeditingwithtext-guideddiffusionmodels. InIn-
+attention. ArXiv,abs/2402.12974,2024. 8 ternationalConferenceonMachineLearning,2021. 2
+10[55] YotamNitzan,ZongzeWu,RichardZhang,EliShechtman, bach. SDXL:Improvinglatentdiffusionmodelsforhigh-
+DanielCohen-Or,TaesungPark,andMichaelGharbi.Lazy resolutionimagesynthesis. ArXiv,abs/2307.01952,2023.
+diffusiontransformerforinteractiveimageediting. ArXiv, 2,3
+abs/2404.12382,2024. 2 [67] Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya
+[56] OpenAI. ChatGPT. https://chat.openai.com/, Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry,
+2022. Accessed:2024-10-1. 3,13,21 Amanda Askell, Pamela Mishkin, Jack Clark, Gretchen
+[57] Maxime Oquab, Timothe´e Darcet, The´o Moutakanni, Krueger, and Ilya Sutskever. Learning transferable visual
+HuyQ.Vo,MarcSzafraniec,VasilKhalidov,PierreFernan- modelsfromnaturallanguagesupervision.InInternational
+dez,DanielHaziza,FranciscoMassa,AlaaeldinEl-Nouby, ConferenceonMachineLearning,2021. 13,15,21,23
+MahmoudAssran,NicolasBallas,WojciechGaluba,Russ [68] Aditya Ramesh, Prafulla Dhariwal, Alex Nichol, Casey
+Howes, Po-Yao (Bernie) Huang, Shang-Wen Li, Ishan Chu, and Mark Chen. Hierarchical text-conditional
+Misra, Michael G. Rabbat, Vasu Sharma, Gabriel Syn- image generation with CLIP latents. arXiv preprint
+naeve,HuijiaoXu,Herve´Je´gou,JulienMairal,PatrickLa- arXiv:2204.06125,2022. 3
+batut, Armand Joulin, and Piotr Bojanowski. DINOv2:
+[69] Omer Regev, Omri Avrahami, and Dani Lischinski.
+Learningrobustvisualfeatureswithoutsupervision.ArXiv,
+Click2mask: Localeditingwithdynamicmaskgeneration.
+abs/2304.07193,2023. 3,13,15,23
+ArXiv,abs/2409.08272,2024. 2
+[58] ZhihongPan,RiccardoGherardi,XiufengXie,andStephen
+[70] Elad Richardson, Yuval Alaluf, Or Patashnik, Yotam
+Huang. Effective real image editing with accelerated it-
+Nitzan, Yaniv Azar, Stav Shapiro, and Daniel Cohen-Or.
+erativediffusioninversion. 2023IEEE/CVFInternational
+Encodinginstyle: astyleganencoderforimage-to-image
+Conference on Computer Vision (ICCV), pages 15866–
+translation. 2021IEEE/CVFConferenceonComputerVi-
+15875,2023. 3
+sion and Pattern Recognition (CVPR), pages 2287–2296,
+[59] GauravParmar,YijunLi,JingwanLu,RichardZhang,Jun-
+2020. 3
+Yan Zhu, and Krishna Kumar Singh. Spatially-adaptive
+[71] DanielRoich,RonMokady,AmitH.Bermano,andDaniel
+multilayer selection for gan inversion and editing. 2022
+Cohen-Or. Pivotal tuning for latent-based editing of real
+IEEE/CVF Conference on Computer Vision and Pattern
+images. ACMTransactionsonGraphics(TOG),42:1–13,
+Recognition(CVPR),pages11389–11399,2022. 3
+2021. 3
+[60] GauravParmar,KrishnaKumarSingh,RichardZhang,Yi-
+[72] Robin Rombach, A. Blattmann, Dominik Lorenz, Patrick
+jun Li, Jingwan Lu, and Jun-Yan Zhu. Zero-shot image-
+Esser, and Bjo¨rn Ommer. High-resolution image synthe-
+to-image translation. ACM SIGGRAPH 2023 Conference
+siswithlatentdiffusionmodels. 2022IEEE/CVFConfer-
+Proceedings,2023. 2
+enceonComputerVisionandPatternRecognition(CVPR),
+[61] OrPatashnik, ZongzeWu, EliShechtman, DanielCohen-
+pages10674–10685,2021. 3
+Or, and Dani Lischinski. Styleclip: Text-driven manipu-
+[73] OlafRonneberger,PhilippFischer,andThomasBrox. U-
+lationofstyleganimagery. 2021IEEE/CVFInternational
+net:Convolutionalnetworksforbiomedicalimagesegmen-
+ConferenceonComputerVision(ICCV),pages2065–2074,
+tation. ArXiv,abs/1505.04597,2015. 1,3
+2021. 6,14
+[74] Chitwan Saharia, William Chan, Saurabh Saxena, Lala
+[62] OrPatashnik,DanielGaribi,IdanAzuri,HadarAverbuch-
+Li, Jay Whang, Emily L Denton, Kamyar Ghasemipour,
+Elor,andDanielCohen-Or. Localizingobject-levelshape
+variations with text-to-image diffusion models. 2023 Raphael Gontijo Lopes, Burcu Karagol Ayan, Tim Sali-
+IEEE/CVF International Conference on Computer Vision mans, etal. Photorealistictext-to-imagediffusionmodels
+(ICCV),pages22994–23004,2023. 2 withdeeplanguageunderstanding. AdvancesinNeuralIn-
+formationProcessingSystems,35:36479–36494,2022. 3
+[63] William S. Peebles and Saining Xie. Scalable diffusion
+models with transformers. 2023 IEEE/CVF International [75] Mohammad Salama, Jonathan Kahana, Eliahu Horwitz,
+ConferenceonComputerVision(ICCV),pages4172–4182, andYedidHoshen.Datasetsizerecoveryfromloraweights.
+2022. 1,2,3 ArXiv,abs/2406.19395,2024. 2
+[64] StanislavPidhorskyi, DonaldA.Adjeroh, andGianfranco [76] ShellySheynin,AdamPolyak,UrielSinger,YuvalKirstain,
+Doretto. Adversariallatentautoencoders. 2020IEEE/CVF AmitZohar,OronAshual,DeviParikh,andYanivTaigman.
+Conference on Computer Vision and Pattern Recognition Emuedit:Preciseimageeditingviarecognitionandgener-
+(CVPR),pages14092–14101,2020. 3 ationtasks. ArXiv,abs/2311.10089,2023. 2,6
+[65] Ryan Po, Wang Yifan, Vladislav Golyanik, Kfir Aber- [77] Karen Simonyan, Andrea Vedaldi, and Andrew Zisser-
+man, Jonathan T. Barron, Amit H. Bermano, Eric Ryan man. Deep inside convolutional networks: Visualising
+Chan,TaliDekel,AleksanderHolynski,AngjooKanazawa, image classification models and saliency maps. CoRR,
+C. Karen Liu, Lingjie Liu, Ben Mildenhall, Matthias abs/1312.6034,2013. 3
+Nießner, BjornOmmer, Christian Theobalt, PeterWonka, [78] JaschaSohl-Dickstein,EricWeiss,NiruMaheswaranathan,
+andGordonWetzstein. Stateoftheartondiffusionmodels and Surya Ganguli. Deep unsupervised learning using
+forvisualcomputing. ArXiv,abs/2310.07204,2023. 2 nonequilibrium thermodynamics. In International Con-
+[66] Dustin Podell, Zion English, Kyle Lacey, A. Blattmann, ference on Machine Learning, pages 2256–2265. PMLR,
+TimDockhorn,JonasMuller,JoePenna,andRobinRom- 2015. 1
+11[79] JiamingSong,ChenlinMeng,andStefanoErmon. Denois- [91] Jay Zhangjie Wu, Yixiao Ge, Xintao Wang, Weixian Lei,
+ingdiffusionimplicitmodels. InInternationalConference Yuchao Gu, Wynne Hsu, Ying Shan, Xiaohu Qie, and
+onLearningRepresentations,2020. 2,3 MikeZhengShou. Tune-a-video: One-shottuningofim-
+[80] Yang Song and Stefano Ermon. Generative modeling by age diffusion models for text-to-video generation. 2023
+estimatinggradientsofthedatadistribution. Advancesin IEEE/CVF International Conference on Computer Vision
+NeuralInformationProcessingSystems,32,2019. 1 (ICCV),pages7589–7599,2022. 1,4
+[81] YoadTewel,RinonGal,DvirSamuelYuvalAtzmon,Lior [92] Weihao Xia, Yulun Zhang, Yujiu Yang, Jing-Hao Xue,
+Wolf,andGalChechik. Add-it:Training-freeobjectinser- BoleiZhou,andMing-HsuanYang. Ganinversion: Asur-
+tioninimageswithpretraineddiffusionmodels,2024. 2 vey. IEEETransactionsonPatternAnalysisandMachine
+Intelligence,45:3121–3138,2021. 2
+[82] Yoad Tewel, Omri Kaduri, Rinon Gal, Yoni Kasten, Lior
+Wolf,GalChechik,andYuvalAtzmon. Training-freecon- [93] ShaoanXie,ZhifeiZhang,ZheLin,TobiasHinz,andKun
+sistent text-to-image generation. ArXiv, abs/2402.03286, Zhang. Smartbrush: Textandshapeguidedobjectinpaint-
+2024. 8 ingwithdiffusionmodel. 2023IEEE/CVFConferenceon
+Computer Vision and Pattern Recognition (CVPR), pages
+[83] OmerTov,YuvalAlaluf,YotamNitzan,OrPatashnik,and
+22428–22437,2022. 2
+DanielCohen-Or.Designinganencoderforstyleganimage
+manipulation.ACMTransactionsonGraphics(TOG),40:1 [94] Binxin Yang, Shuyang Gu, Bo Zhang, Ting Zhang, Xue-
+–14,2021. 3 jinChen,XiaoyanSun,DongChen,andFangWen. Paint
+byexample: Exemplar-basedimageeditingwithdiffusion
+[84] Narek Tumanyan, Michal Geyer, Shai Bagon, and Tali
+models. 2023 IEEE/CVF Conference on Computer Vi-
+Dekel. Plug-and-play diffusion features for text-driven
+sionandPatternRecognition(CVPR),pages18381–18391,
+image-to-image translation. In Proceedings of the
+2022. 6
+IEEE/CVF Conference on Computer Vision and Pattern
+Recognition,pages1921–1930,2023. 2,3 [95] ZhenYang,DinggangGui,WenWang,HaoChen,Bohan
+Zhuang,andChunhuaShen.Object-awareinversionandre-
+[85] Dani Valevski, Matan Kalman, Yossi Matias, and Yaniv
+assemblyforimageediting. ArXiv,abs/2310.12149,2023.
+Leviathan. Unitune:Text-drivenimageeditingbyfinetun-
+3
+ing an image generation model on a single image. arXiv
+[96] Matthew D. Zeiler and Rob Fergus. Visualizing and un-
+preprintarXiv:2210.09477,2022. 2
+derstandingconvolutionalnetworks.ArXiv,abs/1311.2901,
+[86] Patrick von Platen, Suraj Patil, Anton Lozhkov, Pedro
+2013. 3
+Cuenca,NathanLambert,KashifRasul,MishigDavaadorj,
+[97] Kai Zhang, Lingbo Mo, Wenhu Chen, Huan Sun, and
+and Thomas Wolf. Diffusers: State-of-the-art diffusion
+Yu Su. Magicbrush: A manually annotated dataset for
+models. https://github.com/huggingface/
+instruction-guided image editing. In Advances in Neural
+diffusers,2022. 13,21
+InformationProcessingSystems,2023. 2,6,7,13,14,15,
+[87] BramWallace,AkashGokul,andNikhilVijayNaik.Edict:
+16
+Exactdiffusioninversionviacoupledtransformations.2023
+[98] RichardZhang,PhillipIsola,AlexeiA.Efros,EliShecht-
+IEEE/CVF Conference on Computer Vision and Pattern
+man,andOliverWang. Theunreasonableeffectivenessof
+Recognition(CVPR),pages22532–22541,2022. 3
+deepfeaturesasaperceptualmetric.2018IEEE/CVFCon-
+[88] Qian Wang, Biao Zhang, Michael Birsak, and Peter
+ferenceonComputerVisionandPatternRecognition,pages
+Wonka. Instructedit: Improving automatic masks for
+586–595,2018. 13,15,22,23
+diffusion-basedimageeditingwithuserinstructions.ArXiv,
+[99] JiapengZhu,YujunShen,DeliZhao,andBoleiZhou. In-
+abs/2305.18047,2023. 2
+domainganinversionforrealimageediting. InEuropean
+[89] Su Wang, Chitwan Saharia, Ceslee Montgomery, Jordi
+conference on computer vision, pages 592–608. Springer,
+Pont-Tuset,ShaiNoy,StefanoPellegrini,YasumasaOnoe,
+2020. 3
+SarahLaszlo,DavidJFleet,RaduSoricut,etal.Imagened-
+[100] PeihaoZhu,RameenAbdal,YipengQin,andPeterWonka.
+itor and editbench: Advancing and evaluating text-guided
+Improvedstyleganembedding:Wherearethegoodlatents?
+imageinpainting.InProceedingsoftheIEEE/CVFConfer-
+ArXiv,abs/2012.09036,2020. 3
+ence on Computer Vision and Pattern Recognition, pages
+18359–18369,2023. 2
+[90] ThomasWolf,LysandreDebut,VictorSanh,JulienChau-
+mond, Clement Delangue, Anthony Moi, Pierric Cistac,
+Tim Rault, Re´mi Louf, Morgan Funtowicz, Joe Davison,
+SamShleifer,PatrickvonPlaten,ClaraMa,YacineJernite,
+Julien Plu, Canwen Xu, Teven Le Scao, Sylvain Gugger,
+MariamaDrame,QuentinLhoest,andAlexanderM.Rush.
+Transformers:State-of-the-artnaturallanguageprocessing.
+InProceedingsofthe2020ConferenceonEmpiricalMeth-
+odsinNaturalLanguageProcessing: SystemDemonstra-
+tions,pages38–45,Online,2020.AssociationforCompu-
+tationalLinguistics. 13
+12Stable Flow: Vital Layers for Training-Free Image Editing
+Supplementary Material
+Acknowledgments. We thank Omer Dahary for his We adapt the text prompts based on the baseline type:
+valuable help and feedback. This work was supported in for SDEdit [52], P2P+NTI [34, 53], and MasaCTRL [18],
+part by the Israel Science Foundation (grants 1574/21 and we used the standard text prompt describing the desired
+2203/24). editedscene(e.g.,“Aphotoofamanwitharedhat”). For
+theinstruction-basedbaselinesInstruct-P2P[17]andMag-
+A.ImplementationDetails icBrush[97]weadaptedthestyletofitaninstructionalfor-
+mat(e.g.,“Makethepersonweararedhat”).
+InAppendixA.1,westartbyprovidingimplementationde- We used the following third-party implementations in
+tails for our method. Next, in Appendix A.2, we provide thisproject:
+the implementation details for the baselines we compared
+• FLUX.1-dev model [46] HuggingFace Diffusers [86]
+ourmethodagainst.Later,inAppendixA.3,weprovidethe
+implementation at https : / / github . com /
+implementationdetailsfortheautomaticevaluationsdataset
+huggingface/diffusers
+and metrics. Finally, in Appendix A.4 we provide the full
+• P2P+NTI[34,53]officialimplementationathttps://
+detailsoftheuserstudyweconducted.
+github.com/google/prompt-to-prompt
+• Instruct-P2P [17] official implementation at https:
+A.1.MethodImplementationDetails
+//github.com/timothybrooks/instruct-
+As described in Section 3.1 of the main paper, we started pix2pix
+bycollectingadatasetofK =64textpromptsusingChat- • MagicBrush[97]officialimplementationathttps://
+GPT[56].Weinstructedittogeneratetextpromptsdescrib- github.com/OSU-NLP-Group/MagicBrush
+ing a diverse set of objects in different environments, with • MasaCTRL[18]officialimplementationathttps://
+the focus on one main object. Then, we sampled K seeds github.com/TencentARC/MasaCtrl
+denoted by S and used them to generate K corresponding • DINOv2 [57] ViT-g/14 implementation by Hugging-
+imagesG . Next,foreachlayerl,webypassitbytaking Face Transformers [90] at https://github.com/
+ref
+only the residual connection values. For each bypass, we huggingface/transformers.
+generate K images using the same seed set S demoted by • DINOv1 [19] ViT-B/16 implementation by Hugging-
+G . All the images were generated using Euler sampler in Face Transformers [90] at https://github.com/
+l
+15stepsandaguidancescaleof3.5. huggingface/transformers.
+Next, to evaluate the effect of each layer l on the fi- • CLIP [67] ViT-L/14 implementation by Hugging-
+nal result, we compared the generated images G with Face Transformers [90] implementation at https://
+l
+their corresponding images G using the DINOv2 [57] github.com/huggingface/transformers
+ref
+perceptual similarity metric. We term the layers that ef- • LPIPS [98] official implementation at
+fect the generated image the most (i.e., the layers with https : / / github . com / richzhang /
+the lowest perceptual similarity) as vital layers, while PerceptualSimilarity.
+the rest of the layers as non-vital layers. We found
+that the vital layers in the FLUX.1-dev model [46] are A.3.AutomaticMetricsImplementationDetails
+[0,1,2,17,18,25,28,53,54,56]. Forvisualizationresults,
+As explained in Section 4.1 of the main paper, we prepare
+please refer to Appendix B.5. We empirically found that
+an evaluation dataset based on the COCO [48] validation
+layer 2 can be removed from this set. In addition, the vi-
+dataset. We begin by filtering the dataset automatically to
+tallayersfortheStableDiffusion3(SD3)[25]modelvital
+includeatleastoneprominentnon-rigidbody.Morespecif-
+layersare: [0,7,8,9]. Formoredetails,pleaserefertoAp-
+ically, wefilteronlyimagescontaininghumansoranimals
+pendixB.6.
+that at least one of them is prominent enough, but not too
+small, i.e., the prominent non-rigid body occupies at least
+A.2.BaselinesImplementationDetails
+5%oftheimagebutnomorethan33%. Next,foreachim-
+AsexplainedinSection4.1ofthemainpaper,wecompare age, we apply various image editing tasks (non-rigid edit-
+our method against the following baselines: SDEdit [52], ing,objectaddition,objectreplacement,andsceneediting)
+P2P+NTI [34, 53], Instruct-P2P [17], MagicBrush [97], that take into account the prominent object from a list of
+and MasaCTRL [18]. We reimplement SDEdit using the differentcombinations,resultinginatotaldatasetof3,200
+FLUX.1-dev model [46], and use the official implementa- samples. Examplesofimagesfromthisdatasetcanbeseen
+tionfortherestofthebaselines. inFigure13.
+13Figure12. UserStudyTrial. Weprovideanexampleofatrial
+taskintheuserstudyconductedusingAmazonMechanicalTurk
+(AMT)[6]. Userswereaskedfourquestionsofatwo-alternative
+forced-choice format. Complete instructions are shown in Fig-
+ure11.
+Figure 11. User Study Instructions. We provide the complete Table 4. User Study Statistical Significance. A binomial sta-
+instructionsfortheuserstudyweconductedusingAmazonMe- tistical test of the user study results suggests that our results are
+chanicalTurk(AMT)[6]tocompareourmethodwitheachbase- statisticallysignificant(p-value<5%).
+line.
+Oursvs PromptAdher. ImagePres. Realism Overall
+p-value p-value p-value p-value
+We evaluate the editing results using three metrics: (1) SDEdit[52] <1e−8 <1e−8 <1e−6 <1e−8
+CLIP which measures the similarity between the in- P2P+NTI[34,53] <1e−8 <1e−8 <1e−8 <6e−8
+img
+put image and the edited image by calculating the nor- Instruct-P2P[17] <1e−8 <1e−8 <1e−8 <2e−4
+MagicBrush[97] <5e−5 <1e−8 <1e−8 <1e−8
+malizedcosinesimilarityoftheirCLIPimageembeddings.
+MasaCTRL[18] <1e−8 <1e−8 <1e−8 <1e−8
+(2) CLIP which measures the similarity between the
+txt
+edited image and the target editing prompt by calculat-
+ingthenormalizedcosinesimilaritybetweentheCLIPim- amples,asexplainedinAppendixA.3.Wecomparedallthe
+age embedding and the target text CLIP embedding. (3) baselineswithourmethodusingastandardtwo-alternative
+CLIP dir[28,61]whichmeasuresthesimilaritybetweenthe forced-choice format. The users were given full instruc-
+directionofthepromptchangeandthedirectionoftheim- tions, as can be seen in Figure 11. Then, for each study
+agechange. trial, as shown in Figure 12, users were presented with an
+imageandaninstruction“Giventhefollowinginputimage
+A.4.UserStudyDetails
+of a {CATEGORY}” where {CATEGORY} is the COCO
+AsdescribedinSection4.2ofthemainpaper,weconducted categoryoftheprominentobject. Theusersweregiventwo
+anextensiveuserstudyusingtheAmazonMechanicalTurk editing results — one from our method and one from the
+(AMT)[6]platform,usingautomaticallygeneratedtestex- baseline,andwereaskedthefollowingquestions:
+141. “Which of the results is better in adhering to the text Finally,inFigures15and16,wepresentadditionalim-
+prompt{PROMPT}?”,where{PROMPT}istheediting ageeditingresultsusingourmethod.
+targetprompt.
+B.2.DifferentPerceptualMetrics
+2. “Whichoftheresultsisbetterinpreservingtheinforma-
+tionoftheinputimage?” As explained in Section 3.1 of the main paper, we assess
+3. “Whichoftheresultslooksmorerealistic?” theimpactofeachlayerbymeasuringtheperceptualsimi-
+4. “Whichoftheresultsisbetterinoverall?” laritybetweenG andG usingDINOv2[57]. Itraisesthe
+ref ℓ
+Wecollectedfiveratingspersample,resultingin320rat- question of the importance of the specific perceptual [42]
+ings per baseline, for a total of 1,920 responses. The time similaritymetricwhendeterminingthevitallayers.
+allotted per task was one hour, to allow raters to properly To this end, we also experiment with different percep-
+evaluatetheresultswithouttimepressure. Abinomialsta- tualmetrics: DINOv1[19],CLIP[67],andLPIPS[98]. In
+tisticaltestoftheuserstudyresults,aspresentedinTable4, Figures18,19and20weplottheperceptualsimilarityper
+suggeststhatourresultsarestatisticallysignificant(p-value layerforeachofthesemetrics. Thevitallayers,orderedby
+<5%). vitality,asdefinedinEquation1ofthemainpaper,foreach
+metricare:
+B.AdditionalExperiments • DINOv2—[1,0,2,18,53,28,54,17,56,25].
+• DINOv1—[1,0,2,18,53,56,54,25,28,17].
+InAppendixB.1,westartbyprovidingadditionalcompar- • CLIP—[2,0,1,18,53,56,54,4,17,3].
+isons and results of our method. Then, in Appendix B.2, • LPIPS—[0,1,2,18,17,56,53,54,6,4].
+we present experiments on using different perceptual met- As can be seen, the vital set V is equivalent for DI-
+rics. Followingthat,inAppendixB.3,wetesttheeffectof NOv2 and DINOv1 (even though there is a disagreement
+different sizes for vital layer set. Next, in Appendix B.4, on the order). In addition, all the metrics include the
+we provide latent nudging experiments. Furthermore, in set of {1,0,2,18,53,54,17,56} to be included in the vi-
+Appendix B.5 we present a full visualization of our layer tal set, while DINOv1 and DINOv2 suggest also includ-
+bypassing method. Finally, in Appendix B.6, we test our ing {28,25}, CLIP suggests including {3,4} instead and
+methodontheStableDiffusion3backbone. LPIPS suggests including {6,4} instead. In Figure 21 we
+edited images with these slightly different vital layer sets,
+B.1.AdditionalComparisonsandResults
+andfoundthedifferencestobenegligibleinpractice.
+InFigure13weprovideanadditionalqualitativecompari-
+B.3.NumberofVitalLayers
+sonofourmethodagainstthebaselinesonrealimagesex-
+tractedfromtheCOCO[48]dataset,asexplainedinSection Thesomewhatagnosticnatureofourmethodtothespecific
+4.1 in the main paper. As can be seen, SDEdit [52] strug- perceptualmetric,asdescribedinAppendixB.2,raisesthe
+gles with preserving the object identities and backgrounds question of the importance of the entire vital layer set V
+(e.g., the bear and chicken examples). P2P+NTI [34, 53] to the editing task. To this end, in Figure 22 we experi-
+struggleswithpreservingobjectidentities(e.g.,thebearand mentedwithomittingagrowingnumberofvitallayersand
+person examples) and with adding new objects (e.g., the testing the editing results. As can be seen, when remov-
+missing hat in the sheep example and missing ball in the ing 80% of the vital layer set, the changes are negligible.
+elephantexample). Instruct-P2P[17]andMagicBrush[97] However,whenremovingmorethanthat,theeditingresults
+strugglewithnon-rigidediting(e.g.,thepersonraisinghand includeunintendedchanges,suchasidentitychanges(e.g.,
+example).MasaCTRL[18]struggleswithpreservingobject man and woman examples) and background changes (e.g.,
+identities (e.g., the bear and person examples) and adding cat and blackboard examples). This is consistent with the
+newobjects(e.g.,thesheepandcatexamples).Ourmethod, resultsfromAppendixB.2thatshowthattheleastvitallay-
+on the other hand, is able to adhere to the editing prompt ersforeachperceptualmetricarelessimportantfortheim-
+whilepreservingtheidentities. ageeditingtask.
+Next,inFigure14,weprovideaqualitativecomparison
+B.4.LatentNudgingExperiments
+oftheablatedcasesthatareexplainedin,Section4.3inthe
+main paper. As can be seen, we found that (1) perform- AsdescribedinSection3.3ofthemainpaper,weproposed
+ingattentioninjectioninallthelayersorperforming(3)an using a latent nudging technique to avoid the bad recon-
+attention extension in all the layers, encourages the model struction quality of vanilla inverse Euler ODE solver. We
+todirectlycopytheinputimagewhileneglectingthetarget suggest multiplying the initial latent z by a small scalar
+0
+prompt. Inaddition, (2)performing anattention extension λ = 1.15toslightlyoffsetitfromthetrainingdistribution.
+in the non-vital layers or (4) removing the latent nudging AsshowninFigure23,weempiricallytesteddifferentval-
+reducestheinputimagesimilaritysignificantly. uesforthelatentnudginghyperparameterλ. Weperformed
+15Input SDEdit[52] P2P+NTI[34,53] Instruct-P2P[17] MagicBrush[97] MasaCTRL[18] StableFlow(ours)
+“Aphotoofabearwithalonghair”
+“Aphotoofamanraisinghishand”
+“Aphotoofasheepwithayellowhat”
+“Aphotoofacatwearingpurplesunglasses”
+“Aphotoofachickenduringsunset”
+“Aphotoofanelephantnexttoablueball”
+Figure13. BaselinesQualitativeComparisononAutomaticDataset. AsexplainedinSection4.1ofthemainpaper,wecompareour
+methodagainstthebaselinesonrealimagesextractedfromtheCOCO[48]dataset. WefindthatSDEdit[52]struggleswithpreserving
+theobjectidentitiesandbackgrounds(e.g., bearandchickenexamples). P2P+NTI [34,53]struggleswithpreservingobjectidentities
+(e.g., bear and person examples) and with addingnew objects (e.g., missing hat in the sheep example and missing ball in the elephant
+example). Instruct-P2P[17]andMagicBrush[97]strugglewithnon-rigidediting(e.g.,personraisinghand). MasaCTRL[18]struggles
+withpreservingobjectidentities(e.g.,bearandpersonexamples)andaddingnewobjects(e.g.,sheepandcatexamples). Ourmethod,on
+theotherhand,isabletoadheretotheeditingpromptwhilepreservingtheidentities.
+16Input (1)Inj.alllayers (2)Inj.non-vitallayers (3)Extensionalllayers (4)w/olatentnudging StableFlow(ours)
+“Aphotoofabearwithalonghair”
+“Aphotoofamanraisinghishand”
+“Aphotoofasheepwithayellowhat”
+“Aphotoofacatwearingpurplesunglasses”
+“Aphotoofachickenduringsunset”
+“Aphotoofanelephantnexttoablueball”
+Figure14. AblationsQualitativeComparisononAutomaticDataset. AsexplainedinSection4.3ofthemainpaper,wecompareour
+methodagainstseveralablationcasesonrealimagesextractedfromtheCOCO[48]dataset.Ascanbeseen,wefoundthat(1)performing
+attentioninjectioninallthelayersorperforming(3)anattentionextensioninallthelayersencouragesthemodeltodirectlycopytheinput
+imagewhileneglectingthetargetprompt. Inaddition,(2)performinganattentionextensioninthenon-vitallayersor(4)removingthe
+latentnudgingreducestheinputimagesimilaritysignificantly.
+17Input “A‘StableFlow’neonsign” “A‘P=NP’neonsign” “Aneonsignofavocados”
+Input “Awoodenlion” “Awoodentoilet” “Awoodennoodlesbowl”
+Input “Ahedgehog” “Ashark” “Abird”
+Input “Jumping” “Sitting” “Puttingitspawonastone”
+Figure15.AdditionalResults.Weprovidevariouseditingresultsofourmethod.Thesedifferenteditsaredoneusingthesamevitallayer
+set.
+18Input “Analbinoporcupine” “Ahorse” “Acrow”
+Input “Wearingaredshirt” “Wearingpurplejeans” “Wearingglasses”
+Input “Thetext‘FLUX’iswritten “Acamelinthebackground” “Acatinsidethebag”
+onthebag”
+Input “Apinkcar” “Amandrivingthecar” “Intheevening”
+Figure16.AdditionalResults.Weprovidevariouseditingresultsofourmethod.Thesedifferenteditsaredoneusingthesamevitallayer
+set.
+19Input “Minds” “Think” “Alike”
+Figure17. AdditionalResults. Givenaninputimagethatcontainatext,ourmethodcateditthetextwhilekeepingthebackgroundand
+style.
+200.98
+0.96
+0.94
+0.92
+0 5 10 15 20 25 30 35 40 45 50 55 60
+LayerIndex
+ytiralimiSlautpecrePPILC
+0.95
+0.9
+0.85
+0.8
+0 5 10 15 20 25 30 35 40 45 50 55 60
+LayerIndex
+Figure 18. Layer Removal Quantitative Comparison Using
+CLIP.AsexplainedinAppendixB.2,wemeasuredtheeffectof
+removing each layer of the model by calculating the CLIP [67]
+perceptualsimilaritybetweenthegeneratedimageswithandwith-
+out this layer. Lower perceptual similarity indicates significant
+changesinthegeneratedimages. Ascanbeseen,removingcer-
+tain layers significantly affects the generated images, while oth-
+ers have minimal impact. Importantly, influential layers are dis-
+tributedacrossthetransformerratherthanconcentratedinspecific
+regions.Notethatthefirstvitallayerswereomittedforclarity(as
+theirperceptualsimilarityapproachedzero).
+inversion using the inverse Euler ODE solver with a high
+numberof1,000inversion(anddenoising)steps,toreduce
+theinversionerror. However,evenwhenusingsuchahigh
+number of inversion/denoising steps, we notice that when
+notusinglatentnudging(i.e., λ = 1.0), thereconstruction
+quality is poor (notice the eyes and the legs of the dog).
+Next,wefoundthatλ = 1.15isthesmallestvaluethaten-
+ablesfullreconstructionusingtheinverseEulersolver.Fur-
+thermore, nudging values that are too high (e.g., λ = 3.0)
+resultinsaturatedimages. Lastly,wenoticethatdecreasing
+nudgingvalues(i.e.,λ < 1.0)severelydamagestherecon-
+structionquality.
+Inaddition,weexperimentwithasimplerinversionvari-
+ant based on latent caching (termed DDPM bucketing in
+DiffUHaul [11]), in which we saved the series of latents
+duringtheinversionprocesswithoutapplyinglatentnudg-
+ing. AsshowninFigure24,thisapproachindeedachieves
+perfect inversion (second column), but (third column) still
+struggleswithpreservingtheidentitieswhileeditingtheim-
+age(e.g.,therabbitandduckexamples)orsignificantlyal-
+ters the image (e.g., the cat and man examples). On the
+other hand, our method (fourth column) with the latent
+nudgingisabletopreservetheidentitiesduringediting. In
+practice, we found that using latent caching in addition to
+latent nudging enables inversion with a lower number of
+steps(50steps),hence,thisistheapproachweused.
+ytiralimiSlautpecreP1vONID
+Figure19.LayerRemovalQuantitativeComparisonUsingDI-
+NOv1. AsexplainedinAppendixB.2,wemeasuredtheeffectof
+removingeachlayerofthemodelbycalculatingtheDINOv1[19]
+perceptualsimilaritybetweenthegeneratedimageswithandwith-
+out this layer. Lower perceptual similarity indicates significant
+changesinthegeneratedimages. Ascanbeseen,removingcer-
+tain layers significantly affects the generated images, while oth-
+ers have minimal impact. Importantly, influential layers are dis-
+tributedacrossthetransformerratherthanconcentratedinspecific
+regions.Notethatthefirstvitallayerswereomittedforclarity(as
+theirperceptualsimilarityapproachedzero).
+B.5.LayerBypassingVisualization
+As explained in Section 3.1 of the main paper, to quantify
+layerimportanceinFLUXmodel,wedevisedasystematic
+evaluation approach. Using ChatGPT [56], we automati-
+cally generated a set P of k = 64 diverse text prompts,
+and draw a set S of random seeds. Each of these prompts
+wasusedtogenerateareferenceimage,yieldingasetG .
+ref
+For each DiT layer ℓ ∈ L, we performed an ablation by
+bypassingthelayerusingitsresidualconnection. Thispro-
+cess generated a set of images G from the same prompts
+ℓ
+andseeds.
+InFigures 25–32, we provideafull visualizationof the
+referencesetG alongwiththegenerationsetsG –G .
+ref 0 56
+As can be seen, removing certain layers significantly af-
+fectsthegeneratedimages, whileothershaveminimalim-
+pact. Importantly, influential layers are distributed across
+thetransformerratherthanconcentratedinspecificregions.
+B.6.StableDiffusion3Results
+All the experiments in the main paper were based on the
+FLUX.1-dev[46]model. Wealsoexperimentedwithadif-
+ferent DiT text-to-image flow model named Stable Diffu-
+sion 3 [25] based on the Diffusers [86] implementation of
+themediummodel.
+AsdescribedinSection3.1ofthemainpaper,wemea-
+211
+1
+1
+1
+1
+1
+0 5 10 15 20 25 30 35 40 45 50 55 60
+LayerIndex
+ytiralimiSlautpecreP)SPIPL-1(
+Figure 20. Layer Removal Quantitative Comparison Using
+LPIPS. As explained in Appendix B.2, we measured the ef-
+fect of removing each layer of the model by calculating the (1 -
+LPIPS) [98] perceptual similarity between the generated images
+withandwithoutthislayer. Lowerperceptualsimilarityindicates
+significantchangesinthegeneratedimages. Ascanbeseen, re-
+moving certain layers significantly affects the generated images,
+whileothershaveminimalimpact. Importantly,influentiallayers
+aredistributedacrossthetransformerratherthanconcentratedin
+specificregions. Notethatthefirstvitallayerswereomittedfor
+clarity(astheirperceptualsimilarityapproachedzero).
+sured the importance of each of the layers of this model.
+As shown in Figure 33, we measured the effect of remov-
+ingeachlayerfromthemodelbycalculatingtheperceptual
+similarity between the generated images with and without
+thislayer. Lowerperceptualsimilarityindicatessignificant
+changes in the generated images. As can be seen, remov-
+ingcertainlayerssignificantlyaffectsthegeneratedimages,
+whileothershaveminimalimpact.
+Next, in Figure 34 we illustrate the qualitative differ-
+encesbetweenvitalandnon-vitallayers. Whilebypassing
+non-vitallayers(G andG )resultsinmodestalterations,
+1 21
+bypassing vital layers leads to significant changes: com-
+plete noise generation (G ) or severe distortions (G , G ,
+0 7 8
+andG ).
+9
+Finally,inFigure35,weperformvariouseditingopera-
+tions using the same mechanism of injecting the reference
+imageinformationintothevitallayersofthemodel,asde-
+scribedinSection3.2ofthemainpaper.
+22Input DINO[19,57] CLIP[67] LPIPS[98]
+“Amanholdingacupoftea”
+“Anavocadoatthebeach”
+“Ablackboardwiththetext“VitalLayersAreAllYouNeed””
+“Theflooriscoveredwithsnow”
+Figure21. MetricsQualitativeComparison. AsdescribedinAppendixB.2,wealsoexperimentedwithotherperceptualmetrics. We
+foundDINOv2[57]andDINOv1[19]toproducethesamesetofvitallayer. WhileCLIP[67]andLPIPS[98]replacedtwolayersinthe
+vitallayersset(thoughtheyincludemostofthevitallayersetasinDINO).Ascanbeseen,thedifferencesbetweenthesesetsarenegligible
+wheneditingimages.
+23Input 100% 80% 60% 40% 20%
+“Amanholdingacupoftea”
+“Anavocadoatthebeach”
+“Ablackboardwiththetext“VitalLayersAreAllYouNeed””
+“Theflooriscoveredwithsnow”
+Figure22. NumberofVitalLayersComparison. AsexplainedinAppendixB.3,weexperimentedwithchoosingadifferentportionof
+thecalculatedvitallayersetV. Ascanbeseen,whenremoving80%ofthevitallayerset,thechangesarenegligible. However,when
+removingmorethanthat,theeditingresultsincludeunintendedchanges,suchasidentitychanges(e.g.,themanandwomanexamples)and
+backgroundchanges(e.g.,thecatandblackboardexamples).
+24λ=1.0 λ=1.1 λ=1.15 λ=3.0
+Input
+λ=0.9 λ=0.8 λ=0.7 λ=0.6
+Figure23. LatentNudgingValues. AsdescribedinAppendixB.4,weempiricallytesteddifferentvaluesforthelatentnudginghyper-
+parameterλ. Inourexperiments,weperformedinversionusingtheinverseEulerODEsolverwithahighnumberof1,000inversion(and
+denoising)steps, toreducetheinversionerror. However, evenwhenusingsuchahighnumberofinversion/denoisingsteps, wenotice
+thatwhennotusinglatentnudging(i.e.,λ = 1.0),thereconstructionqualityispoor(noticetheeyesandthelegsofthedog). Next,we
+foundthatλ=1.15isthesmallestvaluethatenablesfullreconstructionusingtheinverseEulersolver. Furthermore,nudgingvaluesthat
+aretoohigh(e.g.,λ = 3.0)resultinsaturatedimages. Lastly,wenoticethatreducingnudgingvalues(λ < 1.0)severelydamagesthe
+reconstructionquality.
+25Input Reconstruction Cachingonly LatentNudging
+“Arabbittoysittingandwearing
+pinksocksduringthelateafternoon”
+“Thecatisyellingandraisingitspaw”
+“Arubberducknexttoapurpleballduringasunnyday”
+“Amanwithalonghair”
+Figure24. LatentCaching. AsexplainedinAppendixB.4,wealsotestedalatentcachingapproach[11],inwhichwesavedtheseries
+oflatentsduringtheinversionprocesswithoutapplyinglatentnudging. Ascanbeseen,thisapproachindeedachievesperfectinversion
+(secondcolumn),but(thirdcolumn)stillstruggleswithpreservingtheidentitieswhileeditingtheimage(e.g.,therabbitandduckexamples)
+orsignificantlyalterstheimage(e.g.,thecatandmanexamples). Ontheotherhand,ourmethodwiththelatentnudging(fourthcolumn)
+isabletopreservetheidentitiesduringediting.
+26G G G
+ref 0 1
+G G G
+2 3 4
+G G G
+5 6 7
+Figure25. FullLayerBypassingVisualizationforFlux. Wevisualizetheindividuallayerbypassingstudyweconducted,asdescribed
+inAppendixB.5.WestartbygeneratingasetofimagesG usingafixedsetofseedsandprompts.Then,webypasseachlayerℓbyusing
+ref
+itsresidualconnectionandgeneratethesetofimagesG usingthesamefixedsetofpromptsandseeds.Inthisvisualization,G –G are
+ℓ 0 2
+vitallayers,whileG –G arenon-vitallayers.
+3 7
+27G G G
+ref 8 9
+G G G
+10 11 12
+G G G
+13 14 15
+Figure26. FullLayerBypassingVisualizationforFlux. Wevisualizetheindividuallayerbypassingstudyweconducted,asdescribed
+inAppendixB.5.WestartbygeneratingasetofimagesG usingafixedsetofseedsandprompts.Then,webypasseachlayerℓbyusing
+ref
+itsresidualconnectionandgeneratethesetofimagesG usingthesamefixedsetofpromptsandseeds. Inthisvisualization,G –G
+ℓ 8 15
+areallnon-vitallayers.
+28G G G
+ref 16 17
+G G G
+18 19 20
+G G G
+21 22 23
+Figure27. FullLayerBypassingVisualizationforFlux. Wevisualizetheindividuallayerbypassingstudyweconducted,asdescribed
+inAppendixB.5.WestartbygeneratingasetofimagesG usingafixedsetofseedsandprompts.Then,webypasseachlayerℓbyusing
+ref
+itsresidualconnectionandgeneratethesetofimagesG usingthesamefixedsetofpromptsandseeds.Inthisvisualization,G andG
+ℓ 17 18
+arevitallayers,whileG andG –G arenon-vitallayers.
+16 19 23
+29G G G
+ref 24 25
+G G G
+26 27 28
+G G G
+29 30 31
+Figure28. FullLayerBypassingVisualizationforFlux. Wevisualizetheindividuallayerbypassingstudyweconducted,asdescribed
+inAppendixB.5.WestartbygeneratingasetofimagesG usingafixedsetofseedsandprompts.Then,webypasseachlayerℓbyusing
+ref
+itsresidualconnectionandgeneratethesetofimagesG usingthesamefixedsetofpromptsandseeds.Inthisvisualization,G andG
+ℓ 25 28
+arevitallayers,whileG ,G –G andG –G arenon-vitallayers.
+24 26 27 29 31
+30G G G
+ref 32 33
+G G G
+34 35 36
+G G G
+37 38 39
+Figure29. FullLayerBypassingVisualizationforFlux. Wevisualizetheindividuallayerbypassingstudyweconducted,asdescribed
+inAppendixB.5.WestartbygeneratingasetofimagesG usingafixedsetofseedsandprompts.Then,webypasseachlayerℓbyusing
+ref
+itsresidualconnectionandgeneratethesetofimagesG usingthesamefixedsetofpromptsandseeds. Inthisvisualization,G –G
+ℓ 31 39
+arenon-vitallayers.
+31G G G
+ref 40 41
+G G G
+42 43 44
+G G G
+45 46 47
+Figure30. FullLayerBypassingVisualizationforFlux. Wevisualizetheindividuallayerbypassingstudyweconducted,asdescribed
+inAppendixB.5.WestartbygeneratingasetofimagesG usingafixedsetofseedsandprompts.Then,webypasseachlayerℓbyusing
+ref
+itsresidualconnectionandgeneratethesetofimagesG usingthesamefixedsetofpromptsandseeds. Inthisvisualization,G –G
+ℓ 40 47
+arenon-vitallayers.
+32G G G
+ref 48 49
+G G G
+50 51 52
+G G G
+53 54 55
+Figure31. FullLayerBypassingVisualizationforFlux. Wevisualizetheindividuallayerbypassingstudyweconducted,asdescribed
+inAppendixB.5.WestartbygeneratingasetofimagesG usingafixedsetofseedsandprompts.Then,webypasseachlayerℓbyusing
+ref
+itsresidualconnectionandgeneratethesetofimagesG usingthesamefixedsetofpromptsandseeds. Inthisvisualization,G –G
+ℓ 53 54
+arevitallayers,whileG –G andG arenon-vitallayers.
+48 52 55
+33G G
+ref 56
+Figure32. FullLayerBypassingVisualizationforFlux. Wevisualizetheindividuallayerbypassingstudyweconducted,asdescribed
+inAppendixB.5.WestartbygeneratingasetofimagesG usingafixedsetofseedsandprompts.Then,webypasseachlayerℓbyusing
+ref
+itsresidualconnectionandgeneratethesetofimagesG usingthesamefixedsetofpromptsandseeds.Inthisvisualization,G isavital
+ℓ 56
+layer.
+340.8
+0.6
+0.4
+0.2
+0
+0 5 10 15 20
+LayerIndex
+ytiralimiSlautpecreP
+Figure 33. Layer Removal Quantitative Comparison Stable
+Diffusion3. AsexplainedinAppendixB.6,wemeasuredtheef-
+fectofremovingeachlayerofthemodelbycalculatingthepercep-
+tualsimilaritybetweenthegeneratedimageswithandwithoutthis
+layer.Lowerperceptualsimilarityindicatessignificantchangesin
+thegeneratedimages.Ascanbeseen,removingcertainlayerssig-
+nificantlyaffectsthegeneratedimages,whileothershaveminimal
+impact.Foravisualcomparison,pleaserefertoFigure34.
+ferG
+0G
+1G
+7G
+8G
+9G
+12G
+Figure34.LayerRemovalQualitativeComparisonStableDif-
+fusion3. AsexplainedinAppendixB.6,weillustratethequalita-
+tivedifferencesbetweenvitalandnon-vitallayers. Whilebypass-
+ing non-vital layers (G and G ) results in modest alterations,
+1 21
+bypassingvitallayersleadstosignificantchanges:completenoise
+generation (G ), or severe distortions (G , G and G ). For a
+0 7 8 9
+quantitativecomparison,pleaserefertoFigure33
+35Input “Adogstatue” “Alemur” “Apig” “Agecko”
+Input “Angry” “Closinghiseyes” “Wearingglasses” “Anoldman”
+Input “Apinkcar” “Abluecar” “Anorangecar” “Agreencar”
+Input “Closingitseyes” “Wearingaredhat” “Wearinggreen “Nexttoapurplestone”
+glasses”
+Figure35.StableDiffusion3EditingResults.AsexplainedinAppendixB.6,wetestedourStableFlowmethodontheStableDiffusion
+3backbone[25]. Ascanbeseen,weareabletoperformvariouseditingoperationsusingthesamemechanismofinjectingthereference
+imageinformationintothevitallayersofthemodel.
+36

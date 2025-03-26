@@ -17,7 +17,7 @@
     <!-- 关键词编辑 -->
     <div class="profile-section">
         <label for="keyword">关键词：</label>
-        <input type="text" id="keyword" value="" disabled />
+        <input type="text" id="keyword" value="{{ keyword }}" disabled />
         <button id="edit-btn"><img src="{{ url_for('static', filename='images/edit.svg') }}" alt="Edit"></button>
     </div>
 

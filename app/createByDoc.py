@@ -1,4 +1,3 @@
-from fileinput import filename
 import hashlib
 import hmac
 import base64
@@ -72,8 +71,8 @@ class createByDoc():
         # }
 
         params = {
-            "file_name": "LLama.pdf", 
-            "query": "这是一篇学术文献，请用这篇文献生成一个文献汇报的PPT，要求逻辑清晰，图文并茂，重点突出。", 
+            "file_name": self.filename, 
+            "query": "这是一篇学术文献，请用这篇文献生成一个文献汇报的PPT，要求使用浅色背景，逻辑清晰，有图片说明，重点突出，包含细节。", 
             "file": (
                 self.output + '.pdf', open(self.filepath, 'rb'),
                 'application/pdf'

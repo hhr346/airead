@@ -19,6 +19,8 @@
     margin-bottom: 10px;
 }
 
+
+/* 两个按钮的样式 */
 .generate-button {
     padding: 10px 20px;
     margin-bottom: 20px;
@@ -28,22 +30,38 @@
     color: white;
     border: none;
     border-radius: 5px;
+    width: 500px;
 }
 
 .generate-button:hover {
     background-color: #0056b3;
 }
 
+.send-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+}
+
+.send-button:hover {
+    background-color: #0056b3;
+}
+
+
 .ai-conversation,
 .ppt-download {
-    width: 80%;
+    width: 500px;
     margin-bottom: 20px;
 }
 
 .conversation-textarea,
 .download-textarea {
-    width: 250%;
-    height: 150%;
+    width: 500px;
+    height: 100%;
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;
@@ -53,7 +71,6 @@
 #conversation-box {
     display: none; /* 初始隐藏 */
 }
-
 
 
 .upload-box {
@@ -78,29 +95,29 @@
 
 
 /* 支持Markdown
-这个宽度自动变得太长太蠢了
-气泡的宽度需要更改左右
-绑定回车按钮
-问题的提交可以先执行 */
+这个宽度自动变得太长了
+问题的提交可以先执行 不是等到回答完成 */
 
 .chat-box {
     border: 1px solid #ccc;
-    padding: 100px;
-    max-height: 300px;
-    overflow-y: auto;
-    margin-top: 10px;
     background-color: #f9f9f9;
-    width: 125%;
-}
+    margin-top: 10px;
+    padding: 100px;
 
-.ai-message, .user-message {
-    margin: 10px 0;
+    max-height: 300px;
+    max-width: 700px;
+    overflow-y: auto;
+    width: 700px;
 }
 
 .ai-message p {
     background-color: #e0f7fa;
     padding: 10px;
     border-radius: 5px;
+    text-align: left;
+    float: left;
+    max-width: 70%; /* 控制气泡最大宽度为对话框的70% */
+    clear: both; /* 保证每个消息在新的一行开始 */
 }
 
 .user-message p {
@@ -108,28 +125,24 @@
     padding: 10px;
     border-radius: 5px;
     text-align: right;
+    float: right;
+    max-width: 70%; /* 控制气泡最大宽度为对话框的70% */
+    clear: both;
 }
 
+
 .user-input {
-    margin-top: 10px;
+    margin-top: 16px;
     display: flex;
-    width: 180%;
+    width: 700px;
 }
 
 .user-input textarea {
-    flex-grow: 1;
+    width: 700px;
     margin-right: 10px;
     padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-.send-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.send-button:hover {
-    background-color: #0056b3;
-}

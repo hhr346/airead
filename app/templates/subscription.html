@@ -5,18 +5,136 @@
 {% endblock %}
 
 {% block content %}
+
 <div class="container">
     <h1 class="mt-4">订阅源消息</h1>
+    <!-- “总结资讯”按钮 -->
+    <button id="generate-recommend" class="btn btn-primary mt-4">总结资讯</button>
+
+    <!-- 弹出框 -->
+    <div id="recommend-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h2>大模型推荐列表</h2>
+            <div id="recommend"></div> <!-- 生成的总结显示在这里 -->
+        </div>
+    </div>
+
     <div class="rss-messages">
         {% for message in messages %}
-        <div class="rss-message-card">
+        <div class="rss-message-card" onclick="openModal({{ loop.index }})">
             <h4><a href="{{ message.link }}" target="_blank">{{ message.title }}</a></h4>
             <p class="message-date">{{ message.date }}</p>
-            <p>{{ message.description }}</p>
+            <p>{{ message.summary }}</p>
         </div>
         {% else %}
         <p>暂无消息</p>
         {% endfor %}
     </div>
 </div>
+
+<!-- Modal 用于显示详情信息 -->
+<div id="messageModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-date"></p>
+        <div id="modal-details"></div>
+        <div class="modal-navigation">
+            <button onclick="prevMessage()">&#8592; Previous</button>
+            <button onclick="nextMessage()">Next &#8594;</button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    //////////////////////////
+    // 弹出消息message窗口的设置
+    //////////////////////////
+    let currentMessageIndex = 0;
+    const rssMessages = {{ messages|tojson }}; // 这里改用不同的变量名
+
+    // 打开 modal 并显示消息详情
+    function openModal(index) {
+        currentMessageIndex = index;
+        document.getElementById('modal-title').innerText = rssMessages[index - 1].title;
+        document.getElementById('modal-date').innerText = rssMessages[index - 1].date;
+        document.getElementById('modal-details').innerHTML = rssMessages[index - 1].details;
+        document.getElementById('messageModal').style.display = "block";
+    }
+
+    // 关闭 modal
+    function closeModal() {
+        document.getElementById('messageModal').style.display = "none";
+    }
+
+    // 显示前一个消息
+    function prevMessage() {
+        if (currentMessageIndex > 1) {
+            openModal(currentMessageIndex - 1);
+        }
+    }
+
+    // 显示下一个消息
+    function nextMessage() {
+        if (currentMessageIndex < rssMessages.length) {
+            openModal(currentMessageIndex + 1);
+        }
+    }
+
+    // 键盘监听器来处理左右方向键
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') {
+            prevMessage();
+        } else if (event.key === 'ArrowRight') {
+            nextMessage();
+        }
+    });
+
+
+
+    //////////////////////////
+    // 总结推荐列表
+    //////////////////////////
+
+    // 获取按钮元素和弹出框元素
+    const recommendModal = document.getElementById('recommend-modal');
+    const closeModalBtn = document.getElementById('close-modal');
+    const generateButton = document.getElementById('generate-recommend');
+
+    // 监听点击“总结资讯”按钮，打开弹出框并调用API生成总结
+    generateButton.addEventListener('click', function() {
+        const rssId = window.location.pathname.split('/').pop();  // 获取当前URL中的rss_id
+        fetch('/generate-recommend', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ rss_id: rssId })
+        })
+        .then(response => response.json())
+        .then(data => {
+            // 在弹出框内显示生成的总结
+            document.getElementById('recommend').innerHTML = '<p>' + data.recommend + '</p>';
+            // document.getElementById('recommend').innerHTML =  data.recommend + '</p>';
+            // 显示弹出框
+            recommendModal.style.display = 'block';
+        })
+        .catch(error => console.error('Error:', error));
+    });
+
+    // 监听关闭按钮点击事件，隐藏弹出框
+    closeModalBtn.addEventListener('click', function() {
+        recommendModal.style.display = 'none';
+    });
+
+    // 点击弹出框外部区域时隐藏弹出框
+    window.addEventListener('click', function(event) {
+        if (event.target == recommendModal) {
+            recommendModal.style.display = 'none';
+        }
+    });
+
+</script>
 {% endblock %}

@@ -27,7 +27,7 @@ function updateSidebar() {
     .then(data => {
         const rssFeeds = document.getElementById('rss-feeds');
         const currentUrl = window.location.pathname;  // 获取当前页面的URL
-        // rssFeeds.innerHTML = "";  // 清空现有的RSS feed区域，或许不应该清空？只在更新时清空？为什么这个清空似乎去掉了之后也不会累加呢？
+        rssFeeds.innerHTML = "";  // 清空现有的RSS feed区域
 
         // 遍历从后端获取的数据
         data.forEach(item => {
@@ -58,14 +58,31 @@ document.addEventListener("DOMContentLoaded", function () {
     // 点击编辑按钮，允许编辑关键词
     editBtn.addEventListener("click", function () {
         if (keywordInput.disabled) {
+            // 启用输入框并切换按钮文本为"保存"
             keywordInput.disabled = false;
             keywordInput.focus();
             editBtn.innerHTML = "保存";
         } else {
+            // 禁用输入框并切换按钮为编辑图标
             keywordInput.disabled = true;
-            editBtn.innerHTML = "<img src='/static/images/edit.png' alt='Edit'>";
-            // 你可以在这里添加保存逻辑，例如发送数据到后端
-            console.log("关键词已更新为: " + keywordInput.value);
+            editBtn.innerHTML = "<img src='/static/images/edit.svg' alt='Edit'>";
+            
+            // 发送新的关键词到后端保存
+            const newKeyword = keywordInput.value;
+            fetch('/save_keyword', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ keyword: newKeyword }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.message);  // 后端返回的信息
+            })
+            .catch(error => {
+                console.error('保存关键词时出错:', error);
+            });
         }
     });
 
@@ -177,3 +194,33 @@ function uploadFiles(files) {
 
     xhr.send(formData);
 }
+
+
+/**********************/
+/* 论文工具中的发送消息 */
+/**********************/
+function sendMessage() {
+    const userInput = document.getElementById('user-input-text').value;
+    
+    if (userInput) {
+        fetch('/ask-question', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ question: userInput })
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Append AI answer and user input to the chat
+            const chatBox = document.getElementById('chat-box');
+            const userMessage = '<div class="user-message"><p>' + userInput + '</p></div>';
+            const aiMessage = '<div class="ai-message"><p>' + data.answer + '</p></div>';
+            chatBox.innerHTML += userMessage + aiMessage;
+            document.getElementById('user-input-text').value = ''; // Clear input field
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+}
+
