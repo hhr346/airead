@@ -1,4 +1,6 @@
 flask
+requests-toolbelt
+websocket
 feedparser
 requests
 json
